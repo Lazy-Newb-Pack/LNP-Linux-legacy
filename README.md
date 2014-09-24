@@ -4,12 +4,12 @@ Lazy-Newb-Pack-Linux V0.40.13
 A small package to get people started with Dwarf Fortress on linux. Please take time to check out the [Official thread](http://www.bay12forums.com/smf/index.php?topic=140966.0). There are a few help documents in the [Wiki](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/wiki) if you should get stuck.
 
 
- ### Linux Download 
+#### Linux Download 
 
 For x64 Linux distributions download the package at: [http://dffd.wimbli.com/file.php?id=8936](http://dffd.wimbli.com/file.php?id=8936&v=40.13r1)
 
 
- ### Other Versions
+#### Other Versions
  
 Also Check out the the official thread here: 
 
