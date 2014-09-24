@@ -1,0 +1,90 @@
+customKeybindsFiles: 
+-  name: Classic LNP
+   file: Classic_LNP.txt
+-  name: Vanilla DF
+   file: Vanilla_DF.txt
+dfDirectory: df_linux
+dfExecutable: dfhack
+folders: []
+graphicsPacks: 
+-  name: '[12x8] ASCII [Default]'
+   directory: ASCII-Default
+-  name: '[16x16] ASCII'
+   directory: ASCII-Square
+-  name: '[16x16] Afros Graphics Pack'
+   directory: Afro
+-  name: '[24x24] BurnedFX'
+   directory: BurnedFX
+-  name: '[16x16] CLA 0.40.x'
+   directory: CLA
+-  name: '[15x15] Duerer'
+   directory: Duerer
+-  name: '[12x12] Grim Fortress 1.2'
+   directory: Grim-Fortress
+-  name: '[32x32] DawnFortress v0.28'
+   directory: DawnFortress
+-  name: '[16x16] Phoebus 0.40.x'
+   directory: Phoebus
+-  name: '[16x16] Ironhand 40.x'
+   directory: Ironhand
+-  name: '[16x16] Mayday'
+   directory: Mayday
+-  name: '[12x12] Jolly Bastion '
+   directory: Jolly-Bastion
+-  name: '[16x16] Obsidian'
+   directory: Obsidian
+-  name: '[16x20] Shizzle 1.3 '
+   directory: Shizzle
+-  name: '[16x16] Spacefox Afro v40.x '
+   directory: Spacefox
+-  name: '[20x20] Taffer XVI'
+   directory: Taffer
+-  name: '[24x24] Vherid v6'
+   directory: Vherid
+launchDfWithTerminal: true
+links: 
+-  separator: false
+   title: Dwarf Fortress Website
+   url: http://www.bay12games.com/dwarves
+-  separator: false
+   title: Dwarf Fortress Forums
+   url: http://www.bay12forums.com/smf
+-  separator: false
+   title: Dwarf Fortress Wiki
+   url: http://dwarffortresswiki.org
+-  separator: false
+   title: Lazy Newb Pack Linux V0.40.13 bay12 thread
+   url: http://www.bay12forums.com/smf/index.php?topic=140966.0
+-  separator: false
+   title: Lazy Newb Pack Linux V0.40.13 DFFD
+   url: http://dffd.wimbli.com/file.php?id=8936
+-  separator: true
+   title: Lazy Newb Pack Linux V0.40.13 Project page
+   url: https://github.com/BeauBouchard/DF-Lazy-Newb-Pack/blob/master/README.md
+terminalPath: xterm
+utilities: 
+-  name: Soundsense r43
+   autostart: false
+   directory: soundsense/
+   executable: soundSense.sh
+   showTerminal: false
+-  name: Dwarf Therapist
+   autostart: false
+   directory: dwarf_therapist/
+   executable: DwarfTherapist
+   showTerminal: false
+-  name: qfconvert 2.04
+   autostart: false
+   directory: qfconvert/
+   executable: python ./qfconvert.py
+   showTerminal: true
+-  name: chromafort 2010-04-25
+   autostart: false
+   directory: chromafort/
+   executable: Chromafort.jar
+   showTerminal: false
+-  name: DF Announcement Filter 1.01
+   autostart: false
+   directory: df_announcement_filter/
+   executable: DFAnnouncementFilter.jar
+   showTerminal: false

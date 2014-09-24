@@ -1,0 +1,16 @@
+#!/bin/sh
+DF_DIR=$(dirname "$0")
+cd "${DF_DIR}"
+
+#Workaround for "Not found: /data/art/mouse.png"
+if [ ! -z "$(ldconfig -p | grep libz.so)" ]; then
+	if [ $(uname -m) == "x86_64" ];then
+		export LD_PRELOAD=/usr/lib32/libz.so
+	else
+		export LD_PRELOAD=/usr/lib/libz.so
+	fi
+fi
+
+export SDL_DISABLE_LOCK_KEYS=1 # Work around for bug in Debian/Ubuntu SDL patch.
+#export SDL_VIDEO_CENTERED=1 # Centre the screen.  Messes up resizing.
+./libs/Dwarf_Fortress "$@" # Go, go, go! :)

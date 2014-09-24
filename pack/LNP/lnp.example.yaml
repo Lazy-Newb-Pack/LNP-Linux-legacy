@@ -1,0 +1,216 @@
+#
+# EXAMPLE SETTINGS FILE
+#
+# Copy or rename this file to lnp.yaml and edit it to configure the launcher.
+#
+# WARNING: This configuration file is in the YAML format. I've tried to keep it as simple as humanly possible.
+#          Keep in mind however that the way things are indented is not only to make it nicely readable, but that
+#          it is actually part of YAML's syntax!
+#          See http://en.wikipedia.org/wiki/YAML for more info.
+#
+# This example settings file is based around the following directory structure:
+#
+# <LNP install dir>
+#   |
+#   +- /df_34_11_win            (Dwarf Fortress is extracted here)
+#   |  |
+#   |  +- Dwarf Fortress.exe    (The Dwarf Fortress executable)
+#   |  |
+#   +- /LNP                     (Contains LNP-specific files and folders)
+#   |  |
+#   |  +- lnp.yaml              (This configuration file)
+#   |  |
+#   |  +- /lib                  (Contains libraries needed by the LNP executable)
+#   |  |
+#   |  +- /graphics             (Contains all graphics packs, one per directory; you're free to use any directory name you like)
+#   |  |  |
+#   |  |  +- /pack1
+#   |  |  +- /pack2
+#   |  |  |  ...
+#   |  |  +- /packn
+#   |  |
+#   |  +- /keybinds             (Contains all keybinds, one per file; you're free to use any file name you like)
+#   |  |  |
+#   |  |  +- keybinds1.txt
+#   |  |  +- keybinds2.txt
+#   |  |  |  ...
+#   |  |  +- keybindsn.txt
+#   |  |
+#   |  +- /utilities            (Contains all utilities, one per directory; you're free to use any directory name you like)
+#   |     |
+#   |     +- /utility1
+#   |     |  |
+#   |     |  + utility1.exe
+#   |     |
+#   |     +- /utility2
+#   |     |  ...
+#   |     +- /utilityn
+#   |
+#   +- lazy-newbpack-gui-0.5.3-SNAPSHOT.jar    (The LNP executable)
+
+#
+# The directory, relative to <LNP install dir> where Dwarf Fortress is installed.
+#
+dfDirectory: df_34_11_win
+
+#
+# The filenamename of Dwarf Fortress' executable
+#
+dfExecutable: Dwarf Fortress.exe
+
+#
+# Wether or not to start Dwarf Fortress using a terminal emulator. Set this to true on
+# if you use DFHack, otherwise DFHack won't work correctly.
+#
+# If this is set to false, the executable configured in dfExecutable will be started directly.
+# If this is set to true, Dwarf Fortress will be started using a terminal emulator. How this works
+# is OS-dependant:
+#
+# - On Windows, DF will be started using the following command:
+#   cmd /C <full path to dfExecutable>
+#
+# - On Linux, DF will be started using the following command:
+#   <value of terminalPath> -e <full path to dfExecutable>
+#
+# - On MacOS, DF will be started using the following command:
+#   open <full path to dfExecutable>
+#
+launchDfWithTerminal: true
+
+#
+# IMPORTANT: This setting is Linux only. On Windows and MacOS it will do nothing.
+#
+# The terminal emulator to use for starting DF and utilities. In this example I'm using xterm, which
+# (as far as I know) should be a reasonably safe default, considering xterm seems to be installed 
+# with many Linux distributions.
+#
+terminalPath: xterm
+
+#
+# Utilities provided with your LNP pack.
+#
+# The format for the utility settings is as follows:
+#
+#   <utility setting>: <value>
+#
+#   <utility setting>  Currently there are 4 settings per utility (see below): 
+#                      name, directory, executable, showTerminal and autostart.
+#   <value>            The value of the setting.
+#
+# The first setting you specify for each utility must be preceded with a minus (-) like the example below.
+# The order of utilities in the launcher will be the same as specified in this config file.
+#
+
+# Start of the utilities section.
+utilities: 
+
+   # The name of the utility as you want it to be shown in the launcher.
+-  name: Utility 1
+   # The subdirectory inside <LNP install dir>/LNP/utilities where the utility executable is installed.
+   directory: utility1
+   # The filename of the executable or script to start.
+   executable: utility1.exe
+   # [true/false] Wether or not to start the utility using a terminal emulator. Works exactly like launchDfWithTerminal.
+   showTerminal: false
+   # [true/false] Wether or not to start the utility automatically when starting Dwarf Fortress.
+   autostart: true
+
+-  name: Utility 2
+   directory: utility2
+   executable: utility2.sh
+   showTerminal: true
+   autostart: false
+
+#
+# Graphics packs provided with your LNP pack.
+#
+# The format for the graphics pack settings is as follows:
+#
+#   <pack setting>: <value>
+#
+#   <pack setting>  Currently there are 2 settings per graphics pack (see below): 
+#                   name and directory.
+#   <value>         The value of the setting.
+#
+# The first setting you specify for each graphics pack must be preceded with a minus (-) like the example below.
+# The order of graphics packs in the launcher will be the same as specified in this config file.
+#
+
+# Start of the graphics packs section.
+graphicsPacks:
+
+   # The name of the graphics pack as you want it to be shown in the launcher.
+-  name: Pack 1
+   # The subdirectory inside <LNP install dir>/LNP/graphics where the graphics pack is installed.
+   directory: pack1
+
+-  name: Pack 2
+   directory: pack2
+
+#
+# Keybinds configurations provided with your LNP pack.
+#
+# The format for the keybinds settings is as follows:
+#
+#   <keybinds setting>: <value>
+#
+#   <keybinds setting>  Currently there are 2 settings per keybinds file (see below): 
+#                       name and file.
+#   <value>             The value of the setting.
+#
+# The first setting you specify for each keybinds configuration must be preceded with a minus (-) like the example below.
+# The order of keybinds settings in the launcher will be the same as specified in this config file.
+#
+
+# Start of the graphics packs section.
+customKeybindsFiles:
+
+   # The name of the keybinds file as you want it to be shown in the launcher.
+-  name: Keybinds 1
+   # The filename of the keybinds file.
+   file: keybinds1.txt
+
+-  name: Keybinds 2
+   file: keybinds2.txt
+
+#
+# Custom configurable folders that will appear in the Folders menu after the built-in folders.
+#
+
+# Start of the folder section.
+folders: 
+   # The relative or absolute path to the folder. When you specify a relative path, it will be relative to the root
+   # LNP folder.
+-  path: Test Folder  # This is a relative path
+   # The title of the folder. The actual text in the Folders menu will be "Open <title> Folder", just like the built-in
+   # folders.
+   title: Test
+   # Wether or not this should display as a separator (a horizontal line in the menu).
+   separator: false
+-  separator: true    # This is a separator. The other settings don't need to be specified. 
+-  path: C:\WINDOWS   # This is an absolute path
+   separator: false
+   title: Windows
+
+#
+# Custom configurable links that will appear in the Links menu.
+#
+
+# Start of the links section.
+links:
+   # The URL of the website. 
+-  url: http://www.bay12games.com/dwarves
+   # The title of the link as it will appear in the Links menu.
+   title: Dwarf Fortress Website
+   # Wether or not this should display as a separator (a horizontal line in the menu).
+   separator: false
+-  title: Dwarf Fortress Forums
+   url: http://www.bay12forums.com/smf
+   separator: false
+-  title: Dwarf Fortress Wiki
+   url: http://dwarffortresswiki.org
+   separator: false
+-  separator: true    # This is a separator. The other settings don't need to be specified. 
+-  title: Pack thread
+   url: http://link.to.the.thread.of/your.pack
+   separator: false
