@@ -11,8 +11,6 @@ For x64 Linux distributions download the package at: [http://dffd.wimbli.com/fil
 
 #### Other Versions
  
-Also Check out the the official thread here: 
-
 
 Similar packages also available in windows and Mac:
 
