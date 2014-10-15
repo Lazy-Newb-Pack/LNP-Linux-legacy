@@ -12,7 +12,9 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 
  * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
  
- * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 R1 from DFFD](http://dffd.wimbli.com/file.php?id=8936&v=40.13r1)
+  **x86 Releases:**
+
+ * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 R1]()
  
 
 
@@ -167,6 +169,7 @@ Credits & Special Thanks
  * [@LucasUP](https://github.com/LucasUP/) Lucas Paquette made the orginal windows LNP 
  * [@splintermind](https://github.com/splintermind/) Josh, part time wizard works dilligently on Dwarf Therapist
  * [@PeridexisErrant](http://www.bay12forums.com/smf/index.php?topic=126076.0)
+ * [@Pidgeot](https://bitbucket.org/Pidgeot/python-lnp/) Michael is a Founding developer of PyLNP
  * [@runrobotrun](http://www.bay12forums.com/smf/index.php?topic=55025.0) Created Chromafort
  * [@Zweistein](http://zweistein.cz/) Created Soundsense
 
