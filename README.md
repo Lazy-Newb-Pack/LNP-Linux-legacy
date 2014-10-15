@@ -11,7 +11,7 @@ You can download the package at DFFD:
 
 Or download the varying releases:
 
- *x64 Releases:*
+ **x64 Releases:**
 
  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
 
