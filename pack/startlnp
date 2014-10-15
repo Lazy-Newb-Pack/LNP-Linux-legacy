@@ -11,4 +11,4 @@ if [ ${dt_capabilities} != "cap_sys_ptrace+eip" ]; then
 fi
 
 #run Lazy Newb Pack
-java -jar lazy-newbpack-gui-0.5.3-SNAPSHOT.jar
+./PyLNP
