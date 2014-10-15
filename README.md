@@ -6,7 +6,15 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 
 #### Linux Download 
 
-For x64 Linux distributions download the package at: [http://dffd.wimbli.com/file.php?id=8936](http://dffd.wimbli.com/file.php?id=8936&v=40.13r1)
+You can download the package at DFFD: 
+ * [x64 Linux Lazy Newb Pack Dricus Interface 0.40.13 R1](http://dffd.wimbli.com/file.php?id=8936&v=40.13r1)
+
+Or download the varying releases:
+
+ * [x64 Linux Lazy Newb Pack PyLNP Interface 0.40.13 R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
+
+ * [x64 Linux Lazy Newb Pack Dricus Interface 0.40.13 R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
+ 
 
 
 #### Other Versions
