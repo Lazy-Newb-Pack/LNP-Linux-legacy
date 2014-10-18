@@ -7,11 +7,16 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 #### Linux Download 
 
  **x64 Releases:**
+ * QT 5 Dwarf Therapist
 
- * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
 
- * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
- 
+  * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
+  
+* QT 4 Dwarf Therapist
+
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt4)
+
   **x86 Releases:**
 
  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 R1]()
