@@ -13,37 +13,37 @@ The package has switched from [Dricus's Lazy Newb Pack Java interface](https://b
 
 **x64 PyLNP Interface**
 
-  * QT 5 Dwarf Therapist
+ * QT 5 Dwarf Therapist
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt5)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt5)
   
 
  * QT 4 Dwarf Therapist
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt4)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt4)
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt4)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt4)
 
 **i686 PyLNP Interface**
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d454qt5)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d454qt5)
 
 
  * QT 4 Dwarf Therapist
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt4)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt4)
 
-   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d454qt4)
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d454qt4)
 
 
 
 **Dricus Interface**
 
-   * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
+  * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
 
 
 
