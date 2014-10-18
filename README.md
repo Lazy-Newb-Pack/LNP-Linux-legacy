@@ -6,22 +6,26 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 
 #### Linux Download 
 
- **x64 Releases:**
+
  * QT 5 Dwarf Therapist
 
   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
 
   * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
   
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt5)
+  
+
 * QT 4 Dwarf Therapist
+
+  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt4)
 
   * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt4)
 
-  **x86 Releases:**
 
- * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 R1]()
+
+
  
-
 
 #### Other Versions
  
@@ -38,7 +42,7 @@ Included Mods
 * [Lazy Newb Pack for Linux 0.5.3-SNAPSHOT-20130822](https://bitbucket.org/Dricus/lazy-newbpack/overview)
 * Utilities:
     * [DFhack Linux V0.40.13 R1 (gcc 4.9.1)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
-    * [Dwarf Therapist v26](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) 
+    * [Dwarf Therapist v27](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) 
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
     * [chromafort 2010-04-25](http://www.bay12forums.com/smf/index.php?topic=55025.0)
