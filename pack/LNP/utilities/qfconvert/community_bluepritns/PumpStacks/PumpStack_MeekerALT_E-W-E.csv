@@ -1,0 +1,9 @@
+#dig This is the dig blueprint for an East-West-East repeatable screw pump tower.\n\nOn the bottom level, water is taken up from the East channeled tile. On the top level, water will exit the pump onto the tile directly East of the pump. See the DF wiki for a detailed explanation of screw pump technology.\n\nEvery repetition of this blueprint completes 2 z-levels of tower.\n\nIMPORTANT: Start from the top z-level and repeat (Alt+R) down. Then on the bottommost level, change the leftmost channel designation to mine. This allows the placement of the bottommost screw pump.
+h,d,h,d,#
+d,`,d,`,#
+d,d,d,i,#
+#>,#,#,#,#
+d,h,d,h,#
+`,d,`,d,#
+`,d,d,i,#
+#>,#,#,#,#

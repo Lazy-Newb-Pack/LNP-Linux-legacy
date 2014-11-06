@@ -1,0 +1,17 @@
+#dig start(4; 4; Center tile of a 7-tile square) This is a 7x7, 2 z-level ramp staircase with 8 up ramps per level. It's a combination of + & x formations. NOTE: Always begin a z-level down from where you want to start. (Ramps are upwards. Thus, you need to start these designations from a z-level below.)
+~,~,d,d,~,~,~,#
+~,r,d,d,d,r,~,#
+~,d,r,d,r,d,d,#
+d,d,d,~,d,d,d,#
+d,d,r,d,r,d,~,#
+~,r,d,d,d,r,~,#
+~,~,~,d,d,~,~,#
+#>,#,#,#,#,#,#,#
+~,~,~,~,d,d,~,#
+d,d,d,r,d,d,~,#
+d,d,d,r,d,d,~,#
+~,r,r,~,r,r,~,#
+~,d,d,r,d,d,d,#
+~,d,d,r,d,d,d,#
+~,d,d,~,~,~,~,#
+#>,#,#,#,#,#,#,#

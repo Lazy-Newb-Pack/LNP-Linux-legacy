@@ -7,7 +7,13 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 #### Linux Download 
 
 
+DFFD Download: 
 
+Website Download [faster]: 
+
+#### Older Linux Downloads
+
+V0.40.13 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04013/)
 
  
 
@@ -26,7 +32,7 @@ Included Mods
 * [Pidgeot's PyLNP 0.7.1 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
     * [DFhack Linux V0.40.14 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
-    * [Dwarf Therapist v27](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) 
+    * [Dwarf Therapist v28](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) 
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
     * [chromafort 2010-04-25](http://www.bay12forums.com/smf/index.php?topic=55025.0)

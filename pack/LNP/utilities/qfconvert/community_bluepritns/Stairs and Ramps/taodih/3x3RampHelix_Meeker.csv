@@ -1,0 +1,9 @@
+#dig start(2; 2; Center tile of a 3-tile square) A simple 3x3 double Spiral (DNA) Staircase",,,,
+d,r,`,#
+d,`,d,#
+`,r,d,#
+#<,#,#,#
+`,d,d,#
+r,`,r,#
+d,d,`,#
+#,#,#,#,

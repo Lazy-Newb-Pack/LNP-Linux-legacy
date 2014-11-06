@@ -4,17 +4,15 @@
 # All credit goes to /u/amfournda of reddit
 
 LNPATH="."
-IFS=$'\n'
-
 if [ ! -z "$1" ]
 then
-	LNPATH=$1
+    LNPATH=$1
 fi
 
 if [ ! -d $LNPATH/LNP/graphics ] || [ ! -d $LNPATH/df_linux/data/init ] 
 then
-	echo "Cound not find dwarf fortress install. This scripts expects to either be inside the LNP-linux directory or have you provide the path as an argument to the script."
-	exit
+    echo "Cound not find dwarf fortress install. This scripts expects to either be inside the LNP-linux directory or have you provide the path as an argument to the script."
+    exit
 fi
 
 

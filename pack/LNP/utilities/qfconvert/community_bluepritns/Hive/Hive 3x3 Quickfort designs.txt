@@ -1,0 +1,13 @@
+http://dffd.wimbli.com/file.php?id=3746
+
+Hive 3x3 Quickfort designs
+
+Author:		brandstone
+File version:	Unspecified
+For DF version:	Multiple
+Last Updated:	Jan 31, 2011, 06:50:54 pm
+First Created:	Jan 31, 2011, 03:58:56 pm
+
+DESCRIPTION:
+
+Here are some Quickfort designs for the dual level hive design. They are designed for a 3x3 embark, just start from the corner of the map.

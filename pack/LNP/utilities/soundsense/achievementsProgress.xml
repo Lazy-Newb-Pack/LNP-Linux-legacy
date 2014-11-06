@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="(.+) has created (.+), a (.+)!">7</entry>
+<entry key="The flying (.+)bolt(.+) strikes The Goblin (.+) tearing the heart(.+)">0</entry>
+<entry key="The (.+) has organized a party at (.+)\.">48</entry>
+<entry key="(.+) has come!  ((A)|(An)) (.+)">4</entry>
+<entry key="(.+) has given birth to ((a kitten)|(kittens))\.">5</entry>
+<entry key="(.+) has created a masterpiece!">0</entry>
+<entry key="The Stray Kitten \(Tame\) has been slaughtered\.">5</entry>
+<entry key="(.+) has been found dead(.+)\.">1</entry>
+<entry key="You have discovered (.+)">2</entry>
+<entry key="You have struck (.+)!">90</entry>
+<entry key="(.+) starved(.+)">5</entry>
+<entry key="(.+) in the head with (.+) and the severed part sails off in an arc!">3</entry>
+<entry key="(.+) has been completed\.">0</entry>
+</properties>

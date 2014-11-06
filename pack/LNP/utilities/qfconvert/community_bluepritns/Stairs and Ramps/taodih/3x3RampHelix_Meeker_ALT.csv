@@ -1,0 +1,9 @@
+#dig start(2;2; Center tile of a 3-tile square) A simple 3x3 double helix spiral (DNA) staircase. Note: Always start a z-level down from where you want to start. (Ramps are upwards. Thus, you need to start these designations from a z-level below.)
+~,~,d,#
+r,~,r,#
+d,~,~,#
+#>,#,#,#
+d,r,~,#
+~,~,~,#
+~,r,d,#
+#>,#,#,#

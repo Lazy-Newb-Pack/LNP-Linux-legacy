@@ -1,0 +1,24 @@
+#dig start(16; 12; Center tile of a 31x23 rectangle) This is a 31x23 layout of an apartment level; the design "cribbed from the wiki" by Meeker. I count 26 apartments, plus room for a barracks, a large dining room, and more. Alternatively, one could easily dig out a bit more to make N/S/E/W 3-tile-wide corridors. And the 3x3 solid center leaves room to build taodih's 3x3 counter-clockwise spiral ramp staircase.
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+`,d,`,`,`,d,`,`,`,d,`,`,d,`,`,d,`,`,d,`,`,d,`,`,`,d,`,`,`,d,`,#
+d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,#
+`,d,`,`,`,d,`,`,`,d,`,`,d,`,d,d,d,`,d,`,`,d,`,`,`,d,`,`,`,d,`,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+`,`,`,`,`,`,`,`,`,`,`,`,d,`,d,d,d,`,d,`,`,`,`,`,`,`,`,`,`,`,`,#
+d,d,d,d,d,d,d,d,d,d,d,d,d,`,`,`,`,`,d,d,d,d,d,d,d,d,d,d,d,d,d,#
+d,d,d,`,d,d,d,d,d,d,d,`,d,`,`,`,`,`,d,`,d,d,d,d,d,d,d,`,d,d,d,#
+d,d,d,d,d,d,d,d,d,d,d,d,d,`,`,`,`,`,d,d,d,d,d,d,d,d,d,d,d,d,d,#
+`,`,`,`,`,`,`,`,`,`,`,`,d,`,d,d,d,`,d,`,`,`,`,`,`,`,`,`,`,`,`,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+`,d,`,`,`,d,`,`,`,d,`,`,d,`,d,d,d,`,d,`,`,d,`,`,`,d,`,`,`,d,`,#
+d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,#
+`,d,`,`,`,d,`,`,`,d,`,`,d,`,`,d,`,`,d,`,`,d,`,`,`,d,`,`,`,d,`,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
+d,d,d,`,d,d,d,`,d,d,d,`,d,`,d,d,d,`,d,`,d,d,d,`,d,d,d,`,d,d,d,#
