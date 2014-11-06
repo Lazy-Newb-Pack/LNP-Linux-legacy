@@ -1,51 +1,10 @@
-Lazy-Newb-Pack-Linux V0.40.13
+Lazy-Newb-Pack-Linux V0.40.14
 ====================
 
 A small package to get people started with Dwarf Fortress on linux. Please take time to check out the [Official thread](http://www.bay12forums.com/smf/index.php?topic=140966.0). There are a few help documents in the [Wiki](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/wiki) if you should get stuck.
 
-**Update:**
-
-The package has switched from [Dricus's Lazy Newb Pack Java interface](https://bitbucket.org/Dricus/lazy-newbpack/overview) to 
-[Pidgeot's PyLNP 0.6 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0) which being activly maintained and has graphics pack patching. I will continue to host the  [Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) with Dricus Interface](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5) but all future packages will be using Pidgeot's PyLNP and require Python 2.7 to run. New varying packages have been added in an attempt to be more compatible with different distros.  
-
 
 #### Linux Download 
-
-**x64 PyLNP Interface**
-
- * QT 5 Dwarf Therapist
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt5)
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt5)
-  
-
- * QT 4 Dwarf Therapist
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p491qt4)
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.p454qt4)
-
-**i686 PyLNP Interface**
-
- * QT 5 Dwarf Therapist
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d454qt5)
-
-
- * QT 4 Dwarf Therapist
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt4)
-
-  * [PyLNP Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.5.4) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d454qt4)
-
-
-
-**Dricus Interface**
-
-  * [Dricus Interface - Linux Lazy Newb Pack 0.40.13 (GCC 4.9.1) R1](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases/tag/0.40.13.r1.d491qt5)
 
 
 
@@ -64,9 +23,9 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 Included Mods
 -------------
-* [Pidgeot's PyLNP 0.6 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
+* [Pidgeot's PyLNP 0.7.1 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
-    * [DFhack Linux V0.40.13 R1 (gcc 4.9.1)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
+    * [DFhack Linux V0.40.14 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
     * [Dwarf Therapist v27](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) 
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
@@ -101,40 +60,29 @@ Included Mods
 
 
 
-DF 40.13 Release notes:
+DF 40.14 Release notes:
 -------------
+
+Here is the next release. The focus was not bugs this time, but rather completing the work started on emotions as well as basic fruit harvesting. A note -- adding stepladders to old saves was not possible, so you'll have to wait for a new world for those. Fallen fruit can still be gathered in old saves using the new plant gathering zones. Dwarves in old saves have also had their current thoughts wiped clean to make way for the new emotion/circumstance pairs.
+—Toady One, October 25, 2014
 
 **Major bug fixes**
 
-  * Fixed item storage crash related to minecart being destroyed
-  * Stopped dwarves from trying to clean their own missing or internal body parts
-  * Cleared old activities properly so they aren't considered by dwarves for too long
+  * Dwarf thoughts have been replaced with personality-dependent emotion/circumstance pairs
+  * Dwarf happiness has been replaced by a longer-term stress level, and a few new effects have been added
+  * Plant gathering zones can be used to set up fruit harvesting from trees using the new stepladder
+  * Plant gathering zones can also handle the old shrub jobs, and fallen fruit can also be gathered from zones
+  * Shrubs now have their berries/etc. gathered properly (bean-type plants that only have edible seeds are still an issue)
+  * As a stopgap, farm plot plants yield viable growths out of season upon harvest
+  * In adventure mode, it is possible to ask about people about yourself, other people, and how they are feeling
 
 
 **Other bug fixes/tweaks**
 
-  * Decreased frequency of conversation-skill-building dwarf chats
-  * Reworked grazing formula, used fractional exponent to scale properly according to size
-  * Made grazing tile selection less top-left biased and made it prefer non-creature'd tiles with denser grass
-  * Made butcher jobs for corpses not in piles respect z coordinate of building (Quietust)
-  * Handled some issues with subterranean areas being removed through trees
-  * Made workshop profile skill checks ignore skill rust
-  * Fixed problem with siege operator skill check (Quietust)
-  * Stopped a lever linking job from being added if it is already in progress
-  * Stopped fort dwarves from throwing their clothes off into a pile during unretire after being visited by adventurer
-  * Stopped fort animals from getting clothing during unretire after being visited by adventurer
-  * Stopped animals with kills from getting trinkets from corpses
-  * Stopped animals from growing attached to and bestowing names on items in their possession
-  * Stopped embark screen from setting neighbors with regular sites that happen to have zombies (due to another bug)
-  * Made "place item in tomb" job governed by burial instead of item hauling labor
-  * Made outside refuse order respect inside/outside instead of above ground/subterranean
-  * Stopped inside above ground corpses/corpse pieces from being destroyed periodically
-  * Stopped evaporation of inside above ground water from depending on the weather
-  * Stopped water items on the ground from being cleanable -- they evaporate instead
-  * Made water spatter evaporate properly over time
-  * Sped up extrasensory detection
-  * Sped up tracking of food consumption
-  * Re-enabled effects of cave adaptation
+  * Stopped IMMOBILE creatures from trying to flee terrain
+  * Fixed problem with fear vs. stating proper opinion
+  * Stopped harvest/plant jobs from being added to farms slated for destruction
+  * Deconstructed farm plot loses items
 
 -------------
 

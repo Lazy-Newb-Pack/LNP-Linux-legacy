@@ -1,0 +1,37 @@
+Up-down Stairs
+[OVERRIDE:88:T:ConstructedStairUD:text:158]
+[OVERRIDE:88:T:FeatureStairUD:text:158]
+[OVERRIDE:88:T:FrozenStairUD:text:158]
+[OVERRIDE:88:T:Grass1StairUD:text:158]
+[OVERRIDE:88:T:Grass2StairUD:text:158]
+[OVERRIDE:88:T:LavaStairUD:text:158]
+[OVERRIDE:88:T:MineralStairUD:text:158]
+[OVERRIDE:88:T:SoilStairUD:text:158]
+[OVERRIDE:88:T:StoneStairUD:text:158]
+[OVERRIDE:88:T:UnderworldGateStairUD:text:158]
+
+Doors
+[OVERRIDE:197:B:DOOR:Door::map:216]
+[OVERRIDE:240:B:DOOR:Door::map:216]
+[OVERRIDE:79:B:DOOR:Door::map:216]
+[OVERRIDE:186:B:DOOR:Door::map:216]
+[OVERRIDE:15:B:DOOR:Door::map:216]
+
+Bridge borders
+[OVERRIDE:186:B:BRIDGE:Bridge::text:186]
+[OVERRIDE:187:B:BRIDGE:Bridge::text:187]
+[OVERRIDE:188:B:BRIDGE:Bridge::text:188]
+[OVERRIDE:200:B:BRIDGE:Bridge::text:200]
+[OVERRIDE:201:B:BRIDGE:Bridge::text:201]
+[OVERRIDE:205:B:BRIDGE:Bridge::text:205]
+
+Windows
+[OVERRIDE:177:B:WINDOW_ANY:WindowGlass::map:245]
+[OVERRIDE:177:B:WINDOW_ANY:WindowGem::map:245]
+
+Bin
+[OVERRIDE:88:I:BIN:BIN::text:255]
+
+Hive
+[OVERRIDE:22:B:HIVE:Hive::text:22]
+[OVERRIDE:22:I:TOOL:TOOL:13:text:22]

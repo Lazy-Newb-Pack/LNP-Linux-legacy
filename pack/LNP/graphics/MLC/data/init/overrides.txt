@@ -1,0 +1,168 @@
+# This file should be placed into data/init and allows to load additional tilesets
+# and override tile numbers for certain item/building types.
+
+# Load additional tileset if you ran out of tiles in main and text fonts
+# [TILESET:font.png:fullscreenfont.png] 
+
+# Add an override
+# [OVERRIDE:Tile:Kind:Id:Type:Subtype:Tileset:NewTile]
+# Tile is the original tile number
+# Kind is I for item or B for building
+# Id see buildings_other_id.h or items_other_id.h
+# Type see building_type.h or item_type.h, may be empty
+# Subtype is some numberical value, don't know what values correspond to what
+# Tileset is an index of tileset to use
+#   0 is the main tileset
+#   1 is a text tileset loaded by this plugin
+#   2 and so on are tilesets specified above
+# NewTile is the new tile number
+
+# Override tile if it didn't match any other rules
+# Behaviour of this may change in future
+# [OVERRIDE:Tile:Tileset:NewTile]
+
+# Examples
+
+# [OVERRIDE:177:B:WINDOW_ANY:WindowGem::0:48]
+# Will make gem windows show as coffins (why not)
+
+# [OVERRIDE:197:I:DOOR:::0:197]
+# [OVERRIDE:197:B:DOOR:::0:197]
+# [OVERRIDE:197:0:229]
+# Will make floor engraving in progess to show as anvils instead of doors
+
+# Check all values carefully as there's not error checking currently and the game will
+# crash if you specify non-existing tileset index, for example.
+
+[TILESET:MLC 16x16 - Overrides.png:MLC 16x16 - Overrides.png] 
+
+[OVERRIDE:210:I:CHAIR:::2:0]
+[OVERRIDE:210:B:CHAIR:::2:0]
+
+[OVERRIDE:209:I:TABLE:::2:16]
+[OVERRIDE:209:B:TABLE:::2:16]
+
+[OVERRIDE:197:I:DOOR:::2:1]
+[OVERRIDE:197:B:DOOR:::2:1]
+
+[OVERRIDE:88:I:FLOODGATE:::2:2]
+[OVERRIDE:88:B:FLOODGATE:::2:2]
+
+[OVERRIDE:227:I:CABINET:::2:3]
+[OVERRIDE:227:B:CABINET:::2:3]
+
+[OVERRIDE:233:I:BED:::2:4]
+[OVERRIDE:233:B:BED:::2:4]
+
+[OVERRIDE:155:I:HATCH:::2:5]
+[OVERRIDE:155:B:HATCH:::2:5]
+
+[OVERRIDE:239:I:SLAB:::2:6]
+[OVERRIDE:239:B:SLAB:::2:6]
+
+[OVERRIDE:48:I:COFFIN:::2:7]
+[OVERRIDE:48:B:COFFIN:::2:7]
+
+[OVERRIDE:234:I:STATUE:::2:8]
+[OVERRIDE:234:B:STATUE:::2:8]
+
+[OVERRIDE:19:I:CAGE:::2:9]
+[OVERRIDE:19:B:CAGE:::2:9]
+
+# Space (1 tile)
+
+[OVERRIDE:251:I:WEAPON_RACK:::2:11]
+[OVERRIDE:251:B:WEAPON_RACK:::2:11]
+
+[OVERRIDE:14:I:ARMOR_STAND:::2:12]
+[OVERRIDE:14:B:ARMOR_STAND:::2:12]
+
+[OVERRIDE:135:I:TOTEM:::2:13]
+
+[OVERRIDE:232:I:TRACTION_BENCH:::2:14]
+[OVERRIDE:232:B:TRACTION_BENCH:::2:14]
+
+[OVERRIDE:88:B:ARCHERY_TARGET:::2:15]
+
+[OVERRIDE:15:I:ANY_WEBS:::2:17]
+
+[OVERRIDE:21:I:CHAIN:::2:18]
+[OVERRIDE:21:B:CHAIN:::2:18]
+
+[OVERRIDE:73:B:SUPPORT:::2:19]
+
+# Is the tile number for this correct?
+[OVERRIDE:47:B:WEAPON_UPRIGHT:::2:20]
+
+# NS
+[OVERRIDE:186:B:AXLE_HORIZONTAL:::2:21]
+[OVERRIDE:179:B:AXLE_HORIZONTAL:::2:22]
+# EW
+[OVERRIDE:205:B:AXLE_HORIZONTAL:::2:23]
+[OVERRIDE:196:B:AXLE_HORIZONTAL:::2:24]
+
+[OVERRIDE:9:B:AXLE_VERTICAL:::2:25]
+[OVERRIDE:111:B:AXLE_VERTICAL:::2:26]
+
+[OVERRIDE:15:B:GEAR_ASSEMBLY:::2:27]
+[OVERRIDE:42:B:GEAR_ASSEMBLY:::2:28]
+
+[OVERRIDE:94:B:TRAP:::2:29]
+
+# Chest/coffer
+[OVERRIDE:146:I:BOX:::2:30]
+[OVERRIDE:146:B:BOX:::2:30]
+
+# Bag
+[OVERRIDE:11:I:BOX:::2:31]
+[OVERRIDE:11:B:BOX:::2:31]
+
+[OVERRIDE:35:I:GRATE:::2:32]
+[OVERRIDE:35:B:GRATE_FLOOR:::2:32]
+[OVERRIDE:215:B:GRATE_WALL:::2:33]
+
+[OVERRIDE:215:B:BARS_FLOOR:::2:34]
+[OVERRIDE:19:B:BARS_VERTICAL:::2:35]
+
+[OVERRIDE:176:B:WINDOW_ANY:::2:36]
+
+[OVERRIDE:09:B:WELL:::2:37]
+# under construction :)
+[OVERRIDE:111:B:WELL:::2:38] 
+
+# All weapons look like swords for now
+# It would be good to make a few variations
+[OVERRIDE:47:I:WEAPON:::2:39]
+[OVERRIDE:91:I:SHIELD:::2:40]
+[OVERRIDE:91:I:ARMOR:::2:41]
+[OVERRIDE:91:I:SHOES:::2:42]
+[OVERRIDE:91:I:HELM:::2:43]
+[OVERRIDE:91:I:GLOVES:::2:44]
+[OVERRIDE:91:I:PANTS:::2:45]
+
+# Space (2 tiles)
+
+# NW Corner
+[OVERRIDE:201:B:BRIDGE:::2:48]
+# NE Corner
+[OVERRIDE:187:B:BRIDGE:::2:49]
+# SW Corner
+[OVERRIDE:200:B:BRIDGE:::2:50]
+# SE Corner
+[OVERRIDE:188:B:BRIDGE:::2:51]
+# N Side
+[OVERRIDE:210:B:BRIDGE:::2:52]
+# S Side
+[OVERRIDE:208:B:BRIDGE:::2:53]
+# E Side
+[OVERRIDE:181:B:BRIDGE:::2:54]
+# W Side
+[OVERRIDE:198:B:BRIDGE:::2:55]
+# NS Side
+[OVERRIDE:186:B:BRIDGE:::2:56]
+# EW Side
+[OVERRIDE:205:B:BRIDGE:::2:57]
+# Center (smooth)
+[OVERRIDE:43:B:BRIDGE:::2:58]
+# Center (rough)
+[OVERRIDE:247:B:BRIDGE:::2:59]
