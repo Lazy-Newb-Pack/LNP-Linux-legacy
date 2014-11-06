@@ -1,0 +1,2108 @@
+See readme.txt for general information about the release.
+See file_changes.txt for new init/interface information.
+See command_line.txt for information on world generation from command lines.
+
+
+TO BACK UP SAVES:
+
+(1) Copy the relevant region folder in "data/save" to a safe location.
+(2) When you want to reuse it, copy that region back to "data/save".  Do *NOT* overwrite an old folder, as it might leave residual files.
+
+Please *DO* back up saves.  Although the game has permanent death and you might want to play it in that spirit, the game
+is also an alpha, and your world might become corrupted by an error.  You can also make use of the auto save features settable in "data/init/init.txt".
+
+
+
+TO USE OLD SAVES WHEN UPDATING VERSIONS:
+
+(0) ***Note that this version of DF is only compatible with saves from 0.40.03+.***
+(1) Unzip the new dwarves into a *NEW* folder.
+(2) Copy "data/save" from the old folder into the new folder, or copy over the relevant region folders you've saved to "data/save".  Keep a backup in case something is wrong with the new version.
+(3) When you start, your world should be accessible and ready to play.
+
+Unzipping the new dwarves into your old folder will work most of the time, but if files have changed, it can crash, or worse yet, destroy your saves.
+
+
+
+TO CHANGE DISPLAY AND SOUND OPTIONS:
+
+Go to "data/init/init.txt".  These options will take effect the next time you start the game.
+
+
+
+IF YOUR KEYBOARD ISN'T WORKING:
+
+If you can get to the ESC keybindings menu (from the start screen, press ESC and then 2/8 to scroll to Key Bindings), you can set your key bindings.  If your "?" key on your keyboard doesn't work for help, you can set the keybinding properly here.  It might not display as a "*".  You can set the display up properly in "data/init/interface.txt" using the display strings at the top of the file.
+
+******************************************************
+
+Release notes for 0.40.14 (October 25, 2014):
+
+Here is the next release.  The focus was not bugs this time, but rather completing the work started on emotions as well as basic fruit harvesting.  A note -- adding stepladders to old saves was not possible, so you'll have to wait for a new world for those.  Fallen fruit can still be gathered in old saves using the new plant gathering zones.  Dwarves in old saves have also had their current thoughts wiped clean to make way for the new emotion/circumstance pairs.
+
+New stuff
+	(*) Dwarf thoughts have been replaced with personality-dependent emotion/circumstance pairs
+	(*) Dwarf happiness has been replaced by a longer-term stress level, and a few new effects have been added
+	(*) Plant gathering zones can be used to set up fruit harvesting from trees using the new stepladder
+	(*) Plant gathering zones can also handle the old shrub jobs, and fallen fruit can also be gathered from zones
+	(*) Shrubs now have their berries/etc. gathered properly (bean-type plants that only have edible seeds are still an issue)
+	(*) As a stopgap, farm plot plants yield viable growths out of season upon harvest
+	(*) In adventure mode, it is possible to ask about people about yourself, other people, and how they are feeling
+
+Other bug fixes/tweaks
+	(*) Stopped IMMOBILE creatures from trying to flee terrain
+	(*) Fixed problem with fear vs. stating proper opinion
+	(*) Stopped harvest/plant jobs from being added to farms slated for destruction
+	(*) Deconstructed farm plot loses items
+
+******************************************************
+
+Release notes for 0.40.13 (September 17, 2014):
+
+This release fixes some more bugs, old and new.
+
+Major bug fixes
+	(*) Fixed item storage crash related to minecart being destroyed
+	(*) Stopped dwarves from trying to clean their own missing or internal body parts
+	(*) Cleared old activities properly so they aren't considered by dwarves for too long
+
+Other bug fixes/tweaks
+	(*) Decreased frequency of conversation-skill-building dwarf chats
+	(*) Reworked grazing formula, used fractional exponent to scale properly according to size
+	(*) Made grazing tile selection less top-left biased and made it prefer non-creature'd tiles with denser grass
+	(*) Made butcher jobs for corpses not in piles respect z coordinate of building (Quietust)
+	(*) Handled some issues with subterranean areas being removed through trees
+	(*) Made workshop profile skill checks ignore skill rust
+	(*) Fixed problem with siege operator skill check (Quietust)
+	(*) Stopped a lever linking job from being added if it is already in progress
+	(*) Stopped fort dwarves from throwing their clothes off into a pile during unretire after being visited by adventurer
+	(*) Stopped fort animals from getting clothing during unretire after being visited by adventurer
+	(*) Stopped animals with kills from getting trinkets from corpses
+	(*) Stopped animals from growing attached to and bestowing names on items in their possession
+	(*) Stopped embark screen from setting neighbors with regular sites that happen to have zombies (due to another bug)
+	(*) Made "place item in tomb" job governed by burial instead of item hauling labor
+	(*) Made outside refuse order respect inside/outside instead of above ground/subterranean
+	(*) Stopped inside above ground corpses/corpse pieces from being destroyed periodically
+	(*) Stopped evaporation of inside above ground water from depending on the weather
+	(*) Stopped water items on the ground from being cleanable -- they evaporate instead
+	(*) Made water spatter evaporate properly over time
+	(*) Sped up extrasensory detection
+	(*) Sped up tracking of food consumption
+	(*) Re-enabled effects of cave adaptation
+
+******************************************************
+
+Release notes for 0.40.12 (September 10, 2014):
+
+This release has some more bug fixes in it, mostly related to healthcare, prisoners and morale.
+
+Major bug fixes
+	(*) Made dwarves that fall unconscious while going to rest or sleep location not get stuck on the spot
+	(*) Fixed symptoms of wrestling error that could cause dwarves to freeze in place forever
+	(*) Stopped civs from sending a squad when they failed to find thieves/snatchers to send (led to small sieges in the first year)
+	(*) Allowed recover wounded jobs to bring dwarves to hospital floor if no beds are available
+	(*) Stopped recover wounded jobs from bringing dwarves to non-hospital beds
+	(*) Made caged/chained people request water/food with proper frequency
+
+Other bug fixes/tweaks
+	(*) Made doctors remove dwarves from traction properly (checks weekly)
+	(*) Made dwarves move/get moved to new hospital more quickly if old hospital is removed
+	(*) Roots function as ramp walls properly now
+	(*) Can cross ramps covered by bridges in adventure mode
+	(*) Made critters that join up with your adventurer stop traveling if they were on a journey
+	(*) Made critters with entity-based army duties unwilling to join adventurers
+	(*) Stopped critters joined with you from considering moving, joining armies and other issues
+	(*) Added ability to repeat, suspend and cancel jobs from unit/job lists
+	(*) Made civ-level nobles attached to locations (e.g. barons) include their site in their name when possible
+	(*) Made dwarves that have been grabbed for chaining/etc. cancel their jobs properly
+	(*) Stopped certain events (like giving birth, resting or getting an artifact mood) from causing a working dwarf to suspend jobs for the whole fort
+	(*) Stopped chained mothers from seeking wandering infants
+	(*) Changed name of chaining/other jobs to include target instead of saying "animal" for everybody
+	(*) Made certain creatures like minotaurs act less civilized (requires LARGE_PREDATOR in raws)
+	(*) Stopped alarm moods from persisting long beyond event itself
+	(*) Made non-soldier adventure companions not default to flight (this could include giant demons, etc.)
+	(*) Stopped companions with stranger-kill ethics from starting no-quarter fights with strangers the party meets
+	(*) Made stranger-kill creatures respect their own prisoners/etc.
+	(*) Stopped adventure mode critters from persisting on outmoded paths when destination has changed
+	(*) Made sure dipscripts were loaded in the same order on different platforms (Quietust)
+	(*) Trading a worthless item for a non-worthless item no longer results in you initiating a robbery
+	(*) Wooden chests brought by elven traders are grown now
+	(*) Seeds that should be edible raw in adv mode are now edible
+
+******************************************************
+
+Release notes for 0.40.11 (September 3, 2014):
+
+Here is the first release for September!  As usual, a few bugs like sleep screwups, cowardly companions and wandering children might persist for a while into old saves until the system clears itself out.
+
+Major bug fixes
+	(*) Accounted for site populations properly when moving around (stopping doubling in lairs/player forts)
+	(*) Removed the old animal people camp items, as they cause duplication errors and will work with a better overall army framework later
+	(*) Handle some more instances where led creatures could drag their leader into conflicts (a dwarf caging a goblin, for example)
+	(*) Made historical figures react properly to historical undead
+	(*) Made chained animal checks respect z coordinate properly
+	(*) Gave your companions a bit of a courage boost in terms of intervening in conflicts
+	(*) Fixed some problem with resource stockpiles causing shop types to revert on insurrection
+
+Other bug fixes/tweaks
+	(*) Made dwarf children not seek their mothers when idle, especially in violation of area restrictions
+	(*) Made dwarves prefer claimable rooms to dormitory master beds
+	(*) Stopped uninjured dwarves from sleeping in beds in active hospital zones
+	(*) Tried to make items in markets/homes match races more closely (cannot be completed until later -- right now, resources are based on original site owners)
+	(*) Stopped brief necro master-apprentice relationships from forming in towns
+	(*) Stopped other necro tower townish behavior like fake grazing disputes
+	(*) Made sleeping on the floor respect burrow assignments
+	(*) Made strength/agility/tissue layer effects work for gaits (Quietust)
+	(*) Stopped overuse of plant structure tag causing people to say they preferred to eat trees
+	(*) Fixed other issues causing dwarves to be able to prefer the wrong (generated) materials
+	(*) Stopped adventure skill list from overflowing on status screen
+	(*) Discounted rust when listing relevant skill for squad candidate
+	(*) Stopped evaporation of 1/7 liquid when over 7/7 liquid of the same kind
+	(*) Made flying adventurer able to fly over ramps without using them
+	(*) Fixed missing bindings for animal training keys (Quietust)
+	(*) Adjusted firing rate for projectiles again to make them more like the older versions
+	(*) Made adamantine clothing available in arena
+
+******************************************************
+
+Release notes for 0.40.10 (August 24, 2014):
+
+Here is another round of fixes.  Note that for morale fixes in old saves there could be some persistent alarm data that causes people to continue to run for a bit, even for a few in-game hours in some cases, so you might need to let things work themselves out.
+
+Major bug fixes
+	(*) Fixed crash that could happen when refugee rumors were created
+	(*) Fixed crash from visiting former player fortress with adventurer if certain army is present
+	(*) Fixed crash related to surgery
+	(*) Fixed crash that happened when it considered certain units in play for succession
+	(*) Stopped a conversation crash from talking to mute creatures about their troubles
+	(*) Allowed flying/climbing wilderness critters to work their way off the map
+	(*) Fixed problem allow the player to become invisible among many units even when clearly visible
+	(*) Made running away in terror/fear respect only valid combat location information
+	(*) Made genuine retreat and alarm state more separate from each other (being alarmed was being equated with flight for morale)
+	(*) Stopped certain old conflicts from causing alarm
+	(*) Made people that are attacked briefly have some knowledge of attacker's position
+	(*) Stopped certain jobs from being able to teleport items and engage in other action-at-a-distance antics
+	(*) Stopped necromancer towers from doing various inappropriate townish things that lead to tower proliferation etc.
+	(*) Fixed some reclaim/unretire bugs involving unavailable seeds
+	(*) Adjusted projectile firing speed which became broken during wagon fix
+
+Other bug fixes/tweaks
+	(*) Adjusted emotional strain vs. willpower etc. calculation
+	(*) Made non-extra-sensory creatures also respect z coord of potential targets
+	(*) Fixed a pathing lag associated to mood dwarves not being able to get to their buildings
+	(*) Added stockpile option for cut stones
+	(*) Removed obsolete relieved/drafted thoughts
+	(*) Made extra-sensory creatures even less perturbable by critters sensed through layers of rock
+	(*) Stopped erroneous conflicts between certain hunting creatures
+	(*) Stopped shared/wrestled items from being used for block/parry
+	(*) Stopped creatures with multiple attacks like hydra from stacking attack modifiers incorrectly
+	(*) Made attacker always look at target upon initiating attack
+	(*) Ordered farm plot plant lists by seed availability/name
+	(*) Lowered cap for wrestle skill gain so it wouldn't be hit triple digits attacking large opponents
+	(*) Removed double entry of "slabs" from stocks screen
+	(*) Adjusted 'v' menu location for window height (so it wouldn't overwrite certain lists, etc.)
+	(*) Fixed a few typos causing double periods in personality paragraphs
+
+******************************************************
+
+Release notes for 0.40.09 (August 17, 2014):
+
+The cleaning continues with this release!  Some notes on poles:  For no-pole, you'll need to handle glacier and tundra biomes in one way or another (wider temperature range, remove region requirements, etc.).  For instance, to make a valid no-pole large island, all I needed to do was widen the temperature max/min from 75/25 to 110/-10.  This made a few glaciers and tundras scattered around the world, and it also allowed a few tropical biomes to appear.  For no-pole, base temperatures of at least 85 make an environment tropical (worlds with poles continue to use latitude), though 75 works for certain biomes.  You should be able to input your own temperatures in the txt parameters now without the game applying a polar shift.  No-pole worlds do not yet experience any seasonal temperature variations, and worlds with two poles still have seasons at the same time of year on either side of the equator until that can be made less confusing.
+
+Major bug fixes
+	(*) Fixed problem causing domestic underground animals to be placed beyond their number (and then replaced at that new number)
+	(*) Made people not so eager to jump in on the side of their relatives and friends if the relative/friend is berserk/etc.
+	(*) Made creatures prefer to flee normally if possible (rather than jumping off cliffs etc.)
+	(*) Stopped liquid flows in confined spaces from sometimes making items disappear
+	(*) Made items that froze in ice reappear properly when ice melts
+	(*) Allowed dwarves interested in marriage to start relationships properly (Quietust)
+	(*) Removed some vestigial code stopping wagons from moving properly after move/attack speed split
+	(*) Fixed a wagon AI error that caused them to fail to unload sometimes
+	(*) Gave wagons the ability to go past each other in certain instances
+	(*) Made invaders not come back as ghosts
+	(*) Stopped non-historical dwarves from coming back as ghosts (put in fix for old saves that should lay them to rest soon after unpause)
+	(*) Stopped ghosts from being considered in regular sight code
+	(*) Fixed the defend burrow order
+	(*) Allowed items made from gem materials (including large gems) to be stored in finished goods pile
+	(*) Fixed broken logic that made trade good hauling require both trade good hauling and lever operation labors
+
+Other bug fixes/tweaks
+	(*) Fixed up quarry bush bag job vs. rock nuts
+	(*) Added appropriate announcements for some additional circumstances under which a fort dwarf could assume a civ-level position
+	(*) Added embark warning if civ is dead
+	(*) Added optional confirmation window after preparing embark (default: pops up if points remain)
+	(*) Printed job after name when following unit
+	(*) Marked dwarves as "New Arrival" on unit/job screen instead of "No Job" while they are new
+	(*) Added pole-setting parameters for world gen, allowed north+south pole and no-pole options
+	(*) Fixed an error causing nearby site maps to be offloaded too often
+	(*) Made hill dwarf sites put animals in pastures properly
+	(*) Made animals not placed in pasture/waste/yard get placed even if their preferred type isn't available
+	(*) Fixed some manual typos (Gorobay)
+	(*) Initialized strict pop cap to 220 if not present in d_init
+	(*) Made alerts without names show properly as "Alert State #" in squad mode
+	(*) Finished updating pineapple raws
+	(*) Made several export filenames use the format (region)-YYYYY-MM-DD-(etc)
+	(*) Added error for unrecognized CREATURE in entity raw
+
+******************************************************
+
+Release notes for 0.40.08 (August 11, 2014):
+
+A few new errors crept in.  Hopefully they will creep out now.
+
+Major bug fixes
+	(*) Stopped ESC from ending the game when setting up fort or adventurer
+	(*) Made constructions use materials properly again
+
+******************************************************
+
+Release notes for 0.40.07 (August 10, 2014):
+
+Enjoy another set of bug fixes!
+
+Major bug fixes
+	(*) Fixed crash that involved promoting certain stops above their route
+	(*) Removed some stale invasion data preventing further invasions
+	(*) Stopped dwarves from breeding like animals, technically speaking
+	(*) Made diplomats search for civ-level land-holders properly
+	(*) Fixed some path buffering problems that could screw up neighbor list etc.
+	(*) Fixed a few problems with undead AI
+	(*) Stopped sleeping/incapacitated dwarves from doing things
+	(*) Fixed problem with squad leader assignment in military screen
+	(*) Made sparring people use their weapons properly
+	(*) Made unretired forts unhide fully, flowing from surface and all units
+
+Other bug fixes/tweaks
+	(*) Made masterpiece announcements wait for all item info to be decided before trying to print item name
+	(*) Eliminated an OSX key conflict for text deletion
+	(*) Made install colony jobs respect each other's targets
+	(*) Made install colony jobs react to missing hive at gather destination
+	(*) Added another adjustment to designation jobs to help them vs. paths that became bad
+	(*) Required animal hauling labor for various jobs
+	(*) Added new labors for hauling trade goods, pulling levers, removing constructions and hauling water
+	(*) Attached trap cleaning to clean labor
+	(*) Made laborless building construct/destroy jobs take furniture hauling
+	(*) Allowed burrows to restrict workshop item search or not (default off)
+	(*) Added assigned citizen number to burrow list
+	(*) Stopped paralyzed injured dwarves from spamming rest cancellation messages
+	(*) Stopped some CPU-intensive temperature wobble (ag)
+	(*) Cleaned up the creature pressure plate interface
+	(*) Made paved roads only need as much material as required by the road tiles (rather than the whole rectangle)
+	(*) Made translated name appear properly at the top of the screen when viewing creature
+	(*) Stopped dwarves from liking special items
+	(*) Fixed a problem with unnamed historical figure statue/figurine item names and descriptions
+	(*) Fixed color display problem in civ list
+	(*) Gave not-you civs range of 30 path-wise for neighbor status on embark (towers still 10)
+	(*) Allowed use of number in burrow names without moving cursor
+	(*) SDL string question mark should no longer enter as a pipe, and pipe should be enterable
+	(*) Respected question mark entry in several places
+
+******************************************************
+
+Release notes for 0.40.06 (August 3, 2014):
+
+Another bug fix release.
+
+Major bug fixes
+	(*) Fixed a problem causing certain jobs to become stuck when their paths were interrupted
+	(*) Stopped dwarves from starting conflicts with led creatures
+	(*) Stopped led creatures from wandering away from leader
+	(*) Made buildings with burrows require a connectivity check when searching for items
+	(*) Made dwarves forbid webs that are "accessible" but require pathing through unexplored areas
+	(*) Reduced number of automation jobs created
+	(*) Made some jobs respect fish/vermin amount when producing products
+	(*) Make potash from lye respects lye stacks
+	(*) Made jobs requiring several e.g. bones not need many individual stacks
+	(*) Made thread spinning job not use up all of a stack of wool
+	(*) Stopped decoration job from consuming entire stacks
+	(*) Stopping using entire stack of meat to bait animal trap
+	(*) Stopped reactions from consuming way too many raw materials from stacks (ag), though reactions that use very small amounts still use at least 1 item from a stack
+	(*) Stopped mining of root from removing the tree
+
+Other bug fixes/tweaks
+	(*) Stopped announcement of theft of hidden reclaimed underground objects
+	(*) Stopped birth announcements for hidden creatures and separated wild/tame animal birth announcements
+	(*) Stopped hidden/forbidden buildings from being listed in lever link menu
+	(*) Stopped hidden/forbidden buildings from appearing in room list
+	(*) Stopped hidden items from appearing in military equipment lists
+	(*) Made trees update indoor/etc. settings properly upon removal
+	(*) Made building/stockpile menus to respect different window heights
+	(*) Made hunger/thirst/etc. indicators display properly in travel
+	(*) Made vision arc display turn off for blinded creatures
+	(*) Made scarred over wounds to broken functional layers continue to impair function
+	(*) Removed requirement that a creature have a baby/child state to breed
+	(*) Fixed plant growth consumption preferences (Quietust)
+	(*) Fixed display of tree roots designated for mining
+	(*) Fixed reversed display of zone sizing controls
+	(*) Made random creatures only spit liquid spittle
+	(*) Fixed state token for mud creature tissues (Quietust)
+	(*) Stopped traders from bringing unspecified "liquid" from bloodsucking animals (Quietust)
+	(*) Fixed problem causing multiple plant listings in stockpile
+	(*) Made jobs properly cut away pieces of corpses for use (so that reanimation etc. respects partial use)
+	(*) Made reactions count up and trim away body component materials properly
+	(*) Added wound description for partially butchered parts
+	(*) Made globs stackable
+	(*) Fixed unretire message on linux/osx
+	(*) Stopped dwarven forges in world gen sites from using thrones instead of anvils
+	(*) Fixed message for being caught in a cloud of vapor/dust (Quietust)
+	(*) Removed special materials from dwarf prefs
+	(*) Clarified generated items in stockpiles (can't remove yet)
+	(*) Fixed adjectives for randomly generated blowdarts/bolts (old saves still broken)
+	(*) Made burrow indicator show over hidden areas
+	(*) Fixed broken language selection for certain names
+	(*) Can copy basic item type/subtype with reagent using GET_ITEM_DATA_FROM_REAGENT:<reagent token>:NONE
+
+******************************************************
+
+Release notes for 0.40.05 (July 27, 2014):
+
+This is a bug fix and optimization release, which is probably something we should get used to for a while, since there is a lot left to do!  I've tried to make it possible to play in larger worlds again, but there's also more that can be done.
+
+Major bug fixes
+	(*) Fixed several large slow-down culprits
+	(*) Stopped trees from growing through floors
+	(*) Fixed a problem causing the suspension of constructions (old saves with affected jobs will still need to restart them) (ag)
+	(*) Fixed a few problems with hospital code causing them to overstock item (ag)
+	(*) Fixed problem stopping underground fishing (UristDaVinci/Quietust)
+	(*) Made cultures that oppose intruders more lax when in places controlled by less wary groups (one cause of marketplace knifefights)
+	(*) Made adventure-mode ambushers somewhat more in tune with their task
+	(*) Made master soldiers stop reverting back to corresponding regular soldier type
+	(*) Fixed crash that could occur when looking at adventure log while traveling
+
+Other bug fixes/tweaks
+	(*) Stopped clearing professions upon achieving master soldier type
+	(*) Fixed the population cap
+	(*) Made it possible to detect plantings too late in the season again (Quietust)
+	(*) Stopped migrants from retaining certain adv/etc. flags harmful to their integration into the fort (making them 'hostile')  Note: those from old saves might take off articles of clothing and store them and other strange things, since the integration could not be made complete easily...
+	(*) Fixed problem with non-entity armies/travelers failing to evaluate nearby creatures properly
+	(*) Tried to improve prioritization for creatures trying to handle many targets, especially w/ extra senses (caused combat AI paralysis)
+	(*) Stopped fliers from wanting to jump (and sometimes colliding mid-air)
+	(*) Added some basic climbing skill to wg/etc. soldiers, esp. thieves
+	(*) Vermin can escape from non-artifact containers properly (Quietust)
+	(*) Caravans check weapon type properly for material selection (Quietust)
+	(*) Diplomats that wanted bodyguards should get them now (Quietust)
+	(*) Stopped aquarium check from turning off other vermin code (Quietust)
+	(*) Fixed crash that happened in the arena when doing v-p on a dwarf with a weapon
+	(*) Creature art value considered properly by civs now (Quietust)
+	(*) Fixed problem dividing out item milligrams in weapon velocities (UristDaVinci)
+	(*) Can now melt metal chests (Quietust)
+	(*) Handled a few problems causing extra/erroneous long patrol thoughts (Quietust)
+	(*) Made children get full list of default labors upon growing up and respected any existing skills
+	(*) Stopped migrant historical children from receiving labors
+	(*) Made underground populations properly respect layer size (the numbers can get very high, but blame the giant under-ocean caves in part)
+	(*) Stopped hyper-obese digesting dwarves from constantly recalculating insulation/mass data (ag)
+	(*) Fixed some problems causing certain jobs to check too many items (angavrilov/Quietust)
+	(*) Allowed egg-laying critters without baby/child state to have viable eggs
+	(*) Stopped listing dead non-fort animals/etc. as missing
+	(*) Fixed a rounding error with projectile calculations (Pirate Bob/UristDaVinci)
+	(*) Adjusted contact area/depth of ammo, max velocity of shooters (Joben)
+	(*) Fixed a problem causing saplings to grow up 10x as fast as they should
+	(*) Stopped sparring from being placed in combat reports
+	(*) Displayed proper key for viewing agreements in civ screen
+	(*) Stopped dwarves from swiping hospital goods from the caravan
+	(*) Made the game respect more circumstances whereby medical inventory items are removed (fixing the crutch speed bug, for instance)
+	(*) Stopped ghosts from being able to realize dreams after they are dead
+	(*) Fixed problem where tools made from adamantine wafers required the wrong material amounts (Quietust)
+	(*) Fixed problem with seed initialization for mid-level maps that could cause inconsistency (Quietust)
+	(*) Fixed broken lack of cage/chain thought for law dwarf (Quietust)
+	(*) Adjustments to animal people frequencies (see file_changes.txt)
+	(*) Made king cobra people legless like other snake people
+	(*) Fixed a problem causing the tortoises not to appear
+	(*) Made random creature spines connect up properly
+	(*) Fixed material values for obsidian (UristDaVinci)
+	(*) Various typos fixed (see file_changes.txt) (thanks to Gorobay for finding most of these)
+	(*) Re-added elven diplomacy, though it is still unchanged from its first incarnation
+
+******************************************************
+
+Release notes for 0.40.04 (July 20, 2014):
+
+This is mainly another crash-fix release, though I was able to handle some other problems as well.  I'm still hoping to get to optimizations (for the third time in these release notes!), but as usual that depends on stability.  As you'll note below, a few of the older bugs are gone -- as we continue in this process, I'll work fixes for old bugs into the mix.
+
+Major bug fixes
+	(*) Fixed a crash with pathing for jumps
+	(*) Fixed a crash related to invading squads attempting to train
+	(*) Fixed an overpopulation bug for civilized critters and a related one for site animals
+	(*) Fixed problem with retired fort uniform settings crashing later visits to the fort
+	(*) Stopped a crash associated to misplaced books/slabs (root cause remains, added some logs)
+	(*) Fixed position appointment issue that caused some instability
+	(*) Tried to make idle code somewhat better about climbing while still getting dwarves out from being stuck
+	(*) People with a weapon should use it with the proper frequency now
+
+Other bug fixes/tweaks
+	(*) Fixed problem with animal training/taming vs. lingering combat data (caused job cancel spam and inability to complete jobs)
+	(*) Stopped nearby objects from being teleported by construction removal and a related problem with the item loop (ag/Quietust)
+	(*) Made site finder properly indicate flux layers (Quietust)
+	(*) Made game better respect existing directory structure in data/save when creating new directories
+	(*) Made tops of walls appear properly when trees above walls are removed
+	(*) Made strangulation take less time
+	(*) Enhanced sapling survivability
+	(*) Fixed a problem that caused vermin to occasionally be generated out of the loaded area
+	(*) Fixed a problem that corrupted the information about items on the ground with temperature changes
+	(*) Fixed some brokenness with climbing AI vs. ledge tops
+	(*) Fixed a broken instance of chasing opponent AI vs unwalkable spaces
+	(*) Made climbing have a higher path cost
+	(*) Made people less likely to climb after a failure
+	(*) Babies don't start strapped with a knife
+
+******************************************************
+
+Release notes for 0.40.03 (July 13, 2014):
+
+Many more crash issues fixed.  Mystery babies and large city walls had a corrupting effect that was not possible to manage, so saves are not compatible yet again.  I'll try to keep saves together as we move forward, but there aren't any guarantees, especially this early on.  If things have settled down on the stability front, I can finally move on to the optimizations and other issues.  We'll see what happens!
+
+Major bug fixes
+	(*) Fixed relationship screen crash from certain historial/old-player-fort migrants and adventurer migrants
+	(*) Fixed adv retirement cloning
+	(*) Fixed crash when game tries to realize certain low population sites
+	(*) Fixed crash/corruption problem from large city walls
+	(*) Fixed crash when asking about site trade partners
+	(*) Fixed problem causing travelers originating from realized forts/sewers/dungeons to go out of map bounds (caused crashes)
+	(*) Stopped the babies of the world from appearing in the unit list (and associated minimap crash)
+
+Other bug fixes/tweaks
+	(*) Made farm plant list refresh properly with season selection
+
+******************************************************
+
+Release notes for 0.40.02 (July 10, 2014):
+
+It's not DF without save corruption!  This release should fix an issue with autosaves corrupting and causing various crash issues down the line.  For this reason 0.40.01 saves are not compatible with this version -- I'm going to try to avoid compatibility breaks as we go, but sometimes they happen.  I've also fixed the talk-to-deity crash (closely related to the shout-when-nobody-is-around crash, also fixed), the blocking crash, and some other bad issues.  Due to the save corruption, I didn't get a chance to work on the calendar speed, but assuming this release works as planned, I should be able to jump into that now.
+
+Major bug fixes
+	(*) Stopped autosave features from corrupting worlds (thanks to everybody that helped sort that out so quickly!)
+	(*) Made the game not crash when talking to a deity or shouting out in the wilderness
+	(*) Fixed a crash from trying to actively block in the adventure attack menu
+	(*) Fixed the size bug where 9 of 10 young critters did not grow up beyond baby size (thanks Urist Da Vinci and so many others for all the work on that!  I'd thank you all properly if I could do the archaeology to figure out how it was sorted out...)
+	(*) Fixed a crash that came sometimes when asking about the position of site forces
+	(*) Stopped a freeze that happened when swimming in deep water
+
+Other bug fixes/tweaks
+	(*) Fixed the tracking key in the SDL version so you should be able to do that with capital K now
+	(*) Added the short wait button to the adventurer manual -- you can use , instead of . to wait for one instant
+	(*) Made quarry bushes process to an edible leaf properly
+	(*) Typo when impersonating divine being
+
+******************************************************
+
+Release notes for 0.40.01 (July 7, 2014):
+
+Here is the world activation release!  Lots of processes from world generation -- birth, invasions, succession, site foundation, and so on -- now operate in the world after play has begun.  Getting all of that to work led to a meandering route through various pieces of the game, some of which are described below.  Aside from any bugginess, a lot of it will still feel rough and unfinished as things bump around.
+
+New stuff
+	(*) World activation!  There are a few things that aren't active, like megabeast invasions, but lots of world gen actions made it into the game.  Birth, death (to the extent it wasn't handled before), marriages, site foundation as well as reclaims, basic succession and appointments/etc., invasions, as well as some more detail beyond world gen, like patrols, banditry and animal population handling.  We still don't have army battles -- the invasions are all successful right now, unless they are locally interfered with by you.
+	(*) The game advances two weeks before each play -- the calendar there still moves slowly when there's a lot of action, as there is in larger worlds, but there are quite a few things I can do soon to speed that up.  Due to the speed of the calendar, new forts in particular also get just two weeks.  This'll probably cause some shenanigans with the caravan (or you'll just have to wait a year in an autumn fort for your first one) until we sort it out.
+	(*) Fortresses can be retired and unretired.  Losing is still fun but if it doesn't happen when you want, you can put it off for a while.  Retired forts can be conquered (much more easily than they would be if you still controlled them), so don't be surprised if you have to reclaim instead of being able to unretire sometimes.  You can reclaim forts that didn't make it through world generation.
+	(*) Site maps for dwarves, elves and goblins.  These are very basic, but they are there, anyway.
+	(*) Multi-tile trees and lots of new plants.  Fruit and flowers.  Leaves that fall in little clouds.  I had to put off dwarf mode tree harvesting, but we should get to that before long.
+	(*) Megabeasts/forgotten beasts can attack, destroy and then reside within world gen sites like dwarf fortresses.
+	(*) Various movement changes.  Climbing/jumping/sprinting in both modes, though invaders still require a line of site to use them.  Adventure mode has a stealth rewrite, and some elements of that are present in dwarf mode (it is generally easier to spot thieves and ambushers, and I'll probably need to make them smarter about finding cover).  Movement and combat are separate now.  Startled people climb up the walls of their homes a little too often.
+	(*) Tracking information in adventure mode.  You can pull up a little window and see tracks (capital K), and you can also have it describe the freshest track that isn't yours to more easily stay on a trail (alt K).  Tracks are also part of the regular look command.
+	(*) Different levels of conflict -- your opponents in adventure mode will be listed with the current status (non-lethal, lethal, no quarter, etc.).
+	(*) Combat moves take place over a period of time now, and you can do things like catching an opponent's attack -- you have to do that by targeting a grab at the offending part now (reactions used to have a menu, but that was before combat got more smeared out).  You can get information about what attacks your opponent is doing in the attack menu -- the quality of the information depends on your situational awareness skill.  You can add adjective modifiers to your attacks (quick/heavy/etc.) and you can perform more than one attack at a time for a significant penalty to its force.  It might make sense with two adamantine swords or something, twirling them about.
+	(*) Rumors of incidents can be spread, and the rumors need to be spread before you gain reputation (good or bad).  Killing all of the witnesses to an event will effectively remove it from play if you don't let them get off the screen.  People are a little psychic as it regards ongoing conflicts, so that they can make decisions non-stupidly.  Your liaison can share rumors with your fort, but I still need to set up the screen for reviewing them after you've seen them the first time...  not that you can do much with the information.
+	(*) You can travel through tunnels.
+	(*) You can get a guide to travel with you to a faraway place -- it still ended up being too cumbersome, so locals continue to be able to tell you the location of sites, but only within a certain distance of their home town.
+	(*) In general, conversations have been redone.  They no longer have their own screen, but run along with other actions, and there are many more options.
+	(*) The mind has been rewritten quite a bit -- people now experience emotions according to different circumstances (lots of awkward monologues there), and they consider actions differently.  The main outstanding issue is that I didn't get around to converting existing dwarf mode thoughts, so they sort of exist concurrently with the new emotions and that needs to be changed.  I'll get to that before job priorities (which was one of the main shorter-term reasons for the rewrite).  Some dwarves have life-long dreams and it is possible for them to recognize that they've accomplished the ones relating to skills and family.  They cannot yet realize their dreams of taking over the world.
+	(*) The paragraph at the beginning of adventure mode was marginally more useful, but that slipped a bit at the end as things were tweaked.  I think it'll still describe certain invasions and abductions, but it needs to be redone.
+	(*) Lots of new arena options -- not just the conflict state, but you can set the temperature etc. to all sorts of extremes.
+	(*) Some experiments with procedural items, though the new demon-type sites are still quite un-fun now.  The knowledge on the slab at the bottom can be used, but it is probably not worth the trouble.
+	(*) The stuff I forgot
+
+Bug fixes
+	(*) I'm sure several old bugs were "fixed" as large portions of the code was rewritten/removed, but I haven't tried to track exactly which ones.  Bug fixes will commence in earnest now, and everything will be handled over at the bug tracker http://www.bay12games.com/dwarves/mantisbt/.
+
+******************************************************
+
+Release notes for 0.34.11 (June 4, 2012):
+
+Major bug fixes
+	(*) Stopped crash from forbidden or otherwise lost containers in haul jobs
+	(*) Stopped crash from naming routes when no routes are present
+	(*) Stopped crash from renaming non-squads in the military screen
+	(*) Stopped adventurer from turning into an underground creature when solid ground for placement couldn't be found
+	(*) Stopped children from having missing/damaged clothing thoughts
+
+Other bug fixes/tweaks
+	(*) Stopped dwarves from walling/isolating themselves oftentimes
+	(*) Worker chooses the closest tile instead of preferring tile at the top left of each designation job location (they don't use path distance, nor does this impact global behavior like choosing which designation job is picked overall)
+	(*) Removed ramps near natural waterfalls
+	(*) Added confirmation for burrow deletion
+	(*) Added generic armor options (like those in the default uniforms)
+	(*) Stopped haulers from wandering in loops in certain circumstances
+	(*) Stopped removed constructions from injuring dwarves
+	(*) Stopped dwarves from looping between civ/squad equipment if they can't follow their orders
+	(*) Allowed dwarves to ride/push minecarts even when they don't have walking access to destination
+	(*) Made dwarves equip items based on clothing layering order (there can still be conflicts if some items are already worn)
+	(*) Made dwarves eat from backpacks/drink from waterskins earlier
+	(*) Made armor objects count for missing clothing thoughts
+	(*) Made dwarves drop equipment extra equipment more promptly when they are hungry/thirsty
+	(*) Stopped empty bags from popping out of minecarts
+	(*) Cleared kill orders when completed (they can take a few extra clicks to clear up)
+	(*) Non-fire-immune creatures will dodge out of hot squares
+	(*) Fixed extra flashing _ problem when naming routes
+	(*) Random seeds can now be typed up to the proper number of characters
+	(*) Auto-assign new baby animals to mother's pasture/pond
+	(*) Stopped certain game actions from advancing when designations are placed
+	(*) Added indication of items which are already assigned in specific item assignment on military screen
+	(*) Stopped objects from being forbidden on enemy deaths if they are associated to fort military equipment
+	(*) Made command line world gen exit without forcing a key press confirmation
+	(*) Made command line understand quotes so that parameters with spaces in their names can be used
+
+******************************************************
+
+Release notes for 0.34.10 (May 21, 2012):
+
+Major bug fixes
+	(*) stopped powered rollers from pushing every track cart everywhere
+	(*) fixed lye/milk bucket storage jobs
+	(*) stopped them from storing assigned cart that is on a valid trackless stop
+	(*) allowed them to store unassigned cart that is on a track
+
+Other bug fixes/tweaks
+	(*) updated some screens for higher dimensions (if you enlarge in windowed mode for instance)
+	(*) wrestles/shared items don't persist when cart moves
+
+******************************************************
+
+Release notes for 0.34.09 (May 17, 2012):
+
+Here are the latest fixes.  Note that your furniture stockpiles have some more type options now, and your old piles that had pots enabled will start with all the new tool options enabled (you should set them how you want them after you load it).
+
+Major bug fixes
+	(*) Fixed various broken bucket jobs
+	(*) Rollers require power properly now and get carts to speed faster
+	(*) Stopped injuries from channeling and made objects and the digger move down to the ramp square when appropriate
+	(*) Stopped picking up of unit-occupied/speeding carts in adv mode
+	(*) Stopped wheelbarrow from getting stuck on obstacles that are built as it is moving
+	(*) Fixed problem where carts leaving ramps get their velocity throttled too much (or just outright stopped)
+
+Other bug fixes/tweaks
+	(*) Stopped salt from spreading to fresh water, made fresh water destroy stagnant water
+	(*) Cleaned up stockpile options for tools
+	(*) Increased output of coke reactions
+	(*) Made materials for embark tools match definition
+	(*) Stopped fast travel when riding carts
+	(*) Fixed scrolling of hauling menu for screen heights greater than 25
+	(*) Made older saves set new vehicle ids correctly
+	(*) Fixed busted string when looking at objects on rollers
+	(*) Fixed typo in white sand density
+
+******************************************************
+
+Release notes for 0.34.08 (May 14, 2012):
+
+Here is a hauling release.  I'm sure it has all kinds of interesting issues -- we're going to iron out problems for the next few releases without embarking on anything major in order to restabilize it.  The tile-wise physics causes some oddities on its own (items can't be given a meaningful sub-tile width, so they act a bit strangely if you look at the collisions closely).  Dwarves are also a bit enthusiastic with their new bin/barrel jobs -- when they grab a bin/barrel to load it up, it might have objects in it, and that might lead to conflicts/false shortages on occasion.  We'll have to continue playing around with it.  As far as I can tell, old saves load up fine and have usable minecart/wheelbarrows, so feel free to move your data/save folder over to the new version.  You'll notice your old save stone haulers moving slower -- get some wheelbarrows built at the carpenter's for your stone stockpiles to alleviate that problem.
+
+New stuff
+	(*) Minecarts can be used to haul things around on carved/constructed tracks/bridges ('h'auling to set up routes)
+	(*) Dwarves can be set to guide, push off, or ride carts that are ready to move to the next stop
+	(*) Track stops used to slow/stop cart and/or dump the contents on vehicle entry, can be disengaged with lever/plate
+	(*) Pressure plates can be triggered by carts
+	(*) Rollers can be used to push cart along when powered
+	(*) Minecarts limited to one per tile in general, various collisions can occur
+	(*) Wheelbarrows can be linked to stockpiles in order to move heavy objects (it'll auto-request one for stone stockpiles)
+	(*) Falling objects can collide with critters
+	(*) Camera can be attached to unit or item, can be linked to hotkeys from the unit/item screens
+
+Other bug fixes/tweaks
+	(*) Stockpiles can be linked to workshops, can be set to give to multiple piles, can be set to accept items from links only
+	(*) Hauling jobs will often be combined, using one container
+	(*) Heavy items harder to haul
+	(*) Densities/colors updated, based on Uristocrat's data collection thread
+	(*) Can filter creature names in arena
+	(*) Mine drop rates tweaked, no longer skill-based
+	(*) Puzzleboxes/drum makeable
+	(*) Stopped blinking on bridges
+	(*) Projectiles using new code (most non-shot/thrown projectiles) can skip/skid on liquid/ground
+	(*) All flying units use new minecart parabolic flight paths
+	(*) Many projectiles do not resolve in adventure mode before your turn (so you can dodge a flying cart by moving away)
+	(*) Can create/assign to squads from v-p
+	(*) Squads can be given nicknames from v-p or the military screen
+	(*) Fixed broken clay stockpile option
+
+******************************************************
+
+Release notes for 0.34.07 (March 30, 2012):
+
+Here is another set of bug fixes.  Be warned that some animals had their tiles changed to match the size convention.
+
+Major bug fixes
+	(*) Stopped crash from some odd creatures transforming into werebeasts
+	(*) Fixed crash from sites on the edge of the map
+	(*) Fixed old adv mode save imports
+	(*) Slab to missing allowed, once missing status has been announced (unless from reclaim, then you can always do it)
+	(*) Made animated corpses that collapse still count toward putting down ghosts
+	(*) Stopped undead from getting werecurses -- generally made animation/ghost/acquired tags count for more
+	(*) Removed negative clothing thoughts for children
+
+Other bug fixes/tweaks
+	(*) Stopped people from dropping random crafts/weapons on edge of map again
+	(*) People should more consistently bring axes, picks, crossbows, quivers, ammo
+	(*) Temporarily made amulets/backpacks etc. have no layering info (was screwing up clothing, will return to it)
+	(*) Limited number of hunting/vamp crafts
+	(*) Flux check in site finder should match with text now
+	(*) Stopped vamps from bragging about their kills
+	(*) Lists ghost/slab number/burial state in memorial list and stuck announced ghosts without slab item on the very top
+	(*) Fixed blank memorial names
+	(*) Husks have more information removed (pasture/pet/some job targeting/etc)
+	(*) Opposition to life now overrides peace with wildlife
+	(*) Stopped dwarves leading animals from going moody
+	(*) Imported saves from 34.05 and earlier will have eggs that produce tame hatchlings
+	(*) Option between skill/unit based profession setting in d_init
+	(*) Made initial equipment based on profession setting rather than unit type
+	(*) Fixed broken animal overall training scrolling
+	(*) Mood dwarves no longer ask for "rock bars" and it says "bones" instead of "body parts"
+	(*) Displayed medical dates correctly (they were a day off)
+	(*) Season announcement appears with correct date
+	(*) Correct year will show up on announcement screen
+	(*) Displayed gender for some items that were showing up as duplicate entries
+	(*) Gender in kill list (duplicate entries again)
+	(*) Fixed some mannerism pronouns
+	(*) Various raw fixes (see file_changes) -- highlight is that various underground animal men have attacks again
+
+******************************************************
+
+Release notes for 0.34.06 (March 23, 2012):
+
+Here is the next one!  The main features are the animal training and clothing changes.  You can get at the animal training options from the 'z' animal tab.
+
+New stuff
+	(*) Each civilization has animal training familiarity based on locale/journeys/domestication
+	(*) Your site picks up training knowledge as you go
+	(*) Your civilization picks it up from you if merchants survive
+	(*) Animals have training status which can deteriorate
+	(*) Added tools to the arena
+	(*) Added text site color key for town map export
+
+Major bug fixes
+	(*) Fixed a save corruption from saving at the moment of trade meetings
+	(*) Animals that have killed/attacked civ members no longer attack when trained
+	(*) Allowed people to pick up their own owned clothes
+	(*) Stopped sever victims from obsessing over lost clothes
+	(*) Stopped failed pickup job from keeping item in uniform plan
+	(*) Pickup equipment spam handled
+	(*) Workshop clutter changed
+
+Other bug fixes/tweaks
+	(*) Evil/good trees/shrubs are back
+	(*) Made ownership lapse for things that have been thrown away -- can take about 10-20 days
+	(*) Clothing deterioration in refuse pile
+	(*) Training jobs for large animals decoupled from kennels -- assign trainers in animal screen
+	(*) Animals being trained wander around less
+	(*) Allowed selection of war/hunting animals
+	(*) Stopped young animals from lashing out
+	(*) Decreased vampire frequency for fort migration
+	(*) Fixed metal/bone helm artifacts (Quietust)
+	(*) Fixed problems with socks going on the same foot
+	(*) Champion can be appointed, fixed various circumstances causing failed position activations
+	(*) Tool weights fixed (at least to align with raws)
+	(*) Material size respected in standard tool construction jobs
+	(*) Reintroduced negative thoughts from clothing, nakedness thoughts take a few weeks
+	(*) Stopped zillions of chat thoughts from being stacked up
+	(*) Stopped critters from breaking away from being led in an inconsistent way
+	(*) Various string changes for TrueType (will also affect other modes in hopefully minor ways)
+
+******************************************************
+
+Release notes for 0.34.05 (March 6, 2012):
+
+The necromancer crash was coming up so often in crash reports that I figured now was a good time for another release.  Here it is!  Note that any old vanilla saves you move over will have a short error log on load for their broken eyelid raws.  This isn't a big deal, and you can either update the body detail plan file or just leave it.  New saves won't have this problem.
+
+Major bug fixes
+	(*) fixed crash from necromancers in dwarf mode
+	(*) fixed crash from seed traders that only have access to wool bags
+	(*) stopped adv mode sleeping from sticking you on rooftops and teleporting you outside of castles (underground case not done yet)
+	(*) removed many effects and secret identity from ghosts (vampirism/lycanthropy/necromancer status etc.)
+
+Other bug fixes/tweaks
+	(*) traded adv mode items will go to backpack/quiver first depending on type
+	(*) dwarves won't get unhappy thoughts from dead/rotting relatives if their deaths are not known
+	(*) made various animals non-threatening (new saves only -- BENIGN tag can be added to old save raws, see file_changes.txt)
+	(*) stopped untowered necromancers from losing their zombie pops in their camps
+	(*) fixed broken names for bones and other butcher products
+	(*) removed items from abandoned houses/shops
+	(*) allowed adv mode abilities/powers to page through targets
+	(*) vampires no longer blame children/babies
+	(*) fixed broken companion paging/viewing for large numbers of companions
+	(*) stopped undead cats from adopting dwarves
+	(*) messed with crabs/horseshoe crab water behavior
+	(*) disallowed animation of bogeymen (new saves only)
+	(*) changed mule/muskox color
+	(*) fixed a few animal descriptions
+	(*) eyes/eyelids were broken in various ways
+	(*) tweaked appearance of nearly empty sleep bar
+
+******************************************************
+
+Release notes for 0.34.04 (February 29, 2012):
+
+There was a world gen crash if you exported an image after it was done running the history and then tried to offload the world.
+
+******************************************************
+
+Release notes for 0.34.03 (February 28, 2012):
+
+Here is the second set of fixes for the major release.  There are still enough problems with the new stuff to warrant continued work there before I move on to older issues, and the next release will probably be within the timeframe of the last two.
+
+Major bug fixes
+	(*) Fixed crash with historical figure cull vs. wandering groups
+	(*) Stopped historical figures from starving
+	(*) Stopped various corruption crashes and weird effects, mainly from aborted world gens (nice catch, Lightning4!)
+	(*) Stopped original population associated to historical figure from screwing up its allegiances
+	(*) Stopped it from moving criminal leaders with routine civilian moves, changing their allegiances
+	(*) Stopped populations from villages/trade partners from migrating into dungeon outcast groups all at once (one group had 15000!)
+	(*) Stopped werebeasts from gumming up world gen
+	(*) Stopped raised corpses from having various allegiances
+	(*) Vampires that take over sites lose other allegiances
+	(*) Made soldiers from previous forts clean up military info upon arrival at current fort
+	(*) Stopped ghosts and royal family members and undisguised vampires (aside from the king/king's group vamps) from immigrating to fort
+	(*) Fixed a new bug that completely stopped archery training
+	(*) SDL version: TrueType crash from long strings (Baughn)
+
+Other bug fixes/tweaks
+	(*) Changed which entity moves to which sites, mainly so elf pops don't live in fortresses and vice versa without acclimating to a city first
+	(*) Set labor list for migrants by default (can turn off in data/d_init.txt)
+	(*) Added a tab for other stones in stone list and made stones with a reaction product class list as economic in stone list
+	(*) Sped up adv mode loading/offloading somewhat, and cleaning should be a bit faster -- there are still really slow patches that need work
+	(*) Controlled snatcher number in world gen
+	(*) Decreased questing rate in world gen
+	(*) Stopped reraised corpses from bleeding to death
+	(*) Stopped forbid/melt/traffic/etc. mouse from messing with keyboard
+	(*) Gave more indication for forbidden workshops
+	(*) Made forbid/etc. from stocks screen not effect building items when applied to an entire group
+	(*) Changed ramp names to indicate unusability due to missing walls or lack of space above
+	(*) Sterilized zombies and mummies (only husk-type zombies need the STERILE tag)
+	(*) Cleaned up some botched zombie names (old saves will need to let their zombies fall once and they should be better on reraise)
+	(*) Made vampires fleeing to site in world gen require pop to fit into
+	(*) Made vampire cults follow tyrant vampires properly
+	(*) Vampire nicknames, profession, position names work
+	(*) Vampires won't try to pin crimes on animals
+	(*) Can 'g'et items from cabinets and other building furniture in adv mode now
+	(*) Kea will not follow each other so closely when stealing
+	(*) Fixed busted horseshoe crabs/men
+	(*) Improved the age name calculator, especially as it regards the dominant race after megabeasts are cleared
+	(*) Changed treasure room quality and item selection
+	(*) Stopped designation at the bottom of the map from unhiding portions of it sometimes
+	(*) Unobscured unit list option from main menu
+	(*) Stopped world gen group from lingering in memory after bandits become criminals under town
+	(*) Goblins can have higher pops in their important towns
+	(*) Applied att change syndrome size modifiers properly (stops weird speed issues with adv blood drinking)
+	(*) A few other minor tweaks listed in file_changes.txt
+	(*) SDL version: Highlighting on unit screen fixed for TrueType (Baughn)
+	(*) SDL version: Turning on playback while recording will no longer record the previously recorded keys (Baughn)
+	(*) SDL version: TrueType text will now overwrite properly in some adventure mode circumstances (Baughn)
+	(*) SDL version: Fixed some minor memory leaks (Baughn)
+	(*) SDL version: Minor stability improvements (Baughn)
+	(*) SDL version: Fixed some of the spacing issues with TrueType
+
+******************************************************
+
+Release notes for 0.34.02 (February 18, 2012):
+
+The first bugfix release has arrived.  Unfortunately, you'll have to restart -- even if your save seems fine, it's likely that it is dying a slow death due to corrupted buildings.  Hopefully a compatibility break won't be necessary again for a while.  There are still many new issues to resolve, and I'll be focusing on those for the next bugfix release(s) before we start to transition over to older bugs.
+
+New stuff
+	(*) Generated some default interaction effects for arena use
+	(*) SDL version: Can repeat commands/macros - default Ctrl+u <number> <command> (Baughn)
+	(*) SDL version: Can toggle TrueType - default F12 (Baughn)
+
+Major bug fixes
+	(*) Save corruption/crash from old forts and some other sites corrected
+	(*) Fixed conversation crash
+	(*) Fixed werewolf crash after aborted world generation
+	(*) Stopped books and other artifacts from duplicating in player inventory
+	(*) Stopped companions from getting hungry/thirsty during travel
+	(*) Correct ambush frequency in adv mode
+	(*) Made it possible to remove designation jobs again
+
+Other bug fixes/tweaks
+	(*) SDL version: various technical fixes (Baughn)
+	(*) Dwarves will stop walking toward cancelled jobs
+	(*) Made wagons appear again (Quietust)
+	(*) Stopped mouse designation from messing with keyboard designation
+	(*) Stopped lye making from using full water buckets (Quietust)
+	(*) Made magma/fire safe building materials work properly (Quietust)
+	(*) Stopped worshippers of certain beings from mentioning it
+	(*) Cleaned up stone menu (Quietust)
+	(*) Doors/floodgates display properly after being placed (Quietust)
+	(*) Stopped glazed items from having cabochon shapes in the glaze
+	(*) Sped up conversation initialization
+	(*) Made forge jobs use bar amounts properly (Quietust)
+	(*) Made automated fisher/kitchen/etc. settings display properly (Quietust)
+	(*) Stopped weird job cancellation numbers for bars/cloth/thread
+	(*) Various manual/other grammar tweaks
+	(*) Various broken creature tweaks, notably the giant mosquito epidemic should end
+
+******************************************************
+
+Release notes for 0.34.01 (February 14, 2012):
+
+Here's the release we've been working on for nearly eleven months.  I've tried to collect the major changes below, but it won't be a complete list.  I hope you enjoy the game!
+
+New stuff
+	(*) cities in adventure mode that have various buildings, dungeons, items, livestock, etc.
+	(*) protect your community from secret vampire dwarves or hunt them as an adventurer
+	(*) defend your fort during the full moon or risk a werewolf infestion -- hunt/be hunted as an adventurer
+	(*) face armies of the dead in dwarf mode or visit their necromancers' towers and learn their secrets as an adventurer
+	(*) evil regions where the dead and pieces of the dead can come alive, with evil mists and rain
+	(*) tombs built in world gen which can be visited in adv mode, either beneath towns or out in the wilds -- beware the dead!
+	(*) revamped justice/witness/death notification system in dwarf mode
+	(*) immigrants to your fortress will now be historical figures whenever possible, which means more family relationships and history for each one
+	(*) dropped items/bodies tracked between plays in the wilderness anywhere in the world
+	(*) more battlefield information tracked/war dead raisable in world gen
+	(*) all sponsorship animals and their giant/man versions are in the game now
+	(*) various new abilities for creatures (see file_changes.txt for list and syntax)
+	(*) adventurers can use creature abilities/learned powers and they can be tested from the arena
+	(*) new site travel map to make navigating towns easier
+	(*) reading/swimming/observer (for traps) relevant in adv mode now
+	(*) established historical figures can lead bandits
+	(*) rivers block movement in adv mode travel
+	(*) eating/drinking required in adv mode
+	(*) ingested syndromes are now possible
+	(*) ability to make campfire (from 'g') and warm items at campfire/fire/magma (from 'I') in adv mode
+	(*) traps work in adv mode, once spotted they can be ignored
+	(*) gems now have different cuts
+	(*) necromancers can write books about various topics (all books are in their towers as it stands)
+	(*) moon phase indicator in fort
+	(*) alphanumeric world gen seeds and some more world gen params (see file_changes.txt)
+	(*) the legends xml has a lot of new info for historical figures
+
+Major bug fixes
+	(*) buffer overload from aborted world gen fixed
+	(*) fixed cave-in-on-embark issue with hidden underground structure, and a few others
+
+Other bug fixes/tweaks
+	(*) designations over z levels all at once now possible
+	(*) unit screen divided into four sections
+	(*) rivers/pools have ramps now
+	(*) able to trade portions of stacks in both modes
+	(*) messed with adv mode currency trading and made items teleport to you
+	(*) tweaked how fire damage works
+	(*) made vision work through floor grates and bars properly
+	(*) fixed some road/bridge problems
+	(*) crystal glass items possible again
+	(*) tweaked adventure mode swimming and alt-movement readout (use alt-movement to get into a river you want to cross)
+	(*) skeletons/zombies replaced by animation effect
+	(*) demons masquerading as gods will try a little harder
+	(*) restricted mandates so they'll be more reasonable
+	(*) stopped blank map from being exported when you back out of detailed map export
+
+******************************************************
+
+Release notes for 0.31.25 (March 28, 2011):
+
+Major bug fixes
+	(*)fixed crash related to an items vs. temperature optimization
+	(*)fixed world gen crash that could happen if all the beasts were killed
+	(*)fixed world gen crash caused when a prisoner escapes from a site at the same time the last person to arrive at the site commits murder
+
+Other bug fixes/tweaks
+	(*)made dwarves a little more proactive about seeking a diagnosis for health care that might have been interrupted
+	(*)cave dragon gets claw attack, loses stance strike skill
+
+******************************************************
+
+Release notes for 0.31.24 (March 27, 2011):
+
+Major bug fixes
+	(*)stopped bamboo flicker
+	(*)stopped dwarves from ripping patients out of traction to bring them to bed
+
+Other bug fixes/tweaks
+	(*)made it display traction state in health screen
+	(*)decreased triggers for cleaning a bit to try to stop paranoid over-cleaning of patients
+	(*)fixed key conflict for clay crafts/statue
+	(*)corrected NECK_SPINE bodypart token
+	(*)made rodent man bite use teeth properly
+	(*)dragon/hydra natural stance skill removed, given claw attack
+	(*)corrected baby guineafowl to "keets"
+
+******************************************************
+
+Release notes for 0.31.23 (March 26, 2011):
+
+Major bug fixes
+	(*) Stopped large pots from forgetting their stockpile assignments
+	(*) Cleaned up some more resting/infinite job issues with hospitals (surgery in particular)
+	(*) Stopped plant regrowth underground from deleting ramps and stairs, and stopped plants underground from regrowing in magma, deep water, and some other situations
+	(*) Stopped buckets from occasionally becoming filled with many, many units of water
+	(*) Stopped goblin siegers from fighting amongst themselves all the time
+
+Other bug fixes/tweaks
+	(*) Fixed some issues with natural skills not being applied
+	(*) Handled some more instances of overstockpiling by the hospital zones
+	(*) Fixed erroneous interlink between furniture/ammo stockpile interfaces
+	(*) Made enraged announcement show up for prone-to-rage critters
+	(*) Some more quick speed tweaks (assorted, but not much: bucket save from 27/28FPS -> 31/32FPS)
+	(*) Gave rodent men their rodent teeth and added them to the subterranean entity definition
+	(*) Gave reptile men teeth
+	(*) Changed penguin wings to flippers
+	(*) Made platypuses amphibious and made them swim underwater
+	(*) Changed sizes for most giant variants of animals and gave some thought preference strings to ones that didn't have them
+	(*) Added missing "mundane" tag to penguins and domestic birds
+
+******************************************************
+
+Release notes for 0.31.22 (March 24, 2011):
+
+Here's the second large bug fix release for 0.31.19.
+
+Major bug fixes
+	(*) Fixed a linux crash from units leaving the map with a kill order on them
+	(*) Fixed a crash from tileless burrows
+	(*) Fixed adv mode crash on service conversation option
+	(*) Made healthcare work for dwarves that need crutches
+	(*) Made healthcare/hospitals handle plaster/casts properly
+	(*) Stopped creatures from attacking across several Z levels
+	(*) Stopped hospitals from stocking everything, ignoring the item caps
+	(*) Stopped pots from storing almost infinite numbers of items
+	(*) Stopped inaccessible spam from cleaning jobs with soap
+	(*) Made fish appear in many situation where they were erroneous missing (old forts will still be off, unfortunately)
+	(*) Stopped massive lag from certain ghosts
+	(*) Fixed up bone artifacts
+	(*) Cleaned up persistent activities and squads that were lingering
+	(*) Sorted out an issue with combat/training bolts
+
+Other bug fixes/tweaks
+	(*) Made pots show up in the trade depot list
+	(*) Better stockpile options for stone, blocks, metal clothing, etc. and fixed some broken existing options
+	(*) Cleaned up some issues with glass items
+	(*) Wooden/bone crossbows specifically selectable from uniform screen now
+	(*) Made migrant hunters recognize their crossbows properly
+	(*) Changed how skills are applied to job products -- attributes are accounted for properly and skills should work in adv mode now, but you'll notice a different distribution of qualities in the final product, especially for no/low skill when differing attributes are involved
+	(*) Stopped surgery cancellations over patient not resting in some circumstances
+	(*) Ungummed up the hauling system from certain stale jobs
+	(*) Made lavish etc. meals take the proper number of item piles
+	(*) Made magma forges available more regularly to mood dwarves
+	(*) Stopped raw processing from including backup files
+	(*) Fixed some capybara and panda typos and tweaked giraffe and reptile eggs
+	(*) Cleaned some trouble with grass regrowth and generic "grass" tiles
+	(*) Made recentering hotkeys work in other dwarf modes (ones with x cursors)
+	(*) Fixed broken readout for completed jobs in unit health screen
+	(*) Cleaned up spam from rest jobs from webbed dwarves
+	(*) Fixed broken key in hospital zone mode
+	(*) Moved underground camp creatures from civ list and stopped their items from being counted in fortress wealth
+	(*) Stopped underground theft announcements in hidden areas from being displayed
+	(*) Fixed various ugly blank "" names in legends mode
+	(*) Fixed a random number overflow from creatures with no attacks
+
+New stuff
+	(*) Sponsored animals included: penguin, platypus, badger, moose, along with related buddies
+	(*) Rodent men underground
+	(*) Invader mounts/monsters have first names
+
+******************************************************
+
+Release notes for 0.31.20/21 (March 6, 2011):
+
+This is the first bug fix release for 0.31.19, where I've focused on new bugs.  The fixes are listed below.  It also includes a few sponsored critters (pandas and capybaras), as well as some of their wilder relatives.  Pandas are restricted to bamboo grazing and capybaras can vocalize in adv mode (bark, whistle, etc).  I added a mineral availability parameter that you can set from Create World Now or from the detailed parameter screen.  There are a few more things I can do there, but any extensive rewrite is going to have to wait for 3D veins and mine maps (Release 2 in the schedule).  Barring any catastrophes, we'll be moving on to the old-bug-fixing now.
+
+Major bug fixes
+	(*) Stopped the game from treating every tool like a container for stockpiles/adv mode
+	(*) Stopped hive product collection from removing hive building tag
+	(*) Stopped birds from claiming multiple nest boxes when a nest box is deconstructed
+	(*) Fixed crash with unusual egg laying
+	(*) Made pastured animals spread out more during grazing and allowed pets to be grazed
+	(*) Fixed situation where some stockpiled items were not available to jobs (lye, etc.)
+
+Other bug fixes/tweaks
+	(*) Stopped weird bone-glazing situations
+	(*) Made llama/alpacas get sheared properly
+	(*) Stopped dwarves from cleaning up wax cakes in stockpiles
+	(*) Stopped heroes in world gen from picking fights with dead megabeasts
+	(*) Stopped various tug-of-war fights over animals by different jobs
+	(*) Stopped wildlife from claiming nests
+	(*) Stopped masons from using clay
+	(*) Fixed up a situation where the same params would not generate the same worlds
+	(*) Made potters apply their skill to statues etc. properly
+	(*) Added a clay category to stone stockpiles and cut some inorganics out
+	(*) Added wax to food stockpiles pressed material category
+	(*) Added wax goods option to finished goods pile
+	(*) Made empty pots go to the furniture pile
+	(*) Made pots available for brewing
+	(*) Fixed some erroneous names of groups of object in the stocks screen
+	(*) Made ash glazing use the correct amount of ash (0.31.19 saves might have half-exhausted piles that act up a bit until they are used)
+	(*) Stopped extra grass types being stacked on a tile during regrowth
+	(*) Stopped aboveground grass from growing in tunnels
+	(*) Stopped "grass" from appearing in some underground areas
+	(*) Made grass grow back properly in desert etc. areas (0.31.19 saves will get too much regrowth now)
+	(*) Stopped grass ramps from flashing in no-varied-ground-tiles mode
+	(*) Stopped pet/tame vermin from spawning many copies
+	(*) Reordered the new units in the unit list
+	(*) Adjusted value of bees
+	(*) Stopped vermin assignment to pastures
+	(*) Made pen/pasture interface give status of animals (caged, etc.)
+	(*) Stopped dwarves from encrusting honeycombs with jewels, etc.
+	(*) Corrected egg liquid densities/text error
+	(*) Stopped text export from listing zero population animals
+	(*) Fixed some issues with red reactions and other jobs not being listed in the workshops
+	(*) Allowed object melting and yarn rope jobs from manager
+	(*) Made it select the active zone properly when you enter activity zone mode
+	(*) Made zooming to units go to the proper unit when multiple units are in the same tile
+	(*) Cleaned up some pronoun trouble in personality descriptions
+	(*) Properly initialized banditry information (can cut down on some inappropriate dwarf/elf banditry)
+	(*) Deer antlers
+	(*) Sheep text lines up with there shearability now
+	(*) Fixed some creature description text and other small raw tweaks (see file_changes.txt)
+	(*) See file_changes.txt for new raw tags
+
+New stuff
+	(*) Sponsored animals included: panda and capybara, along with related buddies
+	(*) Added world-wide mineral availability parameter
+
+******************************************************
+
+Release notes for 0.31.19 (February 16, 2011):
+
+This is the first release of what we once called the Caravan Arc, where we'll be changing how trade and the economy work.  The entire release schedule is up at http://bay12games.com/dwarves/dev.html.  This particular release doesn't have visible changes to trade -- just a lot of world generation infrastructure.  People eat and starve in world gen now, though it doesn't matter afterward.  Subsequent releases coming up will be making use of these changes during play, but don't expect too much there this time.  There have been many other changes.  Seeing most of them will require generating a new world.
+
+There are lots of new domestic animals.  We also added giraffes, rhinos, honey bees and bumblebees.  Bees were the winner of the animal sponsorship drive and they had many associated jobs, so we didn't try to get into the other sponsored beasts, but we'll be adding those in with every release.
+
+Animals can be placed in pen/pasture zones, and grazing animals will need to graze on grass (they can also eat underground fungus found in many open cave layers).  Pastures should be made large enough to provide ample grass and to prevent animals from being stacked on top of each other.  Animals crammed into one place for too long can become grumpy and violent, but the animals will stay in the pastures without much tending (a dwarf may occasionally run over to an animal if it wanders off the pasture border to walk around something).  There is no way to trade for hay or animal feed at this time, so don't expect grazing animals in new forts to survive on glaciers or the deepest deserts.  Many deserts have patches of grass (or succulents) now.
+
+Sheep, llamas and alpacas (and trolls for goblins) can be sheared and the wool can be spun into yarn.  Chickens and other birds will lay eggs in nest boxes if you place the boxes in accessible areas.  You can mill rocknuts into paste and press the paste for oil (which goes into jugs).  Pressing occurs at the new screw press building.
+
+You can make many of the more clayish soil types into earthenware ceramics now (and you can make fire clay into stoneware and kaolinite into porcelain).  If a fort embark location has clay above the aquifer (or any clay if there is no aquifer), it'll be displayed in the embark readout.  I didn't get very far into glazing, but you can ash glaze and tin glaze (with cassiterite).  Earthenware jugs need to be glazed to hold liquids.  Stoneware and porcelain jugs don't require glaze but can be glazed.  You can also make large pots out of various materials, and these act like barrels (they are associated to stockpiles in the same way, etc.).
+
+Honey bees can be collected and kept in artificial hives (which you can make out of various materials).  You'll need one natural hive on your embark location to get started, but after that you can split the colony into new artificial hives.  The process is fairly automated.  You just need to place the hive buildings and a beekeeper will do the rest.  You can adjust a few settings on each hive to control which hives are held for splitting and which are collected.  You'll need to have jugs around to collect honeycombs (the royal jelly holds up the process otherwise), and you'll need another jug to collect the honey.  Wax cakes can only be made into crafts by a wax worker at this time.
+
+The site finder records the best hit in each square now, and you can stop the finder at any time and browse the results.  The categories and readout have been changed up a bit.  Minerals have been redistributed on the world map, though this might not be satisfying as I was expecting to get a bit farther with dwarf mode trade.  Adjustments might have to be made there until trade is updated.  We'll see.
+
+Animals and plants occur with more or less contiguous ranges now, respecting biome.  There are specific grasses.  The evil grasses are probably a little extreme and seizure-inducing.  I might throttle that back.
+
+I'm starting the first one to two week bug fix cycle now, so there weren't a lot of bug fixes for this release, but creatures, items and vegetation don't pick up as many contaminants now.
+
+There are new options in the graphical map export from legends mode, and I fixed a bug there with village maps getting cut off.
+
+For a list of the new tags available for modding (container reagents in reactions, etc.) see file_changes.txt or the new stock reactions.
+
+******************************************************
+
+Release notes for 0.31.18 (November 16, 2010):
+
+This one fixes up several crashes and other problems.  Maybe most notably, the problem where you'd become a criminal in adventure mode just by going back to a store, the handedness issue with uniform assignments (it might take it a while to clear out problems in old saves, and I can only state this as confidently as the tests I performed), and SDL movie recording.
+
+Major bug fixes
+	(*)fixed crash from shop signs being placed off map
+	(*)fixed crash during character generation of human outsiders if you back out of the name menu
+	(*)fixed crash from trap announcements/reports
+	(*)fixed world gen crash that arose from creature in secondary entity population taking over leadership role when caste mods are present
+	(*)fixed crash from walking off the left or upper edge of the world
+	(*)corrected misaligned bodypart appearance modifiers on load and resulting crash in pref screen, origin of misalignment unclear
+	(*)fixed problem where you are considered a thief after shopping at a store that had previous had its inventory offloaded
+	(*)made uniform assignments respect handedness
+	(*)reenabled SDL movie recording
+	(*)stopped unfinished quests performed by previous characters from stopping nobles from giving new characters quests
+
+Other bug fixes/tweaks
+	(*)made skill rates copy over to castes correctly
+	(*)fixed problem that added bogeyman kills to the wrong parts of the kill lists
+	(*)stopped retirement in town when bogeymen are active
+	(*)stopped unequipable soldier unit types from occasionally appearing in ambushes/sites/migrants
+	(*)corrected placement of cauldrons
+	(*)got rid of size bonus mistakenly applied to opportunity skill rolls and put in the rage penalty it was supposed to be
+	(*)made master pikemen get proper skill
+	(*)stopped lair hatch covers from rotting away
+	(*)added announcement for falling damage
+	(*)adding retching after initial vomiting
+	(*)changed metal use for humans/gobs/kobs via existing raw tags
+	(*)changed a few two-handed weapon sizes
+	(*)updated dwarf party organization conditions
+	(*)fixed problem with movie playback showing an extra garbage frame for each chunk of the movie
+	(*)changed conversation colors
+	(*)fixed double adjective in dark fortress
+	(*)made Elite Bowman name appear correctly (was showing up as blowgunner), and a few related typos
+	(*)fixed some other typos
+
+******************************************************
+
+Release notes for 0.31.17 (November 11, 2010):
+
+If you want to try out the improvements to adventure mode, I'd recommend generating a new world with at least 100 years of history.  I tried out adventuring in a world from 0.31.03, and it technically worked, but there wasn't much to do.  The reason I recommend some history is just to let the beasts get settled a bit, though it's not strictly required.  We haven't gotten threats moving around and arising during actual play yet, so your worlds will inevitably run out of adventure opportunities as you exhaust them, and games tend to be fast-paced and brief overall once you get the hang of it.  This will change during the next few major releases.  There's an update to the "Your First Adventurer" manual section that might be worth glancing at even if you have played an adventurer before.  Don't be surprised if you die learning a few facts about the world.
+
+Major bug fixes
+	(*)fixed problem with baron not arriving due to stale merchant reports
+	(*)stopped old jobs/projectiles from tying up items on reclaim
+
+Other bug fixes/tweaks
+	(*)changed ring/bracelet symbol to make way for adv mode tools
+	(*)cut kill-bragging to 5 kills
+	(*)fixed bug through which demon could take over two or more civs in one year
+	(*)name change: graveyard -> corpses (since it isn't appropriate for final burial)
+	(*)stopped occupancy from being erased upon entering adv mode in arena
+	(*)allowed labors to be toggled by category
+	(*)added standing order for outdoor vermin refuse
+	(*)fixed erroneous material bonuses in world gen fights
+	(*)updated wrestling interface
+	(*)implemented text for wrestling attacks
+	(*)changed combat announcement colors and stun/paralyze color to light blue from light cyan
+	(*)toes/fingers protected by armor
+	(*)elves are now small e's to match their size
+	(*)different soldier/civilian symbols for human/elf (as with the two dwarf symbols)
+	(*)stopped triggerable vermin groups from becoming visible occasionally
+	(*)fixed some old problems where input wasn't registering properly on movement, etc.
+	(*)disabled need to eat/drink in adv mode until we get some more general work in
+	(*)various minor adv mode tweaks and fixes
+
+New stuff
+	(*)added night creatures
+	(*)added lairs for some creatures
+	(*)added new travel screen (old worlds might have misplaced moons in the sky bar)
+	(*)updated how adv mode sleep works, permission to sleep in buildings
+	(*)updated character generation
+	(*)added memorial slabs to dwarf mode
+	(*)added shops with signs to towns
+	(*)changed how lower body/head severs work (spinal sever required)
+	(*)changed how guts popping out works
+	(*)see file_changes.txt for some new modding tags
+	(*)can get tasks from most people and report success to anybody friendly
+	(*)added human castles
+	(*)made peasants refer you to better quests
+	(*)added banditry
+	(*)added aimed attacks, random combat opportunities and the ability to use secondary attacks/weapons (both adv mode and dwf mode combat reports)
+	(*)added (harder) rolling away for dodgers on the ground
+
+******************************************************
+
+Release notes for 0.31.16 (October 4, 2010):
+
+Hopefully this one doesn't have any weird new issues.  That bumpy lag should be gone now, and there are expanded refuse pile options.  You can also turn off having your dwarves track around blood (it starts off in the init).  I left it on in adventure mode, but you can turn it off there too if you want.
+
+Major bug fixes
+	(*)got rid of intermittent lag that popped up in 0.31.15
+
+New stuff
+	(*)added spatter init options (dwarf mode defaults to no walking spread of spatter)
+	(*)allowed skull/bone/shell/tooth/horn settings from refuse pile
+
+******************************************************
+
+Release notes for 0.31.15 (October 3, 2010):
+
+The purpose of this release is to restore the missing invasions, and I threw in some easy fixes on top of it, mostly to the raws.
+
+Major bug fixes
+	(*)made invasions come again
+
+Other bug fixes/tweaks
+	(*)lots of raw fixes (see "file changes.txt")
+	(*)made reactions show the proper building
+	(*)made LEAVES load the 'character' style tile properly
+	(*)corrected labor name "soap maker" -> "soap making"
+	(*)fixed typo in world gen rejection dialog for missing civ definitions
+	(*)fixed spelling of chinchilla for forgotten beasts (new ones only)
+
+******************************************************
+
+Release notes for 0.31.14 (September 23, 2010):
+
+The main issues here were to handle the new bugs from 0.31.13 which were gumming things up (broken migration, undiggable adamantine) and to address site sprawl concerns a bit.  To the latter end, there's a new world gen option to limit the total number of sites and I've added a few options to "Create World Now!" to make use of that.  It's not going to be truly satisfying until dwarven sprawl is better defined and there are more things to do with the sprawl in adventure mode and in dwarf mode wars, but overall I don't plan to decrease the amount of sprawl drastically on default settings once that is handled -- sprawl will likely increase again once memory problems are addressed, there are more things to do with it, and it shifts more dynamically over long periods of time (improved war, disease, famine, migrations, etc).  For now you can control sprawl with the site cap, with the civilization number, with the savagery, and with the history end year from the "Create World Now!" menu without much fuss (and the default setting is much lighter on sprawl than the default in 0.31.13).
+
+Major bug fixes
+	(*)fixed problems with immigrants having strange unit types and erroneous announcements about terrifying forts
+	(*)allowed raw adamantine to be diggable now by adding a new tag to slade for the time being.  There is a side effect -- slade in old saves will be diggable.  Add [UNDIGGABLE] to slade in the save's raws in inorganic_stone_mineral.txt in your save to fix that.  If you choose to dig through the slade, please don't report any associated bugs.  The game likely won't be able to deal with it properly.
+
+Other bug fixes/tweaks
+	(*)fixed plant text in food preferences and stopped generated forgotten beasts etc. from being chosen
+
+New stuff
+	(*)added site cap option to world gen parameters
+	(*)added beast cap options to world gen parameters
+	(*)added a few options to "create world now"
+
+******************************************************
+
+Release notes for 0.31.13 (September 15, 2010):
+
+The framework for villages and sprawl is in place, and there are now "entity populations" which are made up of thousands of critters for which less information is tracked.  As it stands, this amounts to, say, ten times the number of historical figures after world generation has been running for a while, though it can vary a lot.  These changes have left adventure mode gutted, so don't expect old adventure mode saves to retain much information or work all that well.  Old dwarf mode saves should be fine for continued dwarf fortresses.  In new worlds, you can wander around the new villages, but don't expect anything to be going on.  This is the launching pad for what should be the Funification of adventure mode in the next (non-fix) release, but like many launching pads, it is kind of dull and gray.
+
+As for the merits of this release, there are the bug fixes in the lists below.  The game should also be a bit faster.  I'm on a new compiler in Windows, which led to a general speed increase, and I also optimized some code for improvements on all OSs.  It's not the end of the story there by a long shot, but it is progress, anyway.  World generation itself might be a bit slower overall, since there's a lot more going on site-wise.  This is going to change as we set up relationships between the leaders, one way or another, but I can make a medium island world in around 10 minutes without the memory going totally nuts, and I thought that state was fit for release.
+
+There are some side effects to not having any stable relationships between world gen sites while cutting down on site destructions, like having a site get pillaged for the thousandth time and so on, which will iron themselves out later.  For now, it's a bit weird.  I also saw a battle with negative numbers of soldiers but couldn't reproduce the situation, so there are probably additional issues as well.
+
+The SDL version has the first pass at the experimental TrueType font support that Baughn is working on.  It is off by default in init.txt and it only works in the 2D print mode.  There are lots of justification etc. problems -- you don't need to report those.  Getting those fixed up is part of the process.  It's difficult to read in the standard window size, so you might want to limit yourself to full-screen or a large window with large grid cells when you are trying it out.
+
+Crash fixes
+	(*)fixed some potential problems with aborting zone placement, though it's not guaranteed to solve the crash there
+
+Major bug fixes
+	(*)fixed problem causing dwarves to not sleep in any bed
+	(*)fixed problem causing dwarves not to respect ownership in sleeping priorities
+	(*)made cursor center on buildings properly when linking them up to a lever etc.
+	(*)stopped other civilizations from bringing liaisons
+	(*)stopped building destroyer diplomats/traders from destroying things
+	(*)made units check the validity of targets more often (counters certain interrupt spam)
+
+Other bug fixes/tweaks
+	(*)fixed broken vial making jobs
+	(*)make rock short swords use the proper material for the final product
+	(*)made horn silver use the stone template
+	(*)moved all native metals off of metal template
+	(*)stopped season counter from resetting to spring after travel in adventure mode
+
+******************************************************
+
+Release notes for 0.31.12 (July 25, 2010):
+
+Aside from the major bug fixes listed below, I made skill increases a little faster during training.  Part of the problem is with how classes work -- the teacher and student skills are important, and they can heavily amplify the effects, so the gains for people without those skills were small.  Now it'll be even more extreme that the base rate has increased, so we'll have to see how that plays out in forts that get good teachers.
+
+If your old fort has a dead liaison, your replacement liaison will be named after one of the standard professions most likely, but they should still perform their job.  New worlds should have dead liaisons kicked out completely and get new liaisons.
+
+Crash fixes
+	(*)fixed military training crash
+	(*)fixed a crash during dwarf creation in arena mode after dwarf mode game had been played
+	(*)fullscreen/windowed mode switch crash fixed (Baughn)
+
+Major bug fixes
+	(*)fixed new liaison coming when previous liaison is unavailable for any reason
+	(*)fixed problem which stopped the liaison from talking about making a barony
+
+Other bug fixes/tweaks
+	(*)adjusted skill rates up a bit on indiv training and demonstrations
+	(*)made att/skill rate loader treat 0s like NONE instead of the fastest rate
+
+******************************************************
+
+Release notes for 0.31.11 (July 23, 2010):
+
+Combat was the focus last time, and this time I moved over to equipment and training.  There are a number of bugs left to fix, but a lot of the largest problems should be cleaned up and training should be somewhat usable now.  I wanted to shift ammunition over to a default system where it doesn't get tied to particular squads/hunters (with the old way left as a default for people that want to control it more), since that remains one of the more annoying things, but I didn't have time to finish it up.  Just make sure you have some extra bolts sitting around, and 'm'-'f' should show you how your squads are doing ammo-wise.  Barracks should also probably default to a non-reserved/non-purposed system, though that's not as bad as ammunition reservation is.  In any case, I'll be moving on to the month-end project and entity populations, though I'll release again sooner if something comes up.
+
+Crash fixes
+	(*)stopped crash when individual squad members were selected in 's' and you go back to 's' after leaving
+	(*)fixed crash moving from ammo assignment creation to material assignment
+	(*)fixed reclaim crash
+	(*)fixed text mode crash in SDL version (Baughn)
+
+Major bug fixes
+	(*)freed up assigned items properly when uniforms are overwritten
+	(*)freed up equipment properly from empty positions when squad is disbanded
+	(*)made civilian jobs respect attributes properly
+	(*)fixed turtle (vermin) shell crafts/helms/gauntlets/etc.
+	(*)stopped squad/off-time training activities from persisting when guy goes off to eat, do squad orders, die, etc.
+	(*)made inactive/ordered squads free up their old training activities more quickly
+	(*)stopped off-time training from gumming up squad training barracks assignment
+	(*)removed dead/crazy/etc. dwarves from squads
+	(*)dropped injured dwarves out of their activities properly
+	(*)stopped bleeding dwarves from thinking they need to jump on the ground and be dragged to the hospital
+	(*)stopped miners/woodcutters coming out of the military from thinking they had a claim to old tools
+	(*)made people doing off-time training stop if it becomes inappropriate (kicked out of squad, etc.)
+	(*)made quota countdown respect reactions again
+
+Other bug fixes/tweaks
+	(*)stopped body-component-based artifacts from defaulting out to iron figurines
+	(*)made skill rust display properly on 'v' and made temporary skill loss conditions not display on military screen
+	(*)changed rust display for skills
+	(*)restricted shell moods to dwarves with shell prefs
+	(*)stopped metal goblet/flask construction jobs from shuffling metal of product
+	(*)fixed up idle strings for non-soldiers vs. lingering squad activities
+	(*)decreased effect of low self-discipline on individual training
+	(*)sped up training organization
+	(*)WINDOWEDX/Y values respected when moving to windowed mode from full screen (Baughn)
+	(*)fixed problem with skill demonstration session timer
+	(*)added timers for sparring and individual combat drills
+	(*)adjusted sparring pulled shots for recent combat balancing
+	(*)adjusted skill rates for all practice activities
+	(*)put forest start biome on humans (for proactive forest clearing)
+	(*)changed hauling encumbrance speed formula and made hauling build atts slowly
+	(*)stopped picks from being available to indiv choice soldiers
+	(*)required subtype match for armor even under "partial match"
+	(*)made off-duty archery training occur for indiv choice ranged weapons (not just crossbow)
+	(*)cleaned up various raw typos (see file_changes.txt)
+	(*)fixed a bunch of the "you" announcements in dwarf mode
+	(*)made counter to stop excessive party attendence work properly
+	(*)made it set up default ammo profiles for ranged squads
+
+******************************************************
+
+Release notes for 0.31.10 (July 11, 2010):
+
+(*)fixed problem where your units would not recognize the nice people arriving on business as their friends
+(*)stopped problem where removing a worn object in adv mode could leave you with two copies
+(*)stopped seg-fault at quit in linux if sound wasn't initialized (oliver)
+
+******************************************************
+
+Release notes for 0.31.09 (July 10, 2010):
+
+Lots of combat changes this time.  Keep in mind that old saves use the old raws, so you'll want to copy over at least item_weapon.txt, item_ammo.txt and inorganic_metal.txt to get more of the positive effects.  The adventure mode stone-making ability won't be available in old saves but butchery will be.
+
+Crash fixes
+	(*)fixed potential crash with container reactions
+	(*)stopped arena mode from caving in/locking up when you leave control mode
+
+Major bug fixes
+	(*)made material-based random headless beasts killable
+	(*)stuckin bleeding updated properly
+	(*)fixed major artery tag when added from creature raw with TL_MAJOR_ARTERIES (also TL_CONNECTS)
+	(*)made major artery strike for 25%+ fractures on major artery parts mandatory
+	(*)amplified effects for announced major artery strikes
+	(*)fixed swing velocity calculation for weapons
+	(*)fixed clothing size calculation (messed up shields, gloves, boots)
+	(*)changed contact area and size for bolts
+	(*)fixed blowouts in giant creature wrestling
+	(*)fixed weird skill/profession mixup that stopped marksdwarves from firing on enemies
+	(*)freed up some ammo that became lost in limbo after squad deletion/ammo reassignments/etc.
+	(*)made hunters grab ammo more reliably when they run out or when labor is changed
+	(*)fixed reordering of reaction/ore mats and a few other indexing problems between operating systems
+
+Other bug fixes/tweaks
+	(*)reworded some combat announcements
+	(*)fixed reaction screen product display error
+	(*)fixed contact area issue with misc object fighting
+	(*)changed dodging rules for people mounting a charge defense
+	(*)fixed problem with edge being disregarded too soon after impact breaks
+	(*)changed skill effects on firing rate
+	(*)changed contact area calculations for body parts
+	(*)various changes to weapon raws
+	(*)changed edge/impact calculations
+	(*)metal values changed in raws
+	(*)fixed problems preventing some gut pop-outs from happening
+	(*)fixed issue with extra dodge rolls causing shots to become less square
+	(*)other combat tweaks
+	(*)obliterated arsenal dwarf (position will still exist in old saves, but won't be used/needed)
+	(*)extended distance at which hunters are willing to shoot
+	(*)made hunters return kills under more circumstances
+	(*)allowed miners/woodcutters to switch immediately to hunt labor without getting confused about crossbow
+	(*)stopped targeting of benign, far away wilderness creatures after they see you, unless they are close
+	(*)force-allowed targeting of kill targets in some cases where it wasn't permitting it
+	(*)stopped indiv choice melee/ranged from picking out weapons of the opposite type instead of just preferring them
+	(*)fixed problem with custom workshops blanking out at times (save compat iffy here, might have to rebuild shops)
+	(*)made reaction job interface/automation check inside barrels/etc. (stuff manager jobs did right)
+	(*)changed stuckin chances
+
+New stuff
+	(*)added cumulative wounds
+	(*)added adv mode knapping
+	(*)added adv mode butchery
+	(*)allowed use of (buildingless) reactions in adv mode
+	(*)changed adv mode hunger/thirst/drowsiness durations and penalties
+	(*)start with spear/dagger in adv play now
+	(*)default dwf start with a few quivers
+	(*)gave hunters default ammo assignment
+
+SDL Version: Baughn fixed up the macro delay timer, a PPC Mac bug where the screen would be yellow and a seg-fault.
+
+******************************************************
+
+Release notes for 0.31.08 (June 19, 2010):
+
+Fixed up the crash with the look command and made backing out of embark warnings and reclaim selection work.
+
+******************************************************
+
+Release notes for 0.31.07 (June 19, 2010):
+
+Crash fixes
+	(*)fixed crash when over 200x200 in some screens
+	(*)fixed crash associated to assigning daggers to dwarven soldiers
+	(*)fixed a crash on the military screen
+
+Major bug fixes
+	(*)stopped doctors from picking up and dropping their patients repeatedly when it was time to carry them
+	(*)restricted doctors to using tables and traction benches in hospital zones (stalled doctors from old saves will ignore this)
+	(*)made workers stop taking new jobs if they can and want to eat/drink/sleep instead
+	(*)made certain jobs like updating records and partying quittable at any time due to hunger/thirst/drowsiness
+	(*)fixed pathfinding problem in special features that were placed within surrounding liquid layers
+	(*)allowed options screen from dwarf/adv mode setup
+	(*)fixed some job overwrite issues
+	(*)made stockpiles able to take from other stockpiles again
+	(*)made ownable items like cloaks that are part of uniforms not put soldiers into pickup/drop loops
+	(*)made cooking require a non-liquid object to start (prevents liquid food errors, powders okay)
+	(*)stopped item namers from repeatedly naming their items
+	(*)changed conditions for feeding/watering of injured dwarves so beds aren't required
+	(*)made militia commander assignment from noble screen respect current squad settings properly
+	(*)stopped removal of squad commanders from noble screen if they have subordinates
+	(*)stopped dwarves from holding multiple positions that lead squads
+	(*)got rid of some flashing and debris in SDL version
+
+Other bug fixes/tweaks
+	(*)reduced hunger/thirst/drowsiness skill/speed penalties
+	(*)made hunger/thirst/drowsiness thoughts occur a bit later in the process
+	(*)made alcohol turn into separate liquid objects less often
+	(*)made non-brewing events that create liquids handle alcohol correctly
+	(*)stopped clothier from messing up craft shop task listing (and some related issues)
+	(*)stopped non-locals from announcing their item attachments
+	(*)fixed traction bench situation on manager screen
+	(*)added pillar tile to d_init
+
+SDL Version: Baughn improved the curses and 2D output, fixed a text mode display bug, added keys to change the FPS up/down (default alt-- and alt-=), and likely some other things.
+
+******************************************************
+
+Release notes for 0.31.06 (June 9, 2010):
+
+Crash fixes
+	(*) fixed crash on abandon related to having a box/cabinet building assigned to somebody
+	(*) fixed crash from using nearly spent soap bars to clean people
+	(*) fixed up crash from scrolling over globs in stock screen if certain fats were present
+	(*) SDL mode image export crash fixed (Baughn)
+	(*) fixed cursor position on farm season selection (possible crash)
+
+Major bug fixes
+	(*) made dwarves that initiate individual training recognize when they are no longer doing so properly
+	(*) stopped dwarves from swapping out their equipment for newly made items of equal value
+	(*) stopped dwarves from assigning equipment from caravans or unforbidden possessions held by outsiders
+		also incoming woodcutters/miners/etc.
+	(*) stopped dwarves from being assigned large equipment
+	(*) added default trade capacity to creatures to stop near-infinite caravan goods from being added to certain creatures
+	(*) fixed material template values causing many natural creatures to be very squishy and underpowered
+
+Other bug fixes/tweaks
+	(*) 2D mode colors fixed (Baughn)
+	(*) curses mode color initialization fixed (Baughn)
+	(*) sound header fix (Baughn)
+	(*) fixed temporary pathing problems that came from digging out brook tiles (negative construction distance etc.)
+	(*) fixed deletion for zones that have all their tiles removed
+	(*) fixed problem stopping hospital zones that have some tiles deleted from updating their furniture assignments
+	(*) removed forest temperature dampening for artificially hot worlds
+	(*) fixed some duplicate tags and other issues in the raws (see file_changes.txt)
+	(*) graphical map export should be back in the SDL versions
+
+******************************************************
+
+Release notes for 0.31.05 (June 4, 2010):
+
+There are probably some Baughn SDL version tweaks not listed below.
+
+Crash fixes
+	(*) SDL graphics mode should work now (Baughn)
+	(*) creating squads in Linux shouldn't crash the game now
+	(*) stopped melting items from eventually crashing the game
+
+Major bug fixes
+	(*) animals/babies no longer try to clean themselves at water sources
+	(*) stopped losers from keeping their positions at elections (could not easily repair old saves with this problem though)
+	(*) fixed problem where ID numbers would be invalid on load after generating a world
+	(*) adjusted seasonal temperatures (should actually fix the rain bug)
+	(*) SDL grid sizes no longer stuck on 80x25 if you let intro movies play (Baughn)
+
+Other bug fixes/tweaks
+	(*) site finder will advanec without keypresses now
+	(*) SDL version 2D mode colors are corrected (Baughn)
+	(*) stopped cursor from skipping over large entries in stocks screen in SDL versions (Baughn)
+	(*) ESC no longer quits SDL keybinding screens instead of going up a level (Baughn)
+	(*) slow SDL unit offloading and other similar problems sped up (Baughn)
+
+New stuff
+	(*) immediately runs elections for unappointed, unelected positions like expedition leader if leader dies
+	(*) can set held key repetition behavior in SDL versions from init.txt (Baughn)
+	(*) SDL version 2D mode now allows zooming (Baughn)
+
+
+******************************************************
+
+Release notes for 0.31.04 (May 16, 2010):
+
+The main thing here is the new OpenGL code by Svein Ove Aas (Baughn).  Especially if you weren't running at maximum framerates even on the title screen, you should notice a great improvement.  There are some modes worth messing around with in data/init/init.txt -- try "2D" if the game does not work as well as it used to (or stick with the legacy version if truly necessary).
+
+You can get at macros with:
+	Ctrl+r = record
+	Ctrl+p = play
+	Ctrl+s = save
+	Ctrl+l = load
+There is a directory data/init/macros for them.
+
+You can use PNGs for (translucent) tilesets, you can resize the window using the border, you can zoom using the mouse wheel (reset with F10, you can rebind this to keys if you like) and multiple keys can be bound to one command.
+
+A lot of changes were necessary to get this running, so there are likely to be a variety of bugs.  The legacy version has also been reorganized to make releases easier, so there could be new bugs even there.
+
+Aside from that, we have some general fixes:
+
+Crash fixes
+	(*) stopped site finder from eating up a ton of memory (crashing the game on large maps)
+
+Major bug fixes
+	(*) changed day/night temperature calculations (fixes fish availability and melting in the rain)
+	(*) stopped suture and dressing jobs from being repeated over and over on healed wounds
+
+Minor changes
+	(*) made all vermin and smallish outdoor corpse items disappear over time (can be hit after a month for vermin, season for corpse chunks)
+	(*) changed ranges for adv mode temperature text
+	(*) made temperature of squares adjacent to lava slightly lower
+
+
+******************************************************
+
+Release notes for 0.31.03 (April 12, 2010):
+
+I handled some more crashes and the main pathing issue.  Undead aren't quite where they need to be yet (skeletons in particular still don't understand how the skull and spine should be holding them together), but they are more killable in this version.  Since they don't make sense in the first place, there's a sort of hitpoint system for them now that'll get them dead eventually if you don't break them apart, though punching a skeleton to death takes a long time in this system and maces are still a bit underpowered.  The undead HP will be revisited once the undead have more of a basis in the underlying reality.  I'll get to maces etc. sooner.
+
+Crash fixes
+	(*) fixed a zone deletion crash (only for zones with buildings in them)
+	(*) fixed crash in military screen upon switching to item assignment view when no squads were present
+	(*) fixed crash from copying a schedule cell with fewer orders to one with more
+	(*) fixed crash from changing alert view while scrolling through a schedule cells orders
+
+Major bug fixes
+	(*) fixed pathing problem (root cause was map generation vs. liquids, would mess up ramps/channels and more)
+	(*) stopped missing undead/melted/etc. tissues holding parts from being severed
+
+New stuff
+	(*) allowed undead in arena
+	(*) allowed undead to be killed by accumulated impacts for the time being while they don't make sense
+	(*) stopped people from trying to wrestle the undead at all
+
+Minor changes
+	(*) messed with corpse piece colors a bit
+	(*) fixed "and" spacing in stripe/spot descriptions
+	(*) fixed nervous mannerism typo
+	(*) fixed some raw typos (see file_changes.txt)
+
+******************************************************
+
+Release notes for 0.31.02 (April 8, 2010):
+
+Here's the first little update.  Things are still settling down after the release, but it looks like I'll be able to work with the new bug tracker and handle things there day by day.  There will be a few more of these small releases before I begin the SDL/Mac/Linux/40d# merge, since there are more crashes and huge problems, but I'm going to start some of the preparation for the merge as well.
+
+Crash fixes
+	(*) [GRAPHICS:YES] should no longer crash the arena or world generation
+	(*) fixed training activity crash (from removal of barracks)
+	(*) fixed crash from doing a large flow-style activity zone
+
+Minor changes
+	(*) made zone removal still work if flows are corrected (uses rectangles)
+	(*) made material projectile breath happen intermittently properly
+	(*) corrected gorlak color
+	(*) made blind cave bears eyeless and gave them extravision
+	(*) fixed broken eyelid relationships
+	(*) fixed broken child names for goat/unicorn/cave swallow
+	(*) swapped giant caste names
+	(*) fixed giant cave spider bite (was blunt)
+	(*) fixed alligator eye text
+	(*) made soap bars instead of globs
+	(*) fixed horn silver environment
+	(*) added cookability/vermin eating to meat material templates
+	(*) added cookability/vermin eating to plant leaf/seed materials
+
+******************************************************
+
+Release notes for 0.31.01 (April 1, 2010):
+
+It has been a long journey, and it is ongoing.  This release has all of the new stuff we've been talking about for more than a year, but it is quite buggy.  I also still need to do the merge with the OpenGL/Mac/Linux stuff as I mentioned in the dev log.  We have a new bug tracker at http://www.bay12games.com/dwarves/mantisbt/ which we are going to try out.  Expect it to be populated over the next few days with hundreds of issues.  All the same, the testers seemed to be able to enjoy themselves, so please try everything out and have fun!
+
+******************************************************
+
+Release notes for 0.28.181.40d (September 6, 2008):
+
+I decided to release the current bug fixes since a few of them involve patching up submitted saves and I wanted to get those out before I'm forced to break save compatibility for the next version.  I'll still be able to look at all previously submitted saves (and any saves submitted against this version), but fixes won't apply to the saves themselves as the next release won't be able to load them.
+
+Minor Changes
+	(*) made sparring dwarves work on their selected weapon/unarmed skills rather than using their best skills
+
+Bug Fixes:
+	(*) stopped thrown tantrum items from causing dwarf to become site enemy
+	(*) resolved shared item conflicts during map offloads
+	(*) prevented units with shared items (eg stuckins/wrestles) from leaving the dwarf mode play area
+	(*) got rid of world gen crash during succession after death of prolific long-standing position holders with inbred descendants
+	(*) fixed crash from human siege campfires
+	(*) stopped dwarves from taking their current hauled object off to bed when they schedule a rest due to injuries
+	(*) stopped dwarves from choosing to sleep on top of traps
+	(*) made adventure mode store transactions respect containment
+	(*) made combat-produced chunks respect forbid orders
+	(*) made cats able to carry vermin properly again
+	(*) got rid of erroneous goblin siege announcement for elves
+	(*) stopped custom profession names from obscuring recruitment announcements
+	(*) made forbidden items count toward wealth properly
+	(*) stopped fell moods from occurring if the fortress race does not drop a corpse
+
+******************************************************
+
+Release notes for 0.28.181.40c (August 21, 2008):
+
+Coffee'd up and fixed a display thing.
+
+******************************************************
+
+Release notes for 0.28.181.40b (August 21, 2008):
+
+Another one.  The partial print for graphics has been changed to a default-no init option, so if you weren't having display trouble and had a better framerate, you should turn it on.  It's in data/init/init.txt and it's called "PARTIAL_PRINT".  It'll probably take a while to resolve issues for everyone else.
+
+Minor Changes:
+	(*) added an init option for partial screen refreshes (defaults to off)
+	(*) added windowed/fullscreen grid sizes
+
+Bug Fixes:
+	(*) stopped designation cursor from leaving a trail when the minimap is updating
+	(*) fixed reclaim crash from units holding multigrasp clothing
+	(*) fixed lockup for glassmaker moods where the glassmaker doesn't like glass
+	(*) handled some other potential multigrasp inventory indexing issues
+	(*) fixed problem potentially capping caravan wagon number at 2
+	(*) handled new forbid orders vs. butchery, severs and sever-drops
+	(*) fixed problem with delay on up digging tasks
+	(*) fixed problem causing single tile mountain civs from using feature plants
+	(*) fixed wagon occupancy problem leaving behind flags that stopped construction
+	(*) stopped reclaim from creating a second site at the spot
+	(*) stopped dirt road construction at glacier/stone interface
+	(*) fixed problem with map export and flashing job markers
+
+******************************************************
+
+Release notes for 0.28.181.40a (August 18, 2008):
+
+Here's another one.  Hopefully I can transition to some new features next month, since I've been handling technical issues and problems for a while now.
+
+Additions:
+	(*) you can save your embark settings for later use
+	(*) added note-taking ability for embark screen
+	(*) added forbid-on-death orders for your corpses, other non-hunted corpses, your items and other items
+	(*) added forbid order for fired projectiles
+	(*) made dwarves prefer to combine items in existing bags/barrels/bins with init options to govern this behavior
+
+Minor Changes:
+	(*) made obsidian an economic stone
+	(*) did some display optimizations
+
+Bug fixes:
+	(*) fixed problem causing site finder to miss areas of the map when hunting for hidden features and rivers
+	(*) stopped new kitchen restrictions on contained items from causing no-ingredient food items
+	(*) stopped new kitchen restrictions on free item from causing silent cancellations of cook jobs
+	(*) fixed problem with up/down windows in adv mode for larger grid sizes
+	(*) changed how fireballs interact with the ground
+	(*) patched up decorated ammo values a bit
+	(*) made cageless traps display properly in all circumstances
+	(*) fixed problem with nobles pushing prices out of the displayable range
+	(*) handled adventurers retired while sleeping
+	(*) fixed display mix-up with FPS/GFPS counter in main dwarf screen
+	(*) fixed problem with cursor scrolling vs. y coord in expanded grids
+	(*) allowed mouse designations to work below y=23
+	(*) stopped the one-step key from messing up pausing when in a menu mode
+	(*) made zombie/skels that die in cages have proper corpses
+
+******************************************************
+
+Release notes for 0.28.181.39f:
+
+More fixes, a bit of work toward armies and caravans, and an expandable view.  If you want to try different grid dimensions, change the relevant entry [GRID:80:25] near the top of data/init/init.txt.  You'll also have to adjust your window size or full screen resolution to match if you don't want the new, larger grid to be squashed.  If you overshoot, it'll stretch them unless you turn black space on.
+
+Additions:
+	(*) allowed basic expansion of 80x25 grid
+	(*) gave world gen refugees entities and realized them as moving groups on the map after world gen
+	(*) added notification and history event for reaching summits of peaks and volcanos in adv mode
+
+Minor Changes:
+	(*) added notification for low migration seasons
+	(*) added object of worship to religion view in legends
+	(*) made detailed map export respect new peak heights
+	(*) locally steepened peaks a bit
+	(*) added world name to top of history file
+
+Bug Fixes:
+	(*) fixed crash involving lava pushing objects
+	(*) stopped many bottomless pits from having their upper portions filled with lava
+	(*) made reclaim dwarves start with the proper civilian labors enabled
+	(*) fixed problem causing just good or just evil params not to function
+	(*) stopped message spam from pit/pond/chain/cage jobs where the animal is inaccessible
+	(*) stopped note entry from conflicting with a few of the keys
+	(*) made constructed ramps stick around even if you dig out the walls near them
+	(*) fixed erroneous upper cap on detailed temperature export values
+	(*) fixed problem that caused peaks to be raised in flat areas during erosion
+	(*) suppressed erroneous "Zeroth" text for non-finalized history collections in dwarf-mode art descriptions
+	(*) made usable/unusable option appear when metals are selected in weapon/armor stockpiles
+	(*) fixed spacing problem with related hist fig race display
+	(*) fixed problem with the evil/good conversion of very large subregions
+	(*) fixed lockup from dragon fire modded civs in world gen army fights
+
+******************************************************
+
+Release notes for 0.28.181.39e:
+
+Another quick patch.
+	(*) stopped crash in site finder from large x dims
+	(*) changed designation selection timers (aka lazy miners)
+	(*) made site finder use embark rectangle size from init options
+
+******************************************************
+
+Release notes for 0.28.181.39d:
+
+This is the third and final fix release, barring any silliness that forces another quick patch.  Here's the complete list of changes:
+	(*) added init options/world parameters to show map features during embark
+	(*) added basic site finder to embark
+	(*) added a few optimizations for rivers and designation job selection
+	(*) stopped message spam from repeated animal taming job when no food is available
+	(*) stopped message spam from caging and other jobs when a dwarf is picked that is already leading another animal
+	(*) made dwarves cook quarry leaves properly
+	(*) allowed scrolling and premature stoppage during world generation
+	(*) added display and other features relating to last seed used by world gen
+	(*) added world gen parameter for minimum cave size
+	(*) stopped people from giving quests to kill themselves
+	(*) stopped abandoned stores from being stocked
+	(*) disallowed placement of non-empty bags as container buildings
+	(*) changed insanity text for animals
+	(*) fixed some other minor typos
+	(*) made volcanic shafts that are visible in embark always exit through the surface
+	(*) handled some cavein-at-start cases from pits and volcanos
+	(*) stopped farming restrictions from stopping setting up other seasons
+	(*) stopped dwarves holding a two-handed weapons from seeking another weapon if they are set to carry multiple weapons
+	(*) added races to historical figure list and event text
+	(*) did more context-based name shortening
+	(*) added ability for speakers to use first person when talking about historical events
+	(*) capitalized first names in trading screens
+	(*) got rid of some erroneous birth date display information
+	(*) allowed resters to get up once they are not wounded
+	(*) allowed resters to move again if they've made bad decisions about where to plop down
+	(*) added various detailed map export options (elevation, temperature, etc.)
+	(*) made the generator skip more of the minimum reject values if presets are present
+	(*) made the generator pop up helpful windows after many rejects and give an option to continue, abort, allow that reject type, or allow all rejects
+	(*) fixed crash on large 100 volcanism worlds
+	(*) fixed load crash from nullified items
+	(*) fixed crash from friendship evaluations when stuck merchant animals give birth
+	(*) stopped lockup on artifact creation when 6-7 of the same material are used
+	(*) fixed region rejections from savagery (civs still reject savage regions)
+	(*) made params load the post-region count variables properly
+	(*) added ability to leave notes on the map in dwarf mode
+	(*) stopped ramp removal from highlighting hidden areas for regular dig
+	(*) stopped masterwork ammunition used in weapon traps from making creators go insane
+	(*) stopped removed constructions from removing the floor if another constructed wall is below them
+	(*) made viewing historical event artwork in dwarf mode reveal events
+	(*) stopped double listing of modded MEGABEAST/POWERS in age name
+
+******************************************************
+
+Release notes for 0.28.181.39c:
+
+This is the second fix for the new world generation release.  Here's the complete list of changes:
+	(*) fixed problem with pathfinding that caused jobs to be randomly cancelled
+	(*) fixed bug stopping fish/turtles from being available during embark selection/trade
+	(*) fixed rng issue causing duplicate cave names and other problems
+	(*) sped up the history export, especially on worlds with lengthy histories
+	(*) stopped merchants from complaining about depot when there is one there
+	(*) stopped hidden items from making buildings invisible when they are used in constructions
+	(*) stopped parameter seeds from being set to Various when you abort a randomly seeded generation
+	(*) stopped people from saying RANDOM_DEF_SPHERE when they talk about their megabeast deities
+	(*) stopped adv mode conversations with paralyzed/ko'd people
+	(*) controlled long names during trading
+	(*) moved "Desel All" out of the way in build menu
+	(*) allowed artifact gloves to be left-handed, based on handedness of creator
+	(*) changed King's to Royal in advisor title text
+
+******************************************************
+
+Release notes for 0.28.181.39b:
+
+This is the first fix for the new world generation release.  Here's the complete list of changes:
+	(*) fixed bug causing dwarves and others to sleep forever
+	(*) fixed a few crashes with maps with Y dimensions larger than X dimensions
+	(*) fixed another world gen crash
+	(*) fixed bug stopping caves from appearing
+	(*) fixed bug causing hauling, cleaning and health care professions to disappear from labor list
+	(*) made the escape key work properly when setting world gen parameters
+	(*) loosened travel restrictions based on enemy seeing the player
+	(*) changed effects of temperature on food objects
+	(*) changed creature layout during ambushes
+	(*) stopped world gen roads from being obstructed by swamps and fixed a problem with how they handled slopes
+	(*) stopped world gen animals from starting as drunks
+	(*) stopped null civ membership from being added to moving megabeasts
+	(*) changed the text for culled historical parents
+	(*) fixed problem where tundra rejects were being logged instead of grass/hill rejects
+	(*) fixed some grammar issues with battle summaries
+	(*) fixed "Peasants" display in status
+
+******************************************************
+
+Release notes for 0.28.181.39a:
+
+Okay, here's the new version.  You can do various things with world generation, though not much has changed with the regular game.  If you go into the world generation advanced parameters and start designing/drawing your own world, please keep in mind that you'll probably end up getting infinite reject cycles -- you can turn on the reject log in data/init/init.txt to see what's going wrong.  Oftentimes you'll be violating biome restrictions (you can just go through any that you find and 'n'ullify them to solve this problem).  As usual, let me know if it crashes and how to make it crash if it does -- I suspect there are new problems of all sorts lurking within every part of the game, despite having fixed more than 100 bugs for this version.
+
+Save compatibility is a little iffy this time around -- there have been extensive changes to the mid-level maps, so it might get confused about the biome of a particular tile...  and worse.  I haven't noticed anything in limited messing around with old saves, but there will very likely be problems.
+
+******************************************************
+
+Release notes for 0.27.176.38c:
+
+This release should stop the command line crash from non-standard worlds, and it also has a shot at stopping the site sprawl issue during repeated world generation.  A fix for Power PC Macs is still in progress.
+
+******************************************************
+
+Release notes for 0.27.176.38b:
+
+This is the first Mac release.  Barring some tragic mistake, this is also the last bug fix release before the continuation of the Army Arc.  Again, this release is made up mostly of small changes that people wanted and some bug fixes for the worst problems introduced during the last release.  See the dev log for a complete list.
+
+******************************************************
+
+Release notes for 0.27.176.38a:
+
+Various little things that people have wanted for a while this time, as well as many additional bug fixes.  See the dev log for a complete list.
+
+******************************************************
+
+Release notes for 0.27.173.38a:
+
+The first army arc release, complete with no armies.  It really is mostly foundational work, but you'll notice some small changes here and there, more if you play adventure mode.  See the dev log for a complete list.
+
+******************************************************
+
+Release notes for 0.27.169.33g:
+
+A few more fixes, a few new init options and a new interface for bringing items to the trade depot.  See the dev log for a complete list.
+
+******************************************************
+
+Release notes for 0.27.169.33f:
+
+Various fixes people have been waiting for.  Fixed the farm problem from 33e, goblin sieges, mud tracking, made the treeline less annoying, made the missing gemstones available, and lots of other stuff.  See the dev log for a complete list.
+
+******************************************************
+
+Release notes for 0.27.169.33e:
+
+Continuing along with bug fixing.
+
+******************************************************
+
+Release notes for 0.27.169.33d:
+
+Fixed a few of the serious problems (one of the trade crashes, resting injury loops, waterskin filling at wells forever).  See the dev log for other minor changes.
+
+******************************************************
+
+Release notes for 0.27.169.33c:
+
+Continuing along with bug fixing.
+
+******************************************************
+
+Release notes for 0.27.169.33b:
+
+Various crash and lag fixes again.  See the dev log for other minor changes.
+
+******************************************************
+
+Release notes for 0.27.169.33a:
+
+Various crash and lag fixes.  There are still lags and crashes, but many of the major offenders have been handled now.  There were also several minor fixes.  See the dev log for those.
+
+******************************************************
+
+Release notes for 0.27.169.32a:
+
+Well, it has been a while.  That means potential instability, so don't get too attached to your fortresses at this point.  I'll be doing subsequent releases more often now as I solve problems.  In any case, dwarf mode now has a z-axis and you can make fortresses that span several levels.  Fluids behave much more reasonably, and you can walk across the world in adventure mode in the local view without having to step off of an artificial edge.  And various other lots more stuff.
+
+******************************************************
+
+Release notes for 0.23.125.23a:
+
+The backbone of temperature is in now, but there's still a lot to do.  I'm not working on it for a while again.
+
+******************************************************
+
+Release notes for 0.22.123.23a:
+
+A bug fix release along with a test-change for the FPS toggling.
+
+******************************************************
+
+Release notes for 0.22.121.23b:
+
+Few more crash bug fixes and several minor changes.
+
+If you are having speed trouble, you can go to init and turn off temperature and weather to see if that's the issue.
+
+******************************************************
+
+Release notes for 0.22.121.23a:
+
+Here are some fixes for crash problems.  I've also added metal bins and more information to the sites in the setup screen.  I fixed the FPS/black space problems with the BMP export options and a few other minor problems as well.
+
+There are still potentially serious problems from the temperature and other recent additions.  I'm going to continue working on bugs for the time being.
+
+******************************************************
+
+Release notes for 0.22.120.23b:
+
+I'm partly through the temperature rewrite.  This release has a lot of bug potential.  You should back up your save folders if you are updating from an older version.
+
+You can set fire to shrubs as an adventurer using the [g] command when you are standing near one.  This is not a permanent command.
+
+The temperature behavior of flows has not been implemented yet.  Very hot/cold creatures do not change the air temperature yet either.  There are a number of features that are in progress regarding temperature.
+
+The problem with dwarves being stuck outside during the stay-inside order should be fixed, as well as a number of other bugs.  You can now move the cursor quickly by using shift + direction.
+
+******************************************************
+
+Release notes for 0.22.120.23a:
+
+Lots of bugs fixed this time around.  I caught a lot of the stay-inside problems, but there are probably some new issues with random jobs now.  I'll fix these as I hear about them.  I'll also correct any additional stay-inside problems as I hear about them.  It should be easier now that more infrastructure is in place.
+
+There's also some creature graphics stuff you can play with.  See "raw/graphics/graphics_example.txt" to mess around with it.  You'll also need to set [GRAPHICS:YES] in "init/init.txt".  I only drew a miner picture, and a blobby dwarf thing, so I don't recommend this unless you are going to draw/use some additional tiles.
+
+******************************************************
+
+Release notes for 0.22.110.23c:
+
+Quick fix for missing color definition problem.
+
+******************************************************
+
+Release notes for 0.22.110.23b:
+
+Quick fix for dyes and a crash bug with inventories in adventure mode.
+
+******************************************************
+
+Release notes for 0.22.110.23a:
+
+There were various cosmetic changes to the game, mainly the addition of dyes and more art images.  The selection of dyes is very limited at present, and only involves ground plants.  There is a new workshop for this in dwarf mode.  You can use blue mushrooms or import other dyes from human traders.  This will be expanded later.
+
+******************************************************
+
+Release notes for 0.22.110.22f:
+
+This release is mainly to handle the issues with specific piles.  There are a few other bug fixes as well.
+
+******************************************************
+
+Release notes for 0.22.110.22e:
+
+Fixed a save corrupting problem.
+
+******************************************************
+
+Release notes for 0.22.110.22d:
+
+Quick patch for a crash bug from saving furniture piles.
+
+******************************************************
+
+Release notes for 0.22.110.22c:
+
+Aside from fixing some crash bugs, the main change this time is the addition of specific pile types.  You can access these from [q] on existing piles or you can set them when you are placing piles by selecting "custom settings".  Piles now make claims on bins and barrels.  This is displayed as "Cedar Bin <#12>".  You can use the [q] view for a pile to set the maximum number of bins and barrels it uses.  For now, a pile will only take one extra empty bin/barrel until something is placed inside, then it will take another until it gets up to the maximum.  We'll add some other options later.  In the [p]ile menu, you can also designate a number of reserved bins and barrels that will be used by jobs such as distillation before any stockpile gets to claim them.
+
+******************************************************
+
+Release notes for 0.22.110.22a:
+
+I fixed a lot of bugs; see the dev list.
+
+The main change for this version was the rewrite of the inventory system.  There will probably be several compat. issues, as well as various horrible bugs.  I've tested and fixed what I've found, but you'll find more.  **Back up your old saves before trying this version**  The old saves will work with this version, but you need to be careful with them.
+
+Those that deserve fingers and toes have them in this version.  You'll also notice right/left gloves.  Creatures lose items now with severs, so you'll lose your left gauntlet if your left arm is removed, for instance.
+
+Creatures are a bit silly about wear they put on rings and other trinkets.  Rings will probably pile up on the right thumb for instance, and earrings will pile up in the right ear.  Armor stands will also only store one glove and one boot for the time being.  This will be sorted out over time.
+
+There aren't any temperature effects despite the residents wearing clothing depending on the average temperature.  This will also be handled later.
+
+Finally, there aren't any gender links to clothing right now, so you might see male dwarves in "dresses" and "skirts".  Keep in mind that men all over the world wear clothing like this, and that's what is meant by these generic terms.  You can remove the items from the entity raw before you play if it makes you feel uncomfortable.
+
+******************************************************
+
+Release notes for 0.22.107.21a:
+
+There will be families and guards in new world towns, concluding the first third of the Bustling Town Arc.
+
+There's a wait key in adventure mode now (period), as well as some helpful "are you sure?" prompts.
+
+Various bug fixes -- including the clothing acquirement bug, the shield equipment bug and some ashery bugs.
+
+******************************************************
+
+Release notes for 0.21.104.21c:
+
+I fixed various bugs and implemented other minor changes.  See the changes list for those.  Nobles can still demand items involving small creature bones in old saves, but the preference is no longer generated in new dwarves.
+
+New worlds will see a few cosmetic changes in adventure mode towns (it was not possible to include them in old saves).  It's probably not worth generating a new world for them (and I haven't put up new pregenerated worlds), but the new towns have some larger cookie-cutter buildings like apartment complexes, and everybody will sleep at night and eat three meals a day from a magic barrel in their room that refills at midnight.  Once the caravans and a notion of wealth are in, this can all be differentiated properly instead.  As we progress along the Bustling Town Arc, it'll eventually be worthwhile to regenerate if you play adventure mode, but it's not a big deal right now.  In old worlds, you might notice some things like merchants taking breaks to wander around or sleeping on the beds in the mead hall.  They are just trying their best to follow the new schedules without having a home to go to.
+
+******************************************************
+
+Release notes for 0.21.104.21b:
+
+There's a skeleton of a workshop profile now.  It is in progress and undocumented.  You can select workers to work at the shop either by name or by skill level.  The list is not ordered yet.  You can use the mouse on this screen.  It's also written up in a new way that is independent of the 80x25 window to facilitate some more flexibility later on.
+
+Many small fixes (read the dev log).
+
+******************************************************
+
+Release notes for 0.21.104.21a:
+
+This fixes a problem with the export feature, lets you play around with the mouse when doing designations and cleans up some of the problems with flows and channel-related spam.
+
+******************************************************
+
+Release notes for 0.21.104.19c:
+
+Some highlights include fixing the disappearing bone/shell problem and allowing engraved wall images to be toggled on and off.  The detailing jobs shouldn't shut off at random any more.
+
+Some of the issues with cat butchery have been handled.
+
+I did a little bit with consolidating announcments (x2, x3, etc.), but I'll need more time to do it properly.
+
+Alt-tabbing in full screen might work a little better.  Seems to work here is all I can say.
+
+Until I make the cleaners smarter, blood disappears at the beginning of every season now.
+
+******************************************************
+
+Release notes for 0.21.104.19a:
+
+Fixed several crash bugs and cleaned up some affected saves.  I also found out why named creatures were disappearing sometimes and fixed that, though saves in which the problem is currently active will still see some of it.
+
+Chasming refuse is in, though there will probably be some irregularities of which you'll have the pleasure of informing me.
+
+There were some other changes that might help with sheriff/injury tantrums.
+
+Some of the tree designation clearance problems should be gone.
+
+Trade agreements should work properly.
+
+The thieves that enter the fortress are somewhat easier to detect now.
+
+Depending on how you've bound your keys, you should have the odd hold-down behavior only when using a cursor or scrolling now.
+
+******************************************************
+
+Release notes for 0.21.102.19a:
+
+Fixed a couple more crashes and various other errors (see the change log).
+
+Genders are mixed on starting animals now and horses should breed.  The unit screen will show some other designations beside "No Job" and there it will distinguish merchants and diplomats.  Water should flow into the cliff face now, at least from new channels.
+
+You can give your units nicknames and profession names now.  Do this from the [vpz] profile using [y] to customize them.  In adventure mode, you do it from the [l]ook + [enter] status view (again [y] to customize).  The [y] command appears onscreen.
+
+Some tantrum issues were fixed.  Placing artifact furniture was actually making them unhappier.  Fist fights and beatings still led to a minor version of the civil war bug.  These issues have been resolved.
+
+The "Shift + R Menu" instead of "n" for the N key has been resolved, though you might need to clean up your old files a bit if you are important old ones.
+
+You can toggle between windowed and fullscreen mode using F11 (or whatever key you bind) whenever you like now.  Let me know what problems come up with this.  I haven't handled direct minimization from fullscreen, but you can toggle and minimize from the windowed mode.  You can also get rid of the "fullscreen?" box that pops up the beginning in "data\init\init.txt" now.
+
+******************************************************
+
+Release notes for 0.21.101.19d:
+
+Resolved a unit scrambling issue from active saves in adventure mode.  You will no longer turn into the stray dog in town or a random goblin or warthog.
+
+******************************************************
+
+Release notes for 0.21.101.19c:
+
+Fixed a few more crash problems, but the main thing was to hopefully remove some of the strange mainly adventure mode instability introduced by the last version.  In case this sort of thing persists, please be careful to back up your saves before trying this one.  Worlds that were generated in or even played in the briefly-available 0.21.101.19b are likely to be twisted to pieces, especially if you played adventure mode.
+
+
+******************************************************
+
+Release notes for 0.21.101.19b:
+
+Many more crash fixes, including stopping some of those inflate errors.  Those saves are still corrupted though.
+
+I've changed how some of the search routines work.  I tested it out on several saves, but you should keep a copy of yours safe before you try this one just in case, as usual.  If you get around to creating a new world, you'll notice a significant speed increase when the years march up.  Some of this also carries over to the main game.
+
+Finally, aqueduct behavior has been partially repaired.  Building an aqueduct over your chasm should work, but aqueducts over water can randomly drown your fortress.  If you want to get lava over the river, try a stone bridge instead.  If you lava is in a channel next to the bridge, you might need to use a floodgate to get it over.  Bridges over water filled channels probably won't conduct lava properly.  I'll get around to fixing the rest of this in time, but there are still some crash bugs etc. that are higher priority.
+
+******************************************************
+
+Release notes for 0.21.101.19a:
+
+Several crash bugs should be fixed now.  Most saves will be recoverable, unless they have a load inflate error.
+
+******************************************************
+
+Release notes for 0.21.100.19a:
+
+See command_line.txt for information on world generation from command lines.
+
+******************************************************
+
+Release notes for 0.21.95.19c:
+
+Old save farmplots might show "Ft 0/0" for the fertilizer amount.  It will update at the beginning of the season.
