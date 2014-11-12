@@ -247,6 +247,10 @@ class AnnouncementType < MemHack::Enum
     ENUM[175] = :CONFLICT_CONVERSATION ; NUME[:CONFLICT_CONVERSATION] = 175
     ENUM[176] = :FORT_POSITION_SUCCESSION ; NUME[:FORT_POSITION_SUCCESSION] = 176
     ENUM[177] = :MECHANISM_SOUND ; NUME[:MECHANISM_SOUND] = 177
+    ENUM[178] = :BIRTH_WILD_ANIMAL ; NUME[:BIRTH_WILD_ANIMAL] = 178
+    ENUM[179] = :STRESSED_CITIZEN ; NUME[:STRESSED_CITIZEN] = 179
+    ENUM[180] = :CITIZEN_LOST_TO_STRESS ; NUME[:CITIZEN_LOST_TO_STRESS] = 180
+    ENUM[181] = :CITIZEN_TANTRUM ; NUME[:CITIZEN_TANTRUM] = 181
 end
 
 class AppearanceModifierType < MemHack::Enum
@@ -1413,126 +1417,129 @@ end
 class EmotionType < MemHack::Enum
     ENUM = Hash.new
     NUME = Hash.new
-    ENUM[0] = :Acceptance ; NUME[:Acceptance] = 0
-    ENUM[1] = :Adoration ; NUME[:Adoration] = 1
-    ENUM[2] = :Affection ; NUME[:Affection] = 2
-    ENUM[3] = :Agitation ; NUME[:Agitation] = 3
-    ENUM[4] = :Aggravation ; NUME[:Aggravation] = 4
-    ENUM[5] = :Agony ; NUME[:Agony] = 5
-    ENUM[6] = :Alarm ; NUME[:Alarm] = 6
-    ENUM[7] = :Alienation ; NUME[:Alienation] = 7
-    ENUM[8] = :Amazement ; NUME[:Amazement] = 8
-    ENUM[9] = :Ambivalence ; NUME[:Ambivalence] = 9
-    ENUM[10] = :Amusement ; NUME[:Amusement] = 10
-    ENUM[11] = :Anger ; NUME[:Anger] = 11
-    ENUM[13] = :Anguish ; NUME[:Anguish] = 13
-    ENUM[14] = :Annoyance ; NUME[:Annoyance] = 14
-    ENUM[16] = :Anxiety ; NUME[:Anxiety] = 16
-    ENUM[17] = :Apathy ; NUME[:Apathy] = 17
-    ENUM[19] = :Arousal ; NUME[:Arousal] = 19
-    ENUM[20] = :Astonishment ; NUME[:Astonishment] = 20
-    ENUM[22] = :Aversion ; NUME[:Aversion] = 22
-    ENUM[23] = :Awe ; NUME[:Awe] = 23
-    ENUM[24] = :Bitterness ; NUME[:Bitterness] = 24
-    ENUM[25] = :Bliss ; NUME[:Bliss] = 25
-    ENUM[26] = :Boredom ; NUME[:Boredom] = 26
-    ENUM[27] = :Caring ; NUME[:Caring] = 27
-    ENUM[29] = :Confusion ; NUME[:Confusion] = 29
-    ENUM[30] = :Contempt ; NUME[:Contempt] = 30
-    ENUM[31] = :Contentment ; NUME[:Contentment] = 31
-    ENUM[35] = :Dejection ; NUME[:Dejection] = 35
-    ENUM[36] = :Delight ; NUME[:Delight] = 36
-    ENUM[39] = :Despair ; NUME[:Despair] = 39
-    ENUM[40] = :Disappointment ; NUME[:Disappointment] = 40
-    ENUM[41] = :Disgust ; NUME[:Disgust] = 41
-    ENUM[42] = :Disillusioned ; NUME[:Disillusioned] = 42
-    ENUM[43] = :Dislike ; NUME[:Dislike] = 43
-    ENUM[44] = :Dismay ; NUME[:Dismay] = 44
-    ENUM[45] = :Displeasure ; NUME[:Displeasure] = 45
-    ENUM[46] = :Distress ; NUME[:Distress] = 46
-    ENUM[49] = :Eagerness ; NUME[:Eagerness] = 49
-    ENUM[51] = :Elation ; NUME[:Elation] = 51
-    ENUM[52] = :Embarrassment ; NUME[:Embarrassment] = 52
-    ENUM[53] = :Empathy ; NUME[:Empathy] = 53
-    ENUM[54] = :Emptiness ; NUME[:Emptiness] = 54
-    ENUM[55] = :Enjoyment ; NUME[:Enjoyment] = 55
-    ENUM[60] = :Exasperation ; NUME[:Exasperation] = 60
-    ENUM[62] = :Exhilaration ; NUME[:Exhilaration] = 62
-    ENUM[64] = :Fear ; NUME[:Fear] = 64
-    ENUM[65] = :Ferocity ; NUME[:Ferocity] = 65
-    ENUM[66] = :Fondness ; NUME[:Fondness] = 66
-    ENUM[67] = :Free ; NUME[:Free] = 67
-    ENUM[68] = :Fright ; NUME[:Fright] = 68
-    ENUM[69] = :Frustration ; NUME[:Frustration] = 69
-    ENUM[73] = :Glee ; NUME[:Glee] = 73
-    ENUM[74] = :Gloom ; NUME[:Gloom] = 74
-    ENUM[75] = :Glumness ; NUME[:Glumness] = 75
-    ENUM[76] = :Gratitude ; NUME[:Gratitude] = 76
-    ENUM[78] = :Grief ; NUME[:Grief] = 78
-    ENUM[79] = :GrimSatisfaction ; NUME[:GrimSatisfaction] = 79
-    ENUM[80] = :Grouchiness ; NUME[:Grouchiness] = 80
-    ENUM[81] = :Grumpiness ; NUME[:Grumpiness] = 81
-    ENUM[82] = :Guilt ; NUME[:Guilt] = 82
-    ENUM[83] = :Happiness ; NUME[:Happiness] = 83
-    ENUM[84] = :Hatred ; NUME[:Hatred] = 84
-    ENUM[86] = :Hope ; NUME[:Hope] = 86
-    ENUM[87] = :Hopelessness ; NUME[:Hopelessness] = 87
-    ENUM[88] = :Horror ; NUME[:Horror] = 88
-    ENUM[90] = :Humiliation ; NUME[:Humiliation] = 90
-    ENUM[95] = :Insult ; NUME[:Insult] = 95
-    ENUM[96] = :Interest ; NUME[:Interest] = 96
-    ENUM[97] = :Irritation ; NUME[:Irritation] = 97
-    ENUM[98] = :Isolation ; NUME[:Isolation] = 98
-    ENUM[100] = :Jolliness ; NUME[:Jolliness] = 100
-    ENUM[101] = :Jovialty ; NUME[:Jovialty] = 101
-    ENUM[102] = :Joy ; NUME[:Joy] = 102
-    ENUM[103] = :Jubilation ; NUME[:Jubilation] = 103
-    ENUM[105] = :Loathing ; NUME[:Loathing] = 105
-    ENUM[106] = :Loneliness ; NUME[:Loneliness] = 106
-    ENUM[108] = :Love ; NUME[:Love] = 108
-    ENUM[110] = :Lust ; NUME[:Lust] = 110
-    ENUM[112] = :Misery ; NUME[:Misery] = 112
-    ENUM[113] = :Mortification ; NUME[:Mortification] = 113
-    ENUM[115] = :Nervousness ; NUME[:Nervousness] = 115
-    ENUM[116] = :Nostalgia ; NUME[:Nostalgia] = 116
-    ENUM[117] = :Optimism ; NUME[:Optimism] = 117
-    ENUM[118] = :Outrage ; NUME[:Outrage] = 118
-    ENUM[119] = :Panic ; NUME[:Panic] = 119
-    ENUM[120] = :Patience ; NUME[:Patience] = 120
-    ENUM[121] = :Passion ; NUME[:Passion] = 121
-    ENUM[124] = :Pleasure ; NUME[:Pleasure] = 124
-    ENUM[125] = :Pride ; NUME[:Pride] = 125
-    ENUM[126] = :Rage ; NUME[:Rage] = 126
-    ENUM[127] = :Rapture ; NUME[:Rapture] = 127
-    ENUM[128] = :Rejection ; NUME[:Rejection] = 128
-    ENUM[129] = :Relief ; NUME[:Relief] = 129
-    ENUM[130] = :Regret ; NUME[:Regret] = 130
-    ENUM[131] = :Remorse ; NUME[:Remorse] = 131
-    ENUM[132] = :Repentance ; NUME[:Repentance] = 132
-    ENUM[133] = :Resentment ; NUME[:Resentment] = 133
-    ENUM[135] = :RighteousIndignation ; NUME[:RighteousIndignation] = 135
-    ENUM[136] = :Sadness ; NUME[:Sadness] = 136
-    ENUM[137] = :Satisfaction ; NUME[:Satisfaction] = 137
-    ENUM[139] = :SelfPity ; NUME[:SelfPity] = 139
-    ENUM[141] = :Servile ; NUME[:Servile] = 141
-    ENUM[142] = :Shaken ; NUME[:Shaken] = 142
-    ENUM[143] = :Shame ; NUME[:Shame] = 143
-    ENUM[144] = :Shock ; NUME[:Shock] = 144
-    ENUM[149] = :Suspicion ; NUME[:Suspicion] = 149
-    ENUM[150] = :Sympathy ; NUME[:Sympathy] = 150
-    ENUM[151] = :Tenderness ; NUME[:Tenderness] = 151
-    ENUM[153] = :Terror ; NUME[:Terror] = 153
-    ENUM[154] = :Thrill ; NUME[:Thrill] = 154
-    ENUM[156] = :Triumph ; NUME[:Triumph] = 156
-    ENUM[157] = :Uneasiness ; NUME[:Uneasiness] = 157
-    ENUM[158] = :Unhappiness ; NUME[:Unhappiness] = 158
-    ENUM[159] = :Vengefulness ; NUME[:Vengefulness] = 159
-    ENUM[161] = :Wonder ; NUME[:Wonder] = 161
-    ENUM[162] = :Worry ; NUME[:Worry] = 162
-    ENUM[163] = :Wrath ; NUME[:Wrath] = 163
-    ENUM[164] = :Zeal ; NUME[:Zeal] = 164
-    ENUM[168] = :Restless ; NUME[:Restless] = 168
-    ENUM[169] = :Admiration ; NUME[:Admiration] = 169
+    Color = Hash.new(7)
+    Divider = Hash.new
+    ENUM[-1] = :Anything ; NUME[:Anything] = -1
+    ENUM[0] = :Acceptance ; NUME[:Acceptance] = 0 ; Color[:Acceptance] = 7 ; Divider[:Acceptance] = -8
+    ENUM[1] = :Adoration ; NUME[:Adoration] = 1 ; Color[:Adoration] = 11 ; Divider[:Adoration] = -1
+    ENUM[2] = :Affection ; NUME[:Affection] = 2 ; Color[:Affection] = 11 ; Divider[:Affection] = -2
+    ENUM[3] = :Agitation ; NUME[:Agitation] = 3 ; Color[:Agitation] = 6 ; Divider[:Agitation] = 4
+    ENUM[4] = :Aggravation ; NUME[:Aggravation] = 4 ; Color[:Aggravation] = 6 ; Divider[:Aggravation] = 4
+    ENUM[5] = :Agony ; NUME[:Agony] = 5 ; Color[:Agony] = 14 ; Divider[:Agony] = 1
+    ENUM[6] = :Alarm ; NUME[:Alarm] = 6 ; Color[:Alarm] = 12 ; Divider[:Alarm] = 4
+    ENUM[7] = :Alienation ; NUME[:Alienation] = 7 ; Color[:Alienation] = 6 ; Divider[:Alienation] = 8
+    ENUM[8] = :Amazement ; NUME[:Amazement] = 8 ; Color[:Amazement] = 9 ; Divider[:Amazement] = 0
+    ENUM[9] = :Ambivalence ; NUME[:Ambivalence] = 9 ; Color[:Ambivalence] = 7 ; Divider[:Ambivalence] = 0
+    ENUM[10] = :Amusement ; NUME[:Amusement] = 10 ; Color[:Amusement] = 10 ; Divider[:Amusement] = -4
+    ENUM[11] = :Anger ; NUME[:Anger] = 11 ; Color[:Anger] = 12 ; Divider[:Anger] = 2
+    ENUM[13] = :Anguish ; NUME[:Anguish] = 13 ; Color[:Anguish] = 14 ; Divider[:Anguish] = 1
+    ENUM[14] = :Annoyance ; NUME[:Annoyance] = 14 ; Color[:Annoyance] = 6 ; Divider[:Annoyance] = 8
+    ENUM[16] = :Anxiety ; NUME[:Anxiety] = 16 ; Color[:Anxiety] = 6 ; Divider[:Anxiety] = 4
+    ENUM[17] = :Apathy ; NUME[:Apathy] = 17 ; Color[:Apathy] = 7 ; Divider[:Apathy] = 0
+    ENUM[19] = :Arousal ; NUME[:Arousal] = 19 ; Color[:Arousal] = 11 ; Divider[:Arousal] = -8
+    ENUM[20] = :Astonishment ; NUME[:Astonishment] = 20 ; Color[:Astonishment] = 9 ; Divider[:Astonishment] = 0
+    ENUM[22] = :Aversion ; NUME[:Aversion] = 22 ; Color[:Aversion] = 6 ; Divider[:Aversion] = 4
+    ENUM[23] = :Awe ; NUME[:Awe] = 23 ; Color[:Awe] = 9 ; Divider[:Awe] = 0
+    ENUM[24] = :Bitterness ; NUME[:Bitterness] = 24 ; Color[:Bitterness] = 6 ; Divider[:Bitterness] = 2
+    ENUM[25] = :Bliss ; NUME[:Bliss] = 25 ; Color[:Bliss] = 10 ; Divider[:Bliss] = -1
+    ENUM[26] = :Boredom ; NUME[:Boredom] = 26 ; Color[:Boredom] = 6 ; Divider[:Boredom] = 8
+    ENUM[27] = :Caring ; NUME[:Caring] = 27 ; Color[:Caring] = 11 ; Divider[:Caring] = -2
+    ENUM[29] = :Confusion ; NUME[:Confusion] = 29 ; Color[:Confusion] = 6 ; Divider[:Confusion] = 8
+    ENUM[30] = :Contempt ; NUME[:Contempt] = 30 ; Color[:Contempt] = 6 ; Divider[:Contempt] = 4
+    ENUM[31] = :Contentment ; NUME[:Contentment] = 31 ; Color[:Contentment] = 10 ; Divider[:Contentment] = -8
+    ENUM[35] = :Dejection ; NUME[:Dejection] = 35 ; Color[:Dejection] = 6 ; Divider[:Dejection] = 4
+    ENUM[36] = :Delight ; NUME[:Delight] = 36 ; Color[:Delight] = 10 ; Divider[:Delight] = -1
+    ENUM[39] = :Despair ; NUME[:Despair] = 39 ; Color[:Despair] = 14 ; Divider[:Despair] = 1
+    ENUM[40] = :Disappointment ; NUME[:Disappointment] = 40 ; Color[:Disappointment] = 6 ; Divider[:Disappointment] = 8
+    ENUM[41] = :Disgust ; NUME[:Disgust] = 41 ; Color[:Disgust] = 14 ; Divider[:Disgust] = 4
+    ENUM[42] = :Disillusioned ; NUME[:Disillusioned] = 42 ; Color[:Disillusioned] = 6 ; Divider[:Disillusioned] = 8
+    ENUM[43] = :Dislike ; NUME[:Dislike] = 43 ; Color[:Dislike] = 6 ; Divider[:Dislike] = 8
+    ENUM[44] = :Dismay ; NUME[:Dismay] = 44 ; Color[:Dismay] = 14 ; Divider[:Dismay] = 2
+    ENUM[45] = :Displeasure ; NUME[:Displeasure] = 45 ; Color[:Displeasure] = 6 ; Divider[:Displeasure] = 8
+    ENUM[46] = :Distress ; NUME[:Distress] = 46 ; Color[:Distress] = 14 ; Divider[:Distress] = 2
+    ENUM[49] = :Eagerness ; NUME[:Eagerness] = 49 ; Color[:Eagerness] = 9 ; Divider[:Eagerness] = -4
+    ENUM[51] = :Elation ; NUME[:Elation] = 51 ; Color[:Elation] = 10 ; Divider[:Elation] = -2
+    ENUM[52] = :Embarrassment ; NUME[:Embarrassment] = 52 ; Color[:Embarrassment] = 6 ; Divider[:Embarrassment] = 8
+    ENUM[53] = :Empathy ; NUME[:Empathy] = 53 ; Color[:Empathy] = 11 ; Divider[:Empathy] = -2
+    ENUM[54] = :Emptiness ; NUME[:Emptiness] = 54 ; Color[:Emptiness] = 14 ; Divider[:Emptiness] = 4
+    ENUM[55] = :Enjoyment ; NUME[:Enjoyment] = 55 ; Color[:Enjoyment] = 10 ; Divider[:Enjoyment] = -8
+    ENUM[60] = :Exasperation ; NUME[:Exasperation] = 60 ; Color[:Exasperation] = 6 ; Divider[:Exasperation] = 8
+    ENUM[62] = :Exhilaration ; NUME[:Exhilaration] = 62 ; Color[:Exhilaration] = 9 ; Divider[:Exhilaration] = -2
+    ENUM[64] = :Fear ; NUME[:Fear] = 64 ; Color[:Fear] = 12 ; Divider[:Fear] = 1
+    ENUM[65] = :Ferocity ; NUME[:Ferocity] = 65 ; Color[:Ferocity] = 12 ; Divider[:Ferocity] = 2
+    ENUM[66] = :Fondness ; NUME[:Fondness] = 66 ; Color[:Fondness] = 11 ; Divider[:Fondness] = -8
+    ENUM[67] = :Free ; NUME[:Free] = 67 ; Color[:Free] = 10 ; Divider[:Free] = -4
+    ENUM[68] = :Fright ; NUME[:Fright] = 68 ; Color[:Fright] = 14 ; Divider[:Fright] = 2
+    ENUM[69] = :Frustration ; NUME[:Frustration] = 69 ; Color[:Frustration] = 6 ; Divider[:Frustration] = 8
+    ENUM[73] = :Glee ; NUME[:Glee] = 73 ; Color[:Glee] = 10 ; Divider[:Glee] = -2
+    ENUM[74] = :Gloom ; NUME[:Gloom] = 74 ; Color[:Gloom] = 6 ; Divider[:Gloom] = 4
+    ENUM[75] = :Glumness ; NUME[:Glumness] = 75 ; Color[:Glumness] = 6 ; Divider[:Glumness] = 8
+    ENUM[76] = :Gratitude ; NUME[:Gratitude] = 76 ; Color[:Gratitude] = 11 ; Divider[:Gratitude] = -4
+    ENUM[78] = :Grief ; NUME[:Grief] = 78 ; Color[:Grief] = 14 ; Divider[:Grief] = 2
+    ENUM[79] = :GrimSatisfaction ; NUME[:GrimSatisfaction] = 79 ; Color[:GrimSatisfaction] = 13 ; Divider[:GrimSatisfaction] = 0
+    ENUM[80] = :Grouchiness ; NUME[:Grouchiness] = 80 ; Color[:Grouchiness] = 6 ; Divider[:Grouchiness] = 8
+    ENUM[81] = :Grumpiness ; NUME[:Grumpiness] = 81 ; Color[:Grumpiness] = 6 ; Divider[:Grumpiness] = 8
+    ENUM[82] = :Guilt ; NUME[:Guilt] = 82 ; Color[:Guilt] = 6 ; Divider[:Guilt] = 4
+    ENUM[83] = :Happiness ; NUME[:Happiness] = 83 ; Color[:Happiness] = 10 ; Divider[:Happiness] = -2
+    ENUM[84] = :Hatred ; NUME[:Hatred] = 84 ; Color[:Hatred] = 12 ; Divider[:Hatred] = 2
+    ENUM[86] = :Hope ; NUME[:Hope] = 86 ; Color[:Hope] = 10 ; Divider[:Hope] = -2
+    ENUM[87] = :Hopelessness ; NUME[:Hopelessness] = 87 ; Color[:Hopelessness] = 14 ; Divider[:Hopelessness] = 2
+    ENUM[88] = :Horror ; NUME[:Horror] = 88 ; Color[:Horror] = 12 ; Divider[:Horror] = 1
+    ENUM[90] = :Humiliation ; NUME[:Humiliation] = 90 ; Color[:Humiliation] = 14 ; Divider[:Humiliation] = 4
+    ENUM[95] = :Insult ; NUME[:Insult] = 95 ; Color[:Insult] = 6 ; Divider[:Insult] = 4
+    ENUM[96] = :Interest ; NUME[:Interest] = 96 ; Color[:Interest] = 9 ; Divider[:Interest] = -8
+    ENUM[97] = :Irritation ; NUME[:Irritation] = 97 ; Color[:Irritation] = 6 ; Divider[:Irritation] = 8
+    ENUM[98] = :Isolation ; NUME[:Isolation] = 98 ; Color[:Isolation] = 6 ; Divider[:Isolation] = 4
+    ENUM[100] = :Jolliness ; NUME[:Jolliness] = 100 ; Color[:Jolliness] = 10 ; Divider[:Jolliness] = -4
+    ENUM[101] = :Jovialty ; NUME[:Jovialty] = 101 ; Color[:Jovialty] = 10 ; Divider[:Jovialty] = -2
+    ENUM[102] = :Joy ; NUME[:Joy] = 102 ; Color[:Joy] = 10 ; Divider[:Joy] = -1
+    ENUM[103] = :Jubilation ; NUME[:Jubilation] = 103 ; Color[:Jubilation] = 10 ; Divider[:Jubilation] = -1
+    ENUM[105] = :Loathing ; NUME[:Loathing] = 105 ; Color[:Loathing] = 12 ; Divider[:Loathing] = 2
+    ENUM[106] = :Loneliness ; NUME[:Loneliness] = 106 ; Color[:Loneliness] = 6 ; Divider[:Loneliness] = 4
+    ENUM[108] = :Love ; NUME[:Love] = 108 ; Color[:Love] = 11 ; Divider[:Love] = -1
+    ENUM[110] = :Lust ; NUME[:Lust] = 110 ; Color[:Lust] = 11 ; Divider[:Lust] = -8
+    ENUM[112] = :Misery ; NUME[:Misery] = 112 ; Color[:Misery] = 14 ; Divider[:Misery] = 1
+    ENUM[113] = :Mortification ; NUME[:Mortification] = 113 ; Color[:Mortification] = 14 ; Divider[:Mortification] = 2
+    ENUM[115] = :Nervousness ; NUME[:Nervousness] = 115 ; Color[:Nervousness] = 6 ; Divider[:Nervousness] = 8
+    ENUM[116] = :Nostalgia ; NUME[:Nostalgia] = 116 ; Color[:Nostalgia] = 9 ; Divider[:Nostalgia] = -8
+    ENUM[117] = :Optimism ; NUME[:Optimism] = 117 ; Color[:Optimism] = 10 ; Divider[:Optimism] = -4
+    ENUM[118] = :Outrage ; NUME[:Outrage] = 118 ; Color[:Outrage] = 12 ; Divider[:Outrage] = 2
+    ENUM[119] = :Panic ; NUME[:Panic] = 119 ; Color[:Panic] = 14 ; Divider[:Panic] = 1
+    ENUM[120] = :Patience ; NUME[:Patience] = 120 ; Color[:Patience] = 7 ; Divider[:Patience] = -8
+    ENUM[121] = :Passion ; NUME[:Passion] = 121 ; Color[:Passion] = 11 ; Divider[:Passion] = -2
+    ENUM[124] = :Pleasure ; NUME[:Pleasure] = 124 ; Color[:Pleasure] = 11 ; Divider[:Pleasure] = -4
+    ENUM[125] = :Pride ; NUME[:Pride] = 125 ; Color[:Pride] = 11 ; Divider[:Pride] = -4
+    ENUM[126] = :Rage ; NUME[:Rage] = 126 ; Color[:Rage] = 12 ; Divider[:Rage] = 1
+    ENUM[127] = :Rapture ; NUME[:Rapture] = 127 ; Color[:Rapture] = 11 ; Divider[:Rapture] = -1
+    ENUM[128] = :Rejection ; NUME[:Rejection] = 128 ; Color[:Rejection] = 6 ; Divider[:Rejection] = 4
+    ENUM[129] = :Relief ; NUME[:Relief] = 129 ; Color[:Relief] = 10 ; Divider[:Relief] = -2
+    ENUM[130] = :Regret ; NUME[:Regret] = 130 ; Color[:Regret] = 6 ; Divider[:Regret] = 8
+    ENUM[131] = :Remorse ; NUME[:Remorse] = 131 ; Color[:Remorse] = 6 ; Divider[:Remorse] = 4
+    ENUM[132] = :Repentance ; NUME[:Repentance] = 132 ; Color[:Repentance] = 9 ; Divider[:Repentance] = -2
+    ENUM[133] = :Resentment ; NUME[:Resentment] = 133 ; Color[:Resentment] = 6 ; Divider[:Resentment] = 8
+    ENUM[135] = :RighteousIndignation ; NUME[:RighteousIndignation] = 135 ; Color[:RighteousIndignation] = 6 ; Divider[:RighteousIndignation] = 8
+    ENUM[136] = :Sadness ; NUME[:Sadness] = 136 ; Color[:Sadness] = 14 ; Divider[:Sadness] = 4
+    ENUM[137] = :Satisfaction ; NUME[:Satisfaction] = 137 ; Color[:Satisfaction] = 10 ; Divider[:Satisfaction] = -8
+    ENUM[139] = :SelfPity ; NUME[:SelfPity] = 139 ; Color[:SelfPity] = 6 ; Divider[:SelfPity] = 8
+    ENUM[141] = :Servile ; NUME[:Servile] = 141 ; Color[:Servile] = 9 ; Divider[:Servile] = 0
+    ENUM[142] = :Shaken ; NUME[:Shaken] = 142 ; Color[:Shaken] = 14 ; Divider[:Shaken] = 1
+    ENUM[143] = :Shame ; NUME[:Shame] = 143 ; Color[:Shame] = 14 ; Divider[:Shame] = 4
+    ENUM[144] = :Shock ; NUME[:Shock] = 144 ; Color[:Shock] = 14 ; Divider[:Shock] = 1
+    ENUM[149] = :Suspicion ; NUME[:Suspicion] = 149 ; Color[:Suspicion] = 13 ; Divider[:Suspicion] = 8
+    ENUM[150] = :Sympathy ; NUME[:Sympathy] = 150 ; Color[:Sympathy] = 11 ; Divider[:Sympathy] = -8
+    ENUM[151] = :Tenderness ; NUME[:Tenderness] = 151 ; Color[:Tenderness] = 11 ; Divider[:Tenderness] = -2
+    ENUM[153] = :Terror ; NUME[:Terror] = 153 ; Color[:Terror] = 12 ; Divider[:Terror] = 1
+    ENUM[154] = :Thrill ; NUME[:Thrill] = 154 ; Color[:Thrill] = 9 ; Divider[:Thrill] = -2
+    ENUM[156] = :Triumph ; NUME[:Triumph] = 156 ; Color[:Triumph] = 10 ; Divider[:Triumph] = -2
+    ENUM[157] = :Uneasiness ; NUME[:Uneasiness] = 157 ; Color[:Uneasiness] = 6 ; Divider[:Uneasiness] = 8
+    ENUM[158] = :Unhappiness ; NUME[:Unhappiness] = 158 ; Color[:Unhappiness] = 6 ; Divider[:Unhappiness] = 4
+    ENUM[159] = :Vengefulness ; NUME[:Vengefulness] = 159 ; Color[:Vengefulness] = 12 ; Divider[:Vengefulness] = 4
+    ENUM[161] = :Wonder ; NUME[:Wonder] = 161 ; Color[:Wonder] = 9 ; Divider[:Wonder] = -8
+    ENUM[162] = :Worry ; NUME[:Worry] = 162 ; Color[:Worry] = 6 ; Divider[:Worry] = 8
+    ENUM[163] = :Wrath ; NUME[:Wrath] = 163 ; Color[:Wrath] = 12 ; Divider[:Wrath] = 1
+    ENUM[164] = :Zeal ; NUME[:Zeal] = 164 ; Color[:Zeal] = 9 ; Divider[:Zeal] = -4
+    ENUM[168] = :Restless ; NUME[:Restless] = 168 ; Color[:Restless] = 6 ; Divider[:Restless] = 8
+    ENUM[169] = :Admiration ; NUME[:Admiration] = 169 ; Color[:Admiration] = 11 ; Divider[:Admiration] = -8
 end
 
 class EntityActionType < MemHack::Enum
@@ -9421,10 +9428,10 @@ class AnnouncementFlags < MemHack::Compound
 end
 
 class Announcements < MemHack::Compound
-    sizeof 712
+    sizeof 728
 
     field(:flags, 0) {
-        static_array(178, 4, AnnouncementType) {
+        static_array(182, 4, AnnouncementType) {
             global :AnnouncementFlags
         }
     }
@@ -28042,7 +28049,7 @@ class ItemBackpackst < ItemConstructed
 end
 
 class ItemBallistaarrowheadst < ItemActual
-    sizeof 136
+    sizeof 140
 
     rtti_classname :item_ballistaarrowheadst
 
@@ -28051,6 +28058,9 @@ class ItemBallistaarrowheadst < ItemActual
     }
     field(:mat_index, 132) {
         number 32, true
+    }
+    field(:sharpness, 136) {
+        number 32, true, 10000
     }
 end
 
@@ -29232,7 +29242,7 @@ class ItemShoesst < ItemConstructed
 end
 
 class ItemSiegeammost < ItemConstructed
-    sizeof 168
+    sizeof 172
 
     rtti_classname :item_siegeammost
 
@@ -29240,6 +29250,9 @@ class ItemSiegeammost < ItemConstructed
         pointer {
             global :ItemdefSiegeammost
         }
+    }
+    field(:sharpness, 168) {
+        number 32, true, 10000
     }
 end
 
@@ -41145,9 +41158,10 @@ class UnitAction < MemHack::Compound
             }
             field(:attack, 0) {
                 compound(:UnitAction_TData_TAttack) {
-                    field(:unk_0, 0) {
-                        number 32, true
+                    field(:target_unit_id, 0) {
+                        number 32, true, -1
                     }
+                    def target_unit_tg ; df.world.units.all.binsearch(target_unit_id) ; end
                     field(:unk_4, 4) {
                         compound(:UnitAction_TData_TAttack_TUnk4) {
                             field(:unk_0, 0) {
@@ -41173,10 +41187,11 @@ class UnitAction < MemHack::Compound
                             }
                         }
                     }
-                    field(:unk_1c, 28) {
-                        number 32, true
+                    field(:attack_item_id, 28) {
+                        number 32, true, -1
                     }
-                    field(:unk_20, 32) {
+                    def attack_item_tg ; df.world.items.all.binsearch(attack_item_id) ; end
+                    field(:target_body_part_id, 32) {
                         number 16, true
                     }
                     field(:unk_22, 34) {
@@ -41398,9 +41413,10 @@ class UnitAction < MemHack::Compound
                     field(:target_action, 4) {
                         number 32, true, -1
                     }
-                    field(:unk_8, 8) {
-                        number 32, true
+                    field(:parry_item_id, 8) {
+                        number 32, true, -1
                     }
+                    def parry_item_tg ; df.world.items.all.binsearch(parry_item_id) ; end
                 }
             }
             field(:block, 0) {
@@ -41412,9 +41428,10 @@ class UnitAction < MemHack::Compound
                     field(:target_action, 4) {
                         number 32, true, -1
                     }
-                    field(:unk_8, 8) {
-                        number 32, true
+                    field(:block_item_id, 8) {
+                        number 32, true, -1
                     }
+                    def block_item_tg ; df.world.items.all.binsearch(block_item_id) ; end
                 }
             }
             field(:dodge, 0) {
@@ -42123,7 +42140,7 @@ class UnitPersonality < MemHack::Compound
                     field(:unk2, 4) {
                         number 32, true
                     }
-                    field(:unk3, 8) {
+                    field(:strength, 8) {
                         number 32, true
                     }
                     field(:thought, 12) {
@@ -45179,156 +45196,199 @@ class ViewscreenLayerWorldGenParamst < ViewscreenLayer
 end
 
 class ViewscreenLegendsst < Viewscreen
-    sizeof 436
+    sizeof 440
 
     rtti_classname :viewscreen_legendsst
 
     field(:anon_1, 16) {
         number 32, true
     }
-    field(:anon_2, 20) {
+    field(:init_step, 20) {
         number 32, true
     }
-    field(:anon_3, 24) {
+    field(:init_era, 24) {
         number 32, true
     }
-    field(:anon_4, 28) {
+    field(:anon_2, 28) {
         number 32, true
     }
-    field(:anon_5, 32) {
+    field(:anon_3, 32) {
         number 32, true
     }
-    field(:anon_6, 36) {
+    field(:init_progress, 36) {
         number 32, true
     }
     field(:histfigs, 40) {
-        stl_vector
+        stl_vector(4) {
+            number 32, true, -1
+        }
     }
+    def histfigs_tg ; histfigs.map { |i| df.world.history.figures.binsearch(i) } ; end
     field(:sites, 52) {
-        stl_vector
+        stl_vector(4) {
+            number 32, true
+        }
     }
     field(:artifacts, 64) {
-        stl_vector
+        stl_vector(4) {
+            number 32, true
+        }
     }
     field(:regions, 76) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:layers, 88) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:entities, 100) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:structures_1, 112) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:structures_2, 124) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:unk_a8, 136) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:anon_4, 148) {
         stl_vector
     }
-    field(:entities, 88) {
+    field(:anon_5, 160) {
         stl_vector
     }
-    field(:anon_7, 100) {
+    field(:anon_6, 172) {
+        stl_bit_vector
+    }
+    field(:anon_7, 192) {
         stl_vector
     }
-    field(:structures, 112) {
+    field(:anon_8, 204) {
         stl_vector
     }
-    field(:anon_8, 124) {
+    field(:anon_9, 216) {
         stl_vector
     }
-    field(:anon_9, 136) {
+    field(:anon_10, 228) {
         stl_vector
     }
-    field(:anon_10, 148) {
-        stl_vector
-    }
-    field(:anon_11, 160) {
-        stl_vector
-    }
-    field(:anon_12, 172) {
-        stl_vector
-    }
-    field(:anon_13, 184) {
-        number 32, true
-    }
-    field(:anon_14, 188) {
-        stl_vector
-    }
-    field(:anon_15, 200) {
-        stl_vector
-    }
-    field(:anon_16, 212) {
-        stl_vector
-    }
-    field(:anon_17, 224) {
-        stl_vector
-    }
-    field(:anon_18, 236) {
+    field(:era_name, 240) {
         stl_string
     }
-    field(:anon_19, 240) {
+    field(:cur_page, 244) {
         number 16, true
     }
-    field(:anon_20, 244) {
+    field(:anon_11, 248) {
         number 32, true
     }
-    field(:anon_21, 248) {
+    field(:main_cursor, 252) {
         number 32, true
     }
-    field(:anon_22, 252) {
-        stl_vector
+    field(:main_row_type, 256) {
+        stl_vector(2) {
+            number 16, true
+        }
     }
-    field(:anon_23, 264) {
-        stl_vector
+    field(:main_row_arg1, 268) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_24, 276) {
-        stl_vector
+    field(:main_row_arg2, 280) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_25, 288) {
-        stl_vector
+    field(:main_row_arg3, 292) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_26, 300) {
+    field(:sub_cursor, 304) {
         number 32, true
     }
-    field(:anon_27, 304) {
+    field(:anon_12, 308) {
         number 8, true
     }
-    field(:anon_28, 308) {
-        stl_vector
+    field(:anon_13, 312) {
+        stl_vector(4) {
+            pointer {
+            }
+        }
     }
-    field(:anon_29, 320) {
+    field(:map_x, 324) {
         number 16, true
     }
-    field(:anon_30, 322) {
+    field(:map_y, 326) {
         number 16, true
     }
-    field(:anon_31, 324) {
+    field(:hide_territories, 328) {
         number 16, true
     }
-    field(:anon_32, 326) {
+    field(:civ_site_mode, 330) {
         number 16, true
     }
-    field(:anon_33, 328) {
+    field(:anon_14, 332) {
         number 16, true
     }
-    field(:anon_34, 332) {
+    field(:filter_text, 336) {
         stl_string
     }
-    field(:anon_35, 336) {
+    field(:filter_editing, 340) {
         number 8, true
     }
-    field(:anon_36, 340) {
-        stl_vector
+    field(:anon_15, 344) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_37, 352) {
-        stl_vector
+    field(:anon_16, 356) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_38, 364) {
-        stl_vector
+    field(:anon_17, 368) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_39, 376) {
-        stl_vector
+    field(:anon_18, 380) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_40, 388) {
-        stl_vector
+    field(:anon_19, 392) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_41, 400) {
-        stl_vector
+    field(:anon_20, 404) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_42, 412) {
-        stl_vector
+    field(:anon_21, 416) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
-    field(:anon_43, 424) {
-        stl_vector
+    field(:anon_22, 428) {
+        stl_vector(4) {
+            number 32, true
+        }
     }
 end
 
