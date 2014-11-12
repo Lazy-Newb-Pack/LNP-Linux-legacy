@@ -44,7 +44,7 @@ Included Mods
     - [12x8] ASCII [Default]
     - [16x16] ASCII
     - [16x16] [Afro's Graphics Pack 1.33](http://dffd.wimbli.com/file.php?id=9137)
-    - [16x16] [CLA [0.40.14v19](http://www.bay12forums.com/smf/index.php?topic=105376.0)
+    - [16x16] [CLA v0.40.14v19](http://www.bay12forums.com/smf/index.php?topic=105376.0)
     - [32x32] [DawnFortress v0.28](http://www.bay12forums.com/smf/index.php?topic=136221.msg4992910#msg4992910)
     - [15x15] [Duerer v.0.6](http://www.bay12forums.com/smf/index.php?topic=142083.0)
     - [12x12] [Grim Fortress 1.2](http://www.bay12forums.com/smf/index.php?topic=122421.0)
