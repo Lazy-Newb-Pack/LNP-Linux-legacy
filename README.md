@@ -1,4 +1,4 @@
-Lazy-Newb-Pack-Linux V0.40.15
+Lazy-Newb-Pack-Linux V0.40.16
 ====================
 
 A small package to get people started with Dwarf Fortress on linux. Please take time to check out the [Official thread](http://www.bay12forums.com/smf/index.php?topic=140966.0). There are a few help documents in the [Wiki](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/wiki) if you should get stuck.
@@ -7,11 +7,13 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 #### Linux Download 
 
 
-DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8949)
+DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
-Website Download [faster]: [HERE](http://www.lazynewbpack.com/linux/04015/)
+Website Download [faster]: 
 
 #### Older Linux Downloads
+
+V0.40.15 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04015/)
 
 V0.40.14 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04014/) 
 
@@ -33,7 +35,7 @@ Included Mods
 -------------
 * [Pidgeot's PyLNP 0.7.1 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
-    * [DFhack Linux V0.40.15 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
+    * [DFhack Linux V0.40.16 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
     * [splintermind's Dwarf Therapist v28](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (by default qt5, but also comes in [qt4](http://www.lazynewbpack.com/linux/#qt4))
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
@@ -66,61 +68,11 @@ Included Mods
 
 
 
-DF 40.15 Release notes (November 5, 2014):
+Release notes for 0.40.16 (November 12, 2014):
 -------------
 
-Here's another release with bug fixes and small changes to brighten your day.
-—Toady One, November 5, 2014
 
-*Major bug fixes:*
-
-    * Made growing trees update cave-in and light information properly
-    * Handled stress counter timing properly in adv mode
-    * Stopped nerve check from bypassing broken parts between thought center and body roots
-    * Stopped part from being pulped if inner nervous tissue is not detached
-    * Made pulped parts bleed properly
-    * Stopped crash from trying to place unit in proper connected component of crowded retired fort
-    * Fixed reversed inside/outside check for outdoor refuse hauling
-
-*Other bug fixes/tweaks:*
-
-    * Animals that can escape from cages no longer brought by traders
-    * Made reactions try to guess how their containers will be filled to stop problems with brewing large stacks etc.
-    * Small coin stacks can no longer be stuffed into non-containers
-    * Small coin stacks no longer pass through opponents
-    * Stopped tantrum dwarves from checking burrows for fistfights
-    * Changed tantrum action frequency
-    * Being in an owned site makes bogeyman not an issue
-    * Made ballista arrow heads and ballista arrows have edges
-    * Added ability to trade everything in the depot from either column
-    * Made column widths even in trade view and abbreviated strings differently
-    * Added select visible and select category to bring-to-depot menu
-    * Added totems to crafts tab of bring-to-depot screen
-    * Added a few categories to the kitchen menu
-    * Alphabetized stone and kitchen menus
-    * Added magma-safe indicator to stone menu
-    * Made encrust jobs respect furniture tools
-    * Cannot go into specific encrust menus if selected gem not available for encrust
-    * Dead dwarves removed from burrow count
-    * Made toggle button update properly when moving unit labor view to non-laborer
-    * Fixed a problem causing the right edge of the embark world map to disappear, including the cursor
-    * Fixed location of cursor in minimap for resized windows
-    * Made DOES_NOT_EXIST exclude creatures from certain lists properly
-    * Stopped stress reactions from being applied to unintelligent critters
-    * Stopped stress reactions of hidden creatures from being announced
-    * Fixed many typos (Gorobay)
-    * Updated description for pulping so it doesn't say "bruised" etc.
-    * Fixed broken artifact thought text
-    * Stopped immortality goal from having a broken display in thoughts
-    * Properly recognized multiple embark minecarts of the same material
-    * Slowed down tantrum/mood/etc. indicators
-    * Stopped zombies from interrupting your sleep to ask if they can help you with something
-    * Increased default embark points to compensate for more default equipment (stepladder etc.)
-    * Allowed deletion of first uniform
-    * Stopped crafts brought by traders from satisfying craft mandates
-    * Made weather init option clear up weather properly instead of just turning off the global simulation
-
-
+The purpose of this release is to make stress from long-term separation due to goblin snatching less severe and to stop attackers from always winning in post-world-generation non-player battles.  The fix for the latter could not be done cleanly at this time, so the battle readouts in legends are a little off compared to the ones from world-gen, but defenders are very often successful now.  I also fixed some missing aunts/uncles/cousins in the listing of relatives.
 
 -------------
 
