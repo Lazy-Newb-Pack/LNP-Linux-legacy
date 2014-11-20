@@ -5,7 +5,7 @@
 [BLUE_G:0]
 [BLUE_B:144]
 [GREEN_R:0]
-[GREEN_G:]
+[GREEN_G:0]
 [GREEN_B:200]
 [CYAN_R:0]
 [CYAN_G:0]
