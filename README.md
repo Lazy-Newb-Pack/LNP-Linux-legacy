@@ -33,7 +33,7 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 Included Mods
 -------------
-* [Pidgeot's PyLNP 0.7.1 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
+* [Pidgeot's PyLNP 0.8b Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
     * [DFhack Linux V0.40.16 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
     * [splintermind's Dwarf Therapist v28](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (by default qt5, but also comes in [qt4](http://www.lazynewbpack.com/linux/#qt4))
@@ -63,7 +63,7 @@ Included Mods
  also includes
  * [Captian Duck's DF2014 Embark Profile V3](http://www.reddit.com/r/dwarffortress/comments/2bzrqg/dfvidtuts2014_embark_profile_beta_testing/)
  * [Dwarf Therapist user Guide by ResMar](http://dffd.wimbli.com/file.php?id=7889)
- * [Community Quickfort blueprints]()
+ * [Quickfort Community Blueprints 2.2-BB](https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/)
 
 
 
