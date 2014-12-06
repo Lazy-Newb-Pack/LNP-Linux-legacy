@@ -77,17 +77,19 @@ Release notes for 0.40.19 (November 26, 2014):
 Here is another release for November, mostly related to livestock.
 
 New stuff
-	(*) Added gelding and associated profession/skill/etc.
+
+	* Added gelding and associated profession/skill/etc.
 
 Other bug fixes/tweaks
-	(*) Showed animal gender symbols in a few more places
-	(*) Got rid of mating-at-a-distance
-	(*) Added drink tab to kitchen screen
-	(*) Moved all remaining announcements to announcements.txt
-	(*) Added ability add/remove bp flags to set bp group
-	(*) Tweaked crowded pasture anger counter
-	(*) Stopped liaison from inserting own gender into position change news
-	(*) Added more work-arounds for compiler issue (fixing broken vault weapons and other problems)
+
+	* Showed animal gender symbols in a few more places
+	* Got rid of mating-at-a-distance
+	* Added drink tab to kitchen screen
+	* Moved all remaining announcements to announcements.txt
+	* Added ability add/remove bp flags to set bp group
+	* Tweaked crowded pasture anger counter
+	* Stopped liaison from inserting own gender into position change news
+	* Added more work-arounds for compiler issue (fixing broken vault weapons and other problems)
 
 ******************************************************
 
@@ -104,21 +106,21 @@ Release notes for 0.40.17 (November 19, 2014):
 Here is another friendly little release.
 
 Major bug fixes
-	(*) Fixed collapsing shrines
-	(*) Fixed army crash/bad behavior near the right/lower edge of the map
-	(*) Fixed a conversation crash related to uncivilized people/creatures trying to sell something in the market
-	(*) Made people only jump into actual conflicts, rather than animal encounters and training events
+	* Fixed collapsing shrines
+	* Fixed army crash/bad behavior near the right/lower edge of the map
+	* Fixed a conversation crash related to uncivilized people/creatures trying to sell something in the market
+	* Made people only jump into actual conflicts, rather than animal encounters and training events
 
 Other bug fixes/tweaks
-	(*) Made stress levels drop faster the longer no stressors are applied
-	(*) Made gathering plants from the ground add to herbalist skill properly again
-	(*) Made plants that grow in winter-spring plantable at all proper times (Quietust)
-	(*) Optimized flag checks for non-windows OSs (ag)
-	(*) Fixed problem deleting stockpile links in the case that stockpile had multiple give/take settings
-	(*) Fixed blinking behavior for stockpiles/zones vs. ramps/stairs
-	(*) Fixed blinking behavior for designations vs. anything obscuring them
-	(*) Fixed double untranslated name in thoughts screen
-	(*) Fixed elf diplomacy typo
+	* Made stress levels drop faster the longer no stressors are applied
+	* Made gathering plants from the ground add to herbalist skill properly again
+	* Made plants that grow in winter-spring plantable at all proper times (Quietust)
+	* Optimized flag checks for non-windows OSs (ag)
+	* Fixed problem deleting stockpile links in the case that stockpile had multiple give/take settings
+	* Fixed blinking behavior for stockpiles/zones vs. ramps/stairs
+	* Fixed blinking behavior for designations vs. anything obscuring them
+	* Fixed double untranslated name in thoughts screen
+	* Fixed elf diplomacy typo
 
 -------------
 
