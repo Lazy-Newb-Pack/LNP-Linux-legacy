@@ -1,60 +1,24 @@
 {
 	"folders": [
-	    ["Main folder",""],
-        ["Dwarf Fortress folder","<df>"],
-        ["LNP folder","LNP"],
-        ["-","-"],
-        ["Savegame folder","<df>/data/save"],
-        ["Utilities folder","LNP/Utilities"],
-        ["Graphics folder","LNP/Graphics"],
-        ["Init folder","<df>/data/init"]
+		["Main folder",""],
+		["LNP folder","LNP"],
+		["Dwarf Fortress folder","<df>"],
+		["-","-"],
+		["Savegame folder","<df>/data/save"],
+		["Utilities folder","LNP/Utilities"],
+		["Graphics folder","LNP/Graphics"],
+		["Init folder","<df>/data/init"]
 	],
 	"links": [
-	    ["DF Homepage","http://www.bay12games.com/dwarves/"],
-        ["Donate for Dwarf Fortress","http://www.bay12games.com/support.html"],
-        ["-","-"],
-        ["Lazy Newb Pack Linux","https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux"],
-        ["DF Forums","http://www.bay12forums.com/smf/"],
-        ["DF Wiki","http://dwarffortresswiki.org/index.php/DF2014:Quickstart_guide"],
-        ["DF on Reddit",""],
-        ["DF Map Archive","http://mkv25.net/dfma/index.php"],
-        ["DFHack readme","https://github.com/DFHack/dfhack/blob/master/Readme.rst"],
-        ["DF on TvTropes","http://tvtropes.org/pmwiki/pmwiki.php/VideoGame/DwarfFortress"],
+		["Donate to Dwarf Fortress","http://www.bay12games.com/support.html"],
+		["DF Homepage","http://www.bay12games.com/dwarves/"],
 		["-","-"],
-        ["CptnDuck's Tutorial vids","https://www.youtube.com/playlist?list=PL06686270DA5FF439"],
-        ["Getting Started (book)","http://shop.oreilly.com/product/0636920022565.do"],
-        ["Free basis of book","http://afteractionreporter.com/2009/02/09/the-complete-and-utter-newby-tutorial-for-dwarf-fortress-part-1-wtf/"],
-        ["-","-"],
-        ["DF Stories (1)","http://dfstories.com/all-stories/"],
-        ["DF Stories (2)","http://dfst.org/"],
-        ["Hall of Legends","http://www.bay12forums.com/smf/index.php?topic=89305"]
+		["Lazy Newb Pack Linux","https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux"],
+		["CptnDuck's Tutorial vids","https://www.youtube.com/playlist?list=PL06686270DA5FF439"],
+		["DF Wiki","http://dwarffortresswiki.org/"],
+		["DF Reddit <3","http://reddit.com/r/dwarffortress/"],
+		["DF Forums","http://www.bay12forums.com/smf/"]
 	],
-    "dfhack": {
-        "Partial Mouse Control": {
-            "command": "mousequery edge enable",
-            "tooltip": "allows scrolling by hovering near edge of map; conflicts with isometric view; may cause trouble with levers or macros"
-        },
-        "Automatic Job Assignments": {
-            "command": "autolabor 1",
-            "tooltip": "the 'autolabor' plugin automates job assignments, replacing tools such as Dwarf Therapist"
-        },
-        "Other Automation plugins": {
-            "command": "multicmd autonestbox start; seedwatch start; seedwatch all 150",
-            "tooltip": "more automation plugins - autonestbox and seedwatch"
-        },
-        "Workflow - production targets": {
-            "command": "workflow enable",
-            "tooltip": "the 'workflow' plugin disables cancelling repeat jobs.  Use 'alt-W' to set targets (eg 'if less than 100 drinks, unsuspend drink production until 200 drinks').  Great for automating complicated industries."
-        },
-        "Performance Tweaks": {
-            "command": "multicmd repeat -time 1 -timeUnits months -command [ cleanowned X ]; repeat -time 1 -timeUnits months -command [ clean all ]",
-            "tooltip": "dfhack fixes to run regularly, changes the game a little but helps a lot on old or slow hardware (dump worn items, remove all contaminants)"
-        },
-        "Pure Bugfixes": {
-            "command": "multicmd fix/blood-del; repeat -time 1 -timeUnits months -command [ fix/feeding-timers ]; repeat -time 1 -timeUnits months -command [ fix/stuckdoors ]",
-            "tooltip": "bugfixes to run regularly, strongly recomended (fix: feeding prisoners, stuckdoors)"
-        }
-	},
 	"hideUtilityPath": true,
 	"hideUtilityExt": true,
 	"updates": {
@@ -63,4 +27,4 @@
 		"downloadURL": "",
 		"packVersion": ""
 	}
-
+}
