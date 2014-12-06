@@ -10,5 +10,6 @@ if [ ${dt_capabilities} != "cap_sys_ptrace+eip" ]; then
         xterm -e "echo $msg;sudo setcap cap_sys_ptrace=eip LNP/utilities/dwarf_therapist/DwarfTherapist"
 fi
 
+
 #run Lazy Newb Pack
 ./PyLNP

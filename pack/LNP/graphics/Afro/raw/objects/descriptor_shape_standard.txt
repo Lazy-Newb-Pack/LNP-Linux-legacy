@@ -43,7 +43,7 @@ descriptor_shape_standard
 	[WORD:SUN]
 	[ADJ:shining]
 	[ADJ:blazing]
-	[TILE:36]
+	[TILE:15]
 
 [SHAPE:MOON]
 	[NAME:moon:moons]
@@ -52,7 +52,7 @@ descriptor_shape_standard
 	[ADJ:full]
 	[ADJ:crescent]
 	[ADJ:half]
-	[TILE:7]
+	[TILE:36]
 
 [SHAPE:WAVE]
 	[NAME:wave:waves]

@@ -1,4 +1,4 @@
-Lazy-Newb-Pack-Linux V0.40.16
+Lazy-Newb-Pack-Linux V0.40.19
 ====================
 
 A small package to get people started with Dwarf Fortress on linux. Please take time to check out the [Official thread](http://www.bay12forums.com/smf/index.php?topic=140966.0). There are a few help documents in the [Wiki](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/wiki) if you should get stuck.
@@ -9,9 +9,11 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 
 DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
-Website Download [faster]: [HERE](http://www.lazynewbpack.com/linux/#download)
+Website Download [faster]: [Not yet](http://www.lazynewbpack.com/linux/#download)
 
 #### Older Linux Downloads
+
+V0.40.16 Linux Lazy Newb Pack can be found [Not yet](http://www.lazynewbpack.com/linux/04016/)
 
 V0.40.15 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04015/)
 
@@ -20,7 +22,6 @@ V0.40.14 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/li
 V0.40.13 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04013/)
 
  
-
 #### Other Versions
  
 
@@ -35,8 +36,9 @@ Included Mods
 -------------
 * [Pidgeot's PyLNP 0.8b Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
-    * [DFhack Linux V0.40.16 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0)
-    * [splintermind's Dwarf Therapist v28](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (by default qt5, but also comes in [qt4](http://www.lazynewbpack.com/linux/#qt4))
+    * [DFhack Linux V0.40.19 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
+        * [StoneSense](https://github.com/DFHack/stonesense)
+    * [splintermind's Dwarf Therapist v30](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4, but also comes in [qt5](http://www.lazynewbpack.com/linux/#qt5)
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
     * [chromafort 2010-04-25](http://www.bay12forums.com/smf/index.php?topic=55025.0)
@@ -63,16 +65,60 @@ Included Mods
  also includes
  * [Captian Duck's DF2014 Embark Profile V3](http://www.reddit.com/r/dwarffortress/comments/2bzrqg/dfvidtuts2014_embark_profile_beta_testing/)
  * [Dwarf Therapist user Guide by ResMar](http://dffd.wimbli.com/file.php?id=7889)
- * [Quickfort Community Blueprints 2.2-BB](https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/)
+ * [Community Quickfort blueprints]()
 
 
 
 
-Release notes for 0.40.16 (November 12, 2014):
+Release notes for 0.40.19 (November 26, 2014):
 -------------
 
 
-The purpose of this release is to make stress from long-term separation due to goblin snatching less severe and to stop attackers from always winning in post-world-generation non-player battles.  The fix for the latter could not be done cleanly at this time, so the battle readouts in legends are a little off compared to the ones from world-gen, but defenders are very often successful now.  I also fixed some missing aunts/uncles/cousins in the listing of relatives.
+Here is another release for November, mostly related to livestock.
+
+New stuff
+	(*) Added gelding and associated profession/skill/etc.
+
+Other bug fixes/tweaks
+	(*) Showed animal gender symbols in a few more places
+	(*) Got rid of mating-at-a-distance
+	(*) Added drink tab to kitchen screen
+	(*) Moved all remaining announcements to announcements.txt
+	(*) Added ability add/remove bp flags to set bp group
+	(*) Tweaked crowded pasture anger counter
+	(*) Stopped liaison from inserting own gender into position change news
+	(*) Added more work-arounds for compiler issue (fixing broken vault weapons and other problems)
+
+******************************************************
+
+Release notes for 0.40.18 (November 20, 2014):
+-------------
+
+The flag changes brought forth a compiler issue on Windows (breaking smelting, for example).  Hopefully it'll work better now.
+
+******************************************************
+
+Release notes for 0.40.17 (November 19, 2014):
+-------------
+
+Here is another friendly little release.
+
+Major bug fixes
+	(*) Fixed collapsing shrines
+	(*) Fixed army crash/bad behavior near the right/lower edge of the map
+	(*) Fixed a conversation crash related to uncivilized people/creatures trying to sell something in the market
+	(*) Made people only jump into actual conflicts, rather than animal encounters and training events
+
+Other bug fixes/tweaks
+	(*) Made stress levels drop faster the longer no stressors are applied
+	(*) Made gathering plants from the ground add to herbalist skill properly again
+	(*) Made plants that grow in winter-spring plantable at all proper times (Quietust)
+	(*) Optimized flag checks for non-windows OSs (ag)
+	(*) Fixed problem deleting stockpile links in the case that stockpile had multiple give/take settings
+	(*) Fixed blinking behavior for stockpiles/zones vs. ramps/stairs
+	(*) Fixed blinking behavior for designations vs. anything obscuring them
+	(*) Fixed double untranslated name in thoughts screen
+	(*) Fixed elf diplomacy typo
 
 -------------
 
@@ -139,7 +185,7 @@ Credits & Special Thanks
  * [@Dwimenor](https://github.com/Dwimenor/) Created a workaround for LNP, as well as providing linux support
  * [@fricy](https://github.com/fricy/) Maintains the MacNewbie pack Reborn as well as supporting essential gaphic repo
  * [@joelpt](http://www.joelpt.net/quickfort/) Joel Thornton Created Quickfort 2.x
- * [@lethosor]() Works on DFhack, DFwiki, and maintainer of the LNP
+ * [@lethosor](https://github.com/lethosor) Works on DFhack, DFwiki, and maintainer of the LNP
  * [@LucasUP](https://github.com/LucasUP/) Lucas Paquette made the orginal windows LNP 
  * [@splintermind](https://github.com/splintermind/) Josh, part time wizard works dilligently on Dwarf Therapist
  * [@PeridexisErrant](http://www.bay12forums.com/smf/index.php?topic=126076.0)
