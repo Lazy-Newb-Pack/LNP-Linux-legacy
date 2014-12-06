@@ -106,12 +106,14 @@ Release notes for 0.40.17 (November 19, 2014):
 Here is another friendly little release.
 
 Major bug fixes
+
 	* Fixed collapsing shrines
 	* Fixed army crash/bad behavior near the right/lower edge of the map
 	* Fixed a conversation crash related to uncivilized people/creatures trying to sell something in the market
 	* Made people only jump into actual conflicts, rather than animal encounters and training events
 
 Other bug fixes/tweaks
+
 	* Made stress levels drop faster the longer no stressors are applied
 	* Made gathering plants from the ground add to herbalist skill properly again
 	* Made plants that grow in winter-spring plantable at all proper times (Quietust)
