@@ -207,3 +207,29 @@ log-region
 #######################################################
 # Apply binary patches at runtime                     #
 #######################################################
+
+
+#######################################################
+# Loading Stockpiles Settings Management Defaults	  #
+#######################################################
+
+# enable the stockpiles gui plugin
+enable stockpiles
+
+# q->stockpile - copy & paste stockpiles
+keybinding add Alt-P copystock
+
+# q->stockpile - load and save stockpile settings out of game
+keybinding add Alt-L@dwarfmode/QueryBuilding/Some/Stockpile "gui/stockpiles -load"
+keybinding add Alt-S@dwarfmode/QueryBuilding/Some/Stockpile "gui/stockpiles -save"
+
+
+#######################################################
+# Loading TWBT Default multirender                    #
+#######################################################
+
+# Number of levels to render
+multilevel 6
+
+# making the shadow a little darker, better for a bright tileset.
+multilevel shadowcolor 0 0 0 0.5

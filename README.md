@@ -6,7 +6,6 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 
 #### Linux Download 
 
-
 DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
 Website Download [faster]: [Not yet](http://www.lazynewbpack.com/linux/#download)
@@ -30,6 +29,13 @@ Similar packages also available in windows and Mac:
 Windows Version: [PeridexisErrant's Starter Pack](http://www.bay12forums.com/smf/index.php?topic=126076.0)
 
 Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?topic=128960.0)
+
+
+#### Package Version Notes
+
+Added the Dec 6 updated version of [rmblr's 0.40.19 Stockpiles Settings Management](http://www.bay12forums.com/smf/index.php?topic=146213.0) plugin,
+Added [mifki's Text Will Be Text](http://www.bay12forums.com/smf/index.php?topic=138754.0) dfhack plugin in the x64 version. :D 
+	* multilevel distance set to 6 and on by default, 
 
 
 Included Mods
