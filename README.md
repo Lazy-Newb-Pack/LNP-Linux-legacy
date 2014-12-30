@@ -8,11 +8,11 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 
 DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
-Website Download [faster]: [Not yet](http://www.lazynewbpack.com/linux/#download)
+Website Download [faster]: [HERE](http://www.lazynewbpack.com/linux/#download)
 
 #### Older Linux Downloads
 
-V0.40.16 Linux Lazy Newb Pack can be found [Not yet](http://www.lazynewbpack.com/linux/04016/)
+V0.40.16 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04016/)
 
 V0.40.15 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04015/)
 
@@ -44,7 +44,7 @@ Included Mods
 * Utilities:
     * [DFhack Linux V0.40.19 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
-    * [splintermind's Dwarf Therapist v30](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4, but also comes in [qt5](http://www.lazynewbpack.com/linux/#qt5)
+    	* [splintermind's Dwarf Therapist v30](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
     * [chromafort 2010-04-25](http://www.bay12forums.com/smf/index.php?topic=55025.0)
