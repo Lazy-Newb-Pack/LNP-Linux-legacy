@@ -3,24 +3,5 @@ DF_DIR=$(dirname "$0")
 cd "${DF_DIR}"
 export SDL_DISABLE_LOCK_KEYS=1 # Work around for bug in Debian/Ubuntu SDL patch.
 #export SDL_VIDEO_CENTERED=1 # Centre the screen.  Messes up resizing.
- 
-if [ `uname -m` = "x86_64" ] ; then
-    LIBZ=
-    for dir in /lib32 /usr/lib32 /lib /usr/lib; do
-        if ldd "$dir/libz.so.1" > /dev/null 2>&1 ; then
-            LIBZ="$dir/libz.so.1"
-            break
-        fi
-    done
-    if [ -z "$LIBZ" ] ; then
-        echo No 32-bit libz.so found
-        exit 1
-    fi
-    if [ -z "$LD_PRELOAD" ] ; then
-        export LD_PRELOAD=$LIBZ
-    else
-        export LD_PRELOAD=$LD_PRELOAD:$LIBZ
-    fi
-fi
- 
 ./libs/Dwarf_Fortress "$@" # Go, go, go! :)
+

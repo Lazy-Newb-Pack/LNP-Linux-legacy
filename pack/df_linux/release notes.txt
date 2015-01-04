@@ -34,6 +34,69 @@ IF YOUR KEYBOARD ISN'T WORKING:
 
 If you can get to the ESC keybindings menu (from the start screen, press ESC and then 2/8 to scroll to Key Bindings), you can set your key bindings.  If your "?" key on your keyboard doesn't work for help, you can set the keybinding properly here.  It might not display as a "*".  You can set the display up properly in "data/init/interface.txt" using the display strings at the top of the file.
 
+
+
+******************************************************
+
+Release notes for 0.40.23 (December 24, 2014):
+
+A third set of fixes for the job priority release, as well as a fix for the army "camp forever" problem from July.
+
+Major bug fixes
+	(*) Fixed cancellation bug with farming jobs
+	(*) Fixed problem causing camping armies to lose sight of certain goals once play began
+
+Other bug fixes/tweaks
+	(*) Stopped situation where channeling dwarf decides to stand on channel tile
+	(*) Fixed some raw typos (Gorobay)
+
+******************************************************
+
+Release notes for 0.40.22 (December 21, 2014):
+
+Major bug fixes
+	(*) Multi-item jobs like artifact moods, forging breastplates and smelting pig iron should work now
+
+Other bug fixes/tweaks
+	(*) Made toggle marker behave like toggle engraving mouse-wise
+
+******************************************************
+
+Release notes for 0.40.21 (December 19, 2014):
+
+This fixes some large and small problems with yesterday's release.  Save corruption was quite possible, so upgrading is important!  You can still bring your old saves from 0.40.03+ into this new version.
+
+Major bug fixes
+	(*) Made hauling jobs that chain to other hauling jobs respect job postings, instead of causing crashes and other horror
+	(*) Fixed stair/ramp removal
+
+Other bug fixes/tweaks
+	(*) Made digging look up/down for continuing jobs
+	(*) Fixed problem with harvest jobs stealing dwarves from each other
+
+******************************************************
+
+Release notes for 0.40.20 (December 18, 2014):
+
+Here is the job priorities release.  It should work fine with old saves, though existing hauling jobs may need to work themselves out for a bit.  Further job prioritization work can be done when we get through the framework for start scenarios, since we'll better understand how dwarves fit into the fortress at that time.
+
+New stuff
+	(*) New job selection process where dwarves choose important tasks with more regularity
+	(*) Very important jobs can remove dwarves from less important jobs
+	(*) Ability to prioritize a job so that it gets done immediately
+	(*) Mining, engraving and other designation jobs can now be prioritized numerically
+	(*) Designation jobs can be placed in a "marker only" mode, marker can be removed later to start work
+	(*) Mining jobs can be set to automatically follow veins and clusters
+	(*) Mining designation can be set to only select visible gems or useful stone
+
+Major bug fixes
+	(*) Fixed crash related to armies failing to take over villages
+
+Other bug fixes/tweaks
+	(*) Hauling jobs that used to need a held container now allow the dwarf to carry many items without a container
+	(*) Building jobs can swipe items from hauling jobs if the item is not held
+	(*) Wall/floor construction and road construction use new skill-free labor settings
+
 ******************************************************
 
 Release notes for 0.40.19 (November 26, 2014):

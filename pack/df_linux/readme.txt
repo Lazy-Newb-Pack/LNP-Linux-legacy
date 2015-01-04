@@ -13,7 +13,7 @@ This software is still in development, and this means that there are going to be
 
 For help with gameplay, press the help key (initially '?') after starting the game.  You might have to press ESC and use 2/8 to select keybindings on non-US keyboards in order to get the help key to work properly.
 
-As of November 2014, you can also get help at the fan-created dwarffortresswiki.org.  Please make use of and contribute to this valuable resource.
+As of December 2014, you can also get help at the fan-created dwarffortresswiki.org.  Please make use of and contribute to this valuable resource.
 
 Visit www.bay12games.com to report problems, discuss the game and read information on future development.  There are also other games there.
 All of the games there are free.  If you paid for this game, get the latest version for free at bay12games.com, and let me know who was charging you at tarn.adams@gmail.com.
@@ -136,3 +136,33 @@ THE POSSIBILITY OF SUCH DAMAGE.
 *** end GLEW license ***
 
 Portions of the SDL version are copyright (c)2008 The FreeType Project (www.freetype.org).  All rights reserved.
+
+ncurses:
+
+/****************************************************************************
+ * Copyright (c) 1998-2010,2011 Free Software Foundation, Inc.              *
+ *                                                                          *
+ * Permission is hereby granted, free of charge, to any person obtaining a  *
+ * copy of this software and associated documentation files (the            *
+ * "Software"), to deal in the Software without restriction, including      *
+ * without limitation the rights to use, copy, modify, merge, publish,      *
+ * distribute, distribute with modifications, sublicense, and/or sell       *
+ * copies of the Software, and to permit persons to whom the Software is    *
+ * furnished to do so, subject to the following conditions:                 *
+ *                                                                          *
+ * The above copyright notice and this permission notice shall be included  *
+ * in all copies or substantial portions of the Software.                   *
+ *                                                                          *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS  *
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF               *
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.   *
+ * IN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,   *
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR    *
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR    *
+ * THE USE OR OTHER DEALINGS IN THE SOFTWARE.                               *
+ *                                                                          *
+ * Except as contained in this notice, the name(s) of the above copyright   *
+ * holders shall not be used in advertising or otherwise to promote the     *
+ * sale, use or other dealings in this Software without prior written       *
+ * authorization.                                                           *
+ ****************************************************************************/

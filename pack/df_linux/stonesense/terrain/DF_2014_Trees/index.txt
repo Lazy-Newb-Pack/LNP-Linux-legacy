@@ -1,3 +1,0 @@
-base_mushroom.xml
-base_trees_trunk.xml
-base_trees_foliage.xml
