@@ -1,4 +1,4 @@
-Lazy-Newb-Pack-Linux V0.40.19
+Lazy-Newb-Pack-Linux V0.40.23
 ====================
 
 A small package to get people started with Dwarf Fortress on linux. Please take time to check out the [Official thread](http://www.bay12forums.com/smf/index.php?topic=140966.0). There are a few help documents in the [Wiki](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/wiki) if you should get stuck.
@@ -11,6 +11,8 @@ DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 Website Download [faster]: [HERE](http://www.lazynewbpack.com/linux/#download)
 
 #### Older Linux Downloads
+
+V0.40.19 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04019/)
 
 V0.40.16 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04016/)
 
@@ -35,16 +37,16 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 Added the Dec 6 updated version of [rmblr's 0.40.19 Stockpiles Settings Management](http://www.bay12forums.com/smf/index.php?topic=146213.0) plugin,
 Added [mifki's Text Will Be Text](http://www.bay12forums.com/smf/index.php?topic=138754.0) dfhack plugin in the x64 version. :D 
-	* multilevel distance set to 6 and on by default, 
+    * multilevel distance set to 6 and on by default, 
 
 
 Included Mods
 -------------
 * [Pidgeot's PyLNP 0.8b Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
-    * [DFhack Linux V0.40.19 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
+    * [DFhack Linux V0.40.23 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
-    	* [splintermind's Dwarf Therapist v30](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
+        * [splintermind's Dwarf Therapist v30.1](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
     * [chromafort 2010-04-25](http://www.bay12forums.com/smf/index.php?topic=55025.0)
@@ -76,59 +78,71 @@ Included Mods
 
 
 
-Release notes for 0.40.19 (November 26, 2014):
+Release notes for 0.40.23 (December 21, 2014):
 -------------
 
+I've sorted out the "camp forever" errorlog message many of you have probably seen. Once dwarf/adventure mode began, there was a misflagging that caused various armies to lose their way. It doesn't directly affect invaders camping between marches, but armies lost to the bug (on their way home, for instance, or attacking villages) wouldn't be available for invasions later. This doesn't affect refugee groups that have nowhere to go... they still hang out and sleep all day.
 
-Here is another release for November, mostly related to livestock.
+
+Major bug fixes 
+
+    * Multi-item jobs like artifact moods, forging breastplates and smelting pig iron should work now
+
+Other bug fixes/tweaks
+
+    * Made toggle marker behave like toggle engraving mouse-wise
+
+******************************************************
+
+Release notes for 0.40.22 (December 19, 2014):
+-------------
+
+This fixes some large and small problems with yesterday's release. Save corruption was quite possible, so upgrading is important! You can still bring your old saves from 0.40.03+ into this new version. 
+
+
+Major bug fixes 
+
+    * Made hauling jobs that chain to other hauling jobs respect job postings, instead of causing crashes and other horror
+    * Fixed stair/ramp removal
+
+Other bug fixes/tweaks
+
+    * Made digging look up/down for continuing jobs
+    * Fixed problem with harvest jobs stealing dwarves from each other
+
+  ******************************************************
+
+Release notes for 0.40.21 (December 19, 2014):
+-------------  
+
+Here is the job priorities release. It should work fine with old saves, though existing hauling jobs may need to work themselves out for a bit. Further job prioritization work can be done when we get through the framework for start scenarios, since we'll better understand how dwarves fit into the fortress at that time. 
 
 New stuff
 
-	* Added gelding and associated profession/skill/etc.
+    * New job selection process where dwarves choose important tasks with more regularity
+    * Very important jobs can remove dwarves from less important jobs
+    * Ability to prioritize a job so that it gets done immediately
+    * Mining, engraving and other designation jobs can now be prioritized numerically
+    * Designation jobs can be placed in a "marker only" mode, marker can be removed later to start work
+    * Mining jobs can be set to automatically follow veins and clusters
+    * Mining designation can be set to only select visible gems or useful stone
+
+Major bug fixes 
+
+    * Fixed crash related to armies failing to take over villages
 
 Other bug fixes/tweaks
 
-	* Showed animal gender symbols in a few more places
-	* Got rid of mating-at-a-distance
-	* Added drink tab to kitchen screen
-	* Moved all remaining announcements to announcements.txt
-	* Added ability add/remove bp flags to set bp group
-	* Tweaked crowded pasture anger counter
-	* Stopped liaison from inserting own gender into position change news
-	* Added more work-arounds for compiler issue (fixing broken vault weapons and other problems)
+    * Hauling jobs that used to need a held container now allow the dwarf to carry many items without a container
+    * Building jobs can swipe items from hauling jobs if the item is not held
+    * Wall/floor construction and road construction use new skill-free labor settings
 
-******************************************************
+Release notes for 0.40.20 (December 18, 2014):
+-------------  
 
-Release notes for 0.40.18 (November 20, 2014):
--------------
+I added some different mining designations -- gems only (in the selected area as usual, unhidden tiles), economically useful only (including gems), and an automated designation that spreads to the same material when a job finishes. This can't be placed on layer-wide walls (so you don't mine out all the chalk in the universe), but it can be placed on walls which are part of large oval clusters (which the dwarf will proceed to mine out entirely), vein walls and small cluster walls. Road and wall/etc. construction jobs use two skill-free labor settings now, since skill didn't matter for constructions anyway.
 
-The flag changes brought forth a compiler issue on Windows (breaking smelting, for example).  Hopefully it'll work better now.
-
-******************************************************
-
-Release notes for 0.40.17 (November 19, 2014):
--------------
-
-Here is another friendly little release.
-
-Major bug fixes
-
-	* Fixed collapsing shrines
-	* Fixed army crash/bad behavior near the right/lower edge of the map
-	* Fixed a conversation crash related to uncivilized people/creatures trying to sell something in the market
-	* Made people only jump into actual conflicts, rather than animal encounters and training events
-
-Other bug fixes/tweaks
-
-	* Made stress levels drop faster the longer no stressors are applied
-	* Made gathering plants from the ground add to herbalist skill properly again
-	* Made plants that grow in winter-spring plantable at all proper times (Quietust)
-	* Optimized flag checks for non-windows OSs (ag)
-	* Fixed problem deleting stockpile links in the case that stockpile had multiple give/take settings
-	* Fixed blinking behavior for stockpiles/zones vs. ramps/stairs
-	* Fixed blinking behavior for designations vs. anything obscuring them
-	* Fixed double untranslated name in thoughts screen
-	* Fixed elf diplomacy typo
+Let's see... jobs that are assigned in workshops can swipe items from haul jobs now, provided the hauler doesn't make it to the item before the item is needed. I've also replaced the grab-a-container-and-then-collect-pile-items haul jobs with the ability for dwarves to haul multiple items without a container (as in fruit picking). The piece that's still missing is the use of a wheelbarrow to avoid, for example, dwarves staggering around with tons of bars, but I'm going to put that off since it could be a quagmire. This hauling change only applies to the stockpile container jobs (bin/bag/barrel), since it was the one that caused the most trouble for people and other jobs are more difficult to adapt.
 
 -------------
 
