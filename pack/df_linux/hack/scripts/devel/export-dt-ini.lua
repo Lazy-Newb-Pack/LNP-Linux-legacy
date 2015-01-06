@@ -201,6 +201,11 @@ address('id',df.history_event,'id')
 address('killed_hist_id',df.history_event_hist_figure_diedst,'victim_hf')
 
 header('item_offsets')
+if os_type == 'darwin' then
+    value('item_type',0x4)
+else
+    value('item_type',0x1)
+end
 address('item_def',df.item_ammost,'subtype') --currently same for all
 address('id',df.item,'id')
 address('general_refs',df.item,'general_refs')
@@ -264,6 +269,7 @@ address('shape_name_plural',df.descriptor_shape,'name_plural')
 
 header('health_offsets')
 address('parent_id',df.body_part_raw,'con_part_id')
+address('body_part_flags',df.body_part_raw,'flags')
 address('layers_vector',df.body_part_raw,'layers')
 address('number',df.body_part_raw,'number')
 address('names_vector',df.body_part_raw,'name_singular')
@@ -306,13 +312,12 @@ address('turn_count',df.unit,'curse','time_on_site')
 address('souls',df.unit,'status','souls')
 address('states',df.unit,'status','misc_traits')
 address('labors',df.unit,'status','labors')
---address('thoughts',df.unit,'status','recent_events')
---address('happiness',df.unit,'status','happiness')
 address('hist_id',df.unit,'hist_figure_id')
 address('artifact_name',df.unit,'status','artifact_name')
 address('active_syndrome_vector',df.unit,'syndromes','active')
 address('syn_sick_flag',df.unit_syndrome,'flags')
 address('unit_health_info',df.unit,'health')
+address('temp_mood',df.unit,'counters','soldier_mood')
 address('counters1',df.unit,'counters','winded')
 address('counters2',df.unit, 'counters','pain')
 address('counters3',df.unit, 'counters2','paralysis')
@@ -358,9 +363,20 @@ address('skills',df.unit_soul,'skills')
 address('preferences',df.unit_soul,'preferences')
 address('personality',df.unit_soul,'personality')
 address('beliefs',df.unit_personality,'values')
+address('emotions',df.unit_personality,'emotions')
 address('goals',df.unit_personality,'dreams')
 address('goal_realized',df.unit_personality.T_dreams,'unk8')
 address('traits',df.unit_personality,'traits')
+address('stress_level',df.unit_personality,'stress_level')
+
+header('emotion_offsets')
+address('emotion_type',df.unit_personality.T_emotions,'type')
+address('strength',df.unit_personality.T_emotions,'strength')
+address('thought_id',df.unit_personality.T_emotions,'thought')
+address('sub_id',df.unit_personality.T_emotions,'subthought')
+address('level',df.unit_personality.T_emotions,'severity')
+address('year',df.unit_personality.T_emotions,'year')
+address('year_tick',df.unit_personality.T_emotions,'year_tick')
 
 header('job_details')
 address('id',df.job,'job_type')
@@ -413,27 +429,25 @@ out:write[[
 size=0
 
 [invalid_flags_1]
-size=10
-1\name=a zombie
-1\value=0x00001000
-2\name=a skeleton
-2\value=0x00002000
-3\name=a merchant
-3\value=0x00000040
-4\name=outpost liason or diplomat
-4\value=0x00000800
+size=9
+1\name=a skeleton
+1\value=0x00002000
+2\name=a merchant
+2\value=0x00000040
+3\name=outpost liason or diplomat
+3\value=0x00000800
+4\name=an invader or hostile
+4\value=0x00020000
 5\name=an invader or hostile
-5\value=0x00020000
-6\name=an invader or hostile
-6\value=0x00080000
-7\name=an invader or hostile
-7\value=0x000C0000
-8\name=part of a merchant caravan
-8\value=0x00000080
-9\name="Dead, Jim."
-9\value=0x00000002
-10\name=marauder
-10\value=0x00000010
+5\value=0x00080000
+6\name=resident, invader or ambusher
+6\value=0x00600000
+7\name=part of a merchant caravan
+7\value=0x00000080
+8\name="Dead, Jim."
+8\value=0x00000002
+9\name=marauder
+9\value=0x00000010
 
 [invalid_flags_2]
 size=5
@@ -443,7 +457,7 @@ size=5
 2\value=0x00040000
 3\name=resident
 3\value=0x00080000
-4\name=visitor_uninvited
+4\name=uninvited visitor
 4\value=0x00400000
 5\name=visitor
 5\value=0x00800000

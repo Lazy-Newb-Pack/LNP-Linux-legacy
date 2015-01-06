@@ -6,7 +6,7 @@ creature_annelids
 	[DESCRIPTION:A tiny burrowing creature, found in moist soil.  It is legless, long and thin.]
 	[NAME:worm:worms:worm]
 	[CASTE_NAME:worm:worms:worm]
-	[CREATURE_TILE:'~'][COLOR:7:0:0]
+	[CREATURE_TILE:'{'][COLOR:7:0:0][ALTTILE:'}']
 	[PETVALUE:10]
 	[VERMIN_SOIL][FREQUENCY:100][VERMIN_HATEABLE]
 	[SMALL_REMAINS][VERMIN_NOTRAP][NOBONES]

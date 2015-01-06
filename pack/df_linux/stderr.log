@@ -3,8 +3,7 @@ Identifying DF version.
 Loading hack/symbols.xml ... OK
 Dummy symbol table entry: start_dwarf_count
 Dummy symbol table entry: start_dwarf_count
-Dummy symbol table entry: standing_orders_gather_refuse_outside
-Dummy symbol table entry: standing_orders_gather_refuse_outside
+Dummy symbol table entry: start_dwarf_count
 Dummy symbol table entry: debug_nopause
 Dummy symbol table entry: debug_nomoods
 Dummy symbol table entry: debug_combat
@@ -17,32 +16,21 @@ Dummy symbol table entry: debug_fastmining
 Dummy symbol table entry: debug_noberserk
 Dummy symbol table entry: debug_turbospeed
 Dummy symbol table entry: save_on_exit
-Dummy symbol table entry: standing_orders_gather_refuse_outside
-Dummy symbol table entry: debug_nopause
-Dummy symbol table entry: debug_nomoods
-Dummy symbol table entry: debug_combat
-Dummy symbol table entry: debug_wildlife
-Dummy symbol table entry: debug_nodrink
-Dummy symbol table entry: debug_noeat
-Dummy symbol table entry: debug_nosleep
-Dummy symbol table entry: debug_showambush
-Dummy symbol table entry: debug_fastmining
-Dummy symbol table entry: debug_noberserk
-Dummy symbol table entry: debug_turbospeed
-Dummy symbol table entry: save_on_exit
-Loaded 9 DF symbol tables.
-Version: v0.40.16 linux
+Dummy symbol table entry: start_dwarf_count
+Loaded 4 DF symbol tables.
+Version: v0.40.23 linux
 Initializing Console.
 Console is running.
-<vtable-address name='renderer' value='0xf7625168'/>
+<vtable-address name='renderer' value='0xf75e0168'/>
 Initializing Plugins.
-world: 2432504 ui: 28440 b_stock: 1272
+world: 2456548 ui: 28440 b_stock: 1272
 d_init: 372
 Starting IO thread.
 Starting DF input capture thread.
 Starting the TCP listener.
 DFHack is running.
 Invoking: keybinding add Ctrl-F1 hotkeys
+Invoking: keybinding add Alt-F1 hotkeys
 Invoking: keybinding add Ctrl-W twaterlvl
 Invoking: keybinding add Ctrl-V digv
 Invoking: keybinding add Ctrl-Shift-V "digv x"
@@ -57,12 +45,15 @@ Invoking: keybinding add Ctrl-Shift-P command-prompt
 Invoking: keybinding add Alt-M@dwarfmode/Default "dwarfmonitor prefs"
 Invoking: keybinding add Ctrl-F@dwarfmode/Default "dwarfmonitor stats"
 Invoking: keybinding add Ctrl-Shift-F@dwarfmode forum-dwarves
-Invoking: keybinding add Ctrl-B adv-bodyswap
-Invoking: keybinding add Ctrl-Shift-B "adv-bodyswap force"
+Invoking: keybinding add Ctrl-B@dungeonmode adv-bodyswap
+Invoking: keybinding add Ctrl-Shift-B@dungeonmode "adv-bodyswap force"
+Invoking: keybinding add Shift-O@dungeonmode gui/companion-order
 Invoking: keybinding add Ctrl-A@legends "exportlegends all"
 Invoking: keybinding add Ctrl-Shift-Z@dwarfmode/Default "stocks show"
 Invoking: keybinding add Ctrl-Shift-I@dwarfmode/Default "gui/dfstatus"
 Invoking: keybinding add Alt-P copystock
+Invoking: keybinding add Alt-L@dwarfmode/QueryBuilding/Some/Stockpile "gui/stockpiles -load"
+Invoking: keybinding add Alt-S@dwarfmode/QueryBuilding/Some/Stockpile "gui/stockpiles -save"
 Invoking: keybinding add Ctrl-D job-duplicate
 Invoking: keybinding add Shift-A "job-material ALUNITE"
 Invoking: keybinding add Shift-M "job-material MICROCLINE"
@@ -99,13 +90,12 @@ Invoking: tweak craft-age-wear
 Invoking: tweak farm-plot-select
 Invoking: tweak import-priority-category
 Invoking: tweak civ-view-agreement
+Invoking: tweak max-wheelbarrow
 Invoking: enable manipulator
 Invoking: enable search
 Invoking: enable automaterial
-Invoking: enable dwarfmonitor mousequery automelt autotrade buildingplan resume trackstop zone stocks autochop
+Invoking: enable dwarfmonitor mousequery automelt autotrade buildingplan resume trackstop zone stocks autochop stockpiles
 Invoking: stockflow enable
 Invoking: soundsense-season
 Invoking: log-region
-Invoking: echo DE is $DE
-echo is not a recognized command.
 Console is shutting down properly.

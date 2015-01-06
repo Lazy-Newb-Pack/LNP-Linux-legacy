@@ -1,0 +1,15 @@
+prefix=/home/peterix/allegpack
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+version=5.0.9
+suffix=
+versuffix=5
+
+Name: allegro_ttf
+Description: Allegro game programming library, TrueType fonts addon
+Version: ${version}
+Libs: -L${libdir} -lallegro_ttf${suffix}
+Libs.private: 
+Requires: allegro_font${suffix}-${versuffix} >= ${version}
+Cflags: -I${includedir}

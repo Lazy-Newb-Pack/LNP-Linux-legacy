@@ -1,0 +1,15 @@
+prefix=/home/peterix/allegpack
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+version=5.0.9
+suffix=
+versuffix=5
+
+Name: allegro_image
+Description: Allegro game programming library, image I/O addon
+Version: ${version}
+Libs: -L${libdir} -lallegro_image${suffix}
+Libs.private: 
+Requires: allegro${suffix}-${versuffix} >= ${version}
+Cflags: -I${includedir}

@@ -1,9 +1,58 @@
-DFHack Future
+DFHack 0.40.23-r1
+    Internals
+        plugins will not be loaded if globals they specify as required are not located (should prevent some crashes)
+    Fixes
+        Fixed numerous (mostly Lua-related) crashes on OS X by including a more up-to-date libstdc++
+        Alt should no longer get stuck on Windows (and perhaps other platforms as well)
+        advfort works again
+        autobutcher takes sexualities into account
+        devel/export-dt-ini: Updated for 0.40.20+
+        digfort: now checks file type and existence
+        exportlegends: Fixed map export
+        full-heal: Fixed a problem with selecting units in the GUI
+        gui/hack-wish: Fixed restrictive material filters
+        mousequery: Changed box-select key to Alt+M
+        plugins/dwarfmonitor: correct date display (month index, separator)
+        scripts/putontable: added to the readme
+        siren should work again
+        stderr.log: removed excessive debug output on OS X
+        trackstop: No longer prevents cancelling the removal of a track stop or roller.
+        Fixed a display issue with PRINT_MODE:TEXT
+        Fixed a symbol error (MapExtras::BiomeInfo::MAX_LAYERS) when compiling DFHack in Debug mode
+    New Plugins
+    	fortplan: designate construction of (limited) buildings from .csv file, quickfort-style
+    New Scripts
+        gui/stockpiles: an in-game interface for saving and loading stockpile
+          settings files.
+        position: Reports the current date, time, month, and season, plus
+            some location info.  Port/update of position.py
+        hfs-pit: Digs a hole to hell under the cursor.  Replaces needs_porting/hellhole.cpp
+    Removed
+        embark.lua: Obsolete, use `embark-tools`
+    New tweaks:
+        eggs-fertile: Displays an egg fertility indicator on nestboxes
+        max-wheelbarrow: Allows assigning more than 3 wheelbarrows to a stockpile
+    Misc Improvements
+        embark-tools: Added basic mouse support on the local map
+        Made some adventure mode keybindings in dfhack.init-example only work in adventure mode
+        Added a default keybinding for "gui/companion-order"
+        further work on needs_porting
+
+DFHack 0.40.19-r1
     Internals:
     Fixes:
+        typo fix in modtools/reaction-trigger
+        modtools/item-trigger should now work with item types
     New plugins:
+        savestock and loadstock: two commands for saving and loading
+          stockpile settings to a file. They can be used to migrate stockpile
+          settings between worlds and saves.
     New scripts:
+        remove-stress [all]: set selected or all units unit to -1,000,000 stress
+          this script replaces removebadthoughts.rb
     Misc improvements:
+        cmd-prompt can now access selected items, units, and buildings
+        autolabor plugin: add an optional talent pool parameter
 
 DFHack 0.40.16-r1
     Internals:
@@ -265,7 +314,7 @@ DFHack v0.34.11-r5
     - rendermax: replace the renderer with something else. Most interesting is "rendermax light"- a lighting engine for df.
     - automelt: allows marking stockpiles for automelt (i.e. any items placed in stocpile will be designated for melting)
     - embark-tools: implementations of Embark Anywhere, Nano Embark, and a few other embark-related utilities
-    - building-hacks: Allows to add custom functionality and/or animations to buildings. 
+    - building-hacks: Allows to add custom functionality and/or animations to buildings.
     - petcapRemover: triggers pregnancies in creatures so that you can effectively raise the default pet population cap from the default 50
 
   Misc improvements:
