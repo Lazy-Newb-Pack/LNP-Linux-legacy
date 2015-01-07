@@ -35,9 +35,11 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 #### Package Version Notes
 
-Added the Dec 6 updated version of [rmblr's 0.40.19 Stockpiles Settings Management](http://www.bay12forums.com/smf/index.php?topic=146213.0) plugin,
-Added [mifki's Text Will Be Text](http://www.bay12forums.com/smf/index.php?topic=138754.0) dfhack plugin in the x64 version. :D 
-    * multilevel distance set to 6 and on by default, 
+Update: 5th, Jan 2015
+R1 - Updated DF to v0.40.23, added dfhack v0.40.23 r1, updated graphics, DTv30.1 
+R2 - Added [mifki's 5.40 (DF 0.40.23) Text Will Be Text](http://www.bay12forums.com/smf/index.php?topic=138754.0) dfhack plugin. :D 
+    * multilevel distance set to 6 and on by default
+ 
 
 
 Included Mods
@@ -46,6 +48,7 @@ Included Mods
 * Utilities:
     * [DFhack Linux V0.40.23 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
+        * [TWBT 5.40](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
         * [splintermind's Dwarf Therapist v30.1](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
     * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
