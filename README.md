@@ -248,6 +248,7 @@ Credits & Special Thanks
 
  * [@andrewd18](https://github.com/andrewd18/) Andrew Dorney made the awesome linux LNP isntaller script
  * [@amfournda](https://github.com/amfournda/) Created a great gentoo fix script included in the pack
+ * [@beaubouchard](https://github.com/BeauBouchard) Maintains this package and lazynewbpack.com website
  * [@Captain Duck](https://www.youtube.com/playlist?list=PL06686270DA5FF439) 
  * [@Daveralph](https://github.com/daveralph1234/LazyNewbPack/) continued working on LNP after Dricus 
  * [@Dricus](https://github.com/Dricus)   Dirk Groot is the creator of the cross platform LNP port
@@ -256,6 +257,7 @@ Credits & Special Thanks
  * [@joelpt](http://www.joelpt.net/quickfort/) Joel Thornton Created Quickfort 2.x
  * [@lethosor](https://github.com/lethosor) Works on DFhack, DFwiki, and maintainer of the LNP
  * [@LucasUP](https://github.com/LucasUP/) Lucas Paquette made the orginal windows LNP 
+ * [@mifki](https://github.com/mifki) Text Will Be Text dfmultiscroll and webfort
  * [@splintermind](https://github.com/splintermind/) Josh, part time wizard works dilligently on Dwarf Therapist
  * [@PeridexisErrant](http://www.bay12forums.com/smf/index.php?topic=126076.0)
  * [@Pidgeot](https://bitbucket.org/Pidgeot/python-lnp/) Michael is a Founding developer of PyLNP
