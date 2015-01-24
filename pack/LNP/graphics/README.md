@@ -1,4 +1,4 @@
-DFgraphics 40.23
+DFgraphics 40.24
 ==========
 
 Place graphics packs here, each one in it's own directory. 

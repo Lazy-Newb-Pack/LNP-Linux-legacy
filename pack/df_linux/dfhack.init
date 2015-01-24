@@ -52,9 +52,8 @@ keybinding add Ctrl-Shift-F@dwarfmode forum-dwarves
 # Generic adv mode bindings  #
 ##############################
 
-keybinding add Ctrl-B@dungeonmode adv-bodyswap
-keybinding add Ctrl-Shift-B@dungeonmode "adv-bodyswap force"
-keybinding add Shift-O@dungeonmode gui/companion-order
+keybinding add Ctrl-B adv-bodyswap
+keybinding add Ctrl-Shift-B "adv-bodyswap force"
 
 ##############################
 # Generic legends bindings   #
@@ -73,12 +72,8 @@ keybinding add Ctrl-Shift-Z@dwarfmode/Default "stocks show"
 # open an overview window summarising some stocks (dfstatus)
 keybinding add Ctrl-Shift-I@dwarfmode/Default "gui/dfstatus"
 
-# q->stockpile - copy & paste stockpiles
+# q->stockpile; p - copy & paste stockpiles
 keybinding add Alt-P copystock
-
-# q->stockpile - load and save stockpile settings out of game
-keybinding add Alt-L@dwarfmode/QueryBuilding/Some/Stockpile "gui/stockpiles -load"
-keybinding add Alt-S@dwarfmode/QueryBuilding/Some/Stockpile "gui/stockpiles -save"
 
 # q->workshop - duplicate the selected job
 keybinding add Ctrl-D job-duplicate
@@ -179,7 +174,6 @@ tweak import-priority-category
 
 # Misc. UI tweaks
 tweak civ-view-agreement
-tweak max-wheelbarrow
 
 ###########################
 # Globally acting plugins #
@@ -195,7 +189,7 @@ enable search
 enable automaterial
 
 # Other interface improvement tools
-enable dwarfmonitor mousequery automelt autotrade buildingplan resume trackstop zone stocks autochop stockpiles
+enable dwarfmonitor mousequery automelt autotrade buildingplan resume trackstop zone stocks autochop
 
 # allow the fortress bookkeeper to queue jobs through the manager
 stockflow enable
@@ -239,4 +233,3 @@ multilevel 6
 
 # making the shadow a little darker, better for a bright tileset.
 multilevel shadowcolor 0 0 0 0.5
-

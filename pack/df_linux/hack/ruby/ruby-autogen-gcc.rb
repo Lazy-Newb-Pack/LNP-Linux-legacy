@@ -27038,7 +27038,7 @@ class InteractionTargetMaterialst < InteractionTarget
 end
 
 class InterfaceButton < MemHack::Compound
-    sizeof 12
+    sizeof 16
 
     rtti_classname :interface_buttonst
 
@@ -27047,6 +27047,9 @@ class InterfaceButton < MemHack::Compound
     }
     field(:is_hidden, 8) {
         number 8, true, nil, BooleanEnum
+    }
+    field(:anon_1, 12) {
+        number 32, true
     }
     def printSlabStatus(x, y, unused)
         DFHack.vmethod_call(self, 0, x, y, unused) ; nil
@@ -27073,11 +27076,11 @@ class InterfaceButton < MemHack::Compound
 end
 
 class InterfaceButtonBuildingst < InterfaceButton
-    sizeof 16
+    sizeof 20
 
     rtti_classname :interface_button_buildingst
 
-    field(:building, 12) {
+    field(:building, 16) {
         pointer {
             global :Building
         }
@@ -27085,177 +27088,121 @@ class InterfaceButtonBuildingst < InterfaceButton
 end
 
 class InterfaceButtonBuildingCategorySelectorst < InterfaceButtonBuildingst
-    sizeof 24
+    sizeof 28
 
     rtti_classname :interface_button_building_category_selectorst
 
-    field(:category_id, 16) {
+    field(:category_id, 20) {
         number 32, true
     }
-    field(:unk_14, 20) {
+    field(:unk_14, 24) {
         number 8, true
     }
 end
 
 class InterfaceButtonBuildingMaterialSelectorst < InterfaceButtonBuildingst
-    sizeof 32
+    sizeof 36
 
     rtti_classname :interface_button_building_material_selectorst
 
-    field(:mat_type, 16) {
+    field(:mat_type, 20) {
         number 16, true, -1
     }
-    field(:mat_index, 20) {
+    field(:mat_index, 24) {
         number 32, true
     }
-    field(:material_category, 24) {
+    field(:material_category, 28) {
         global :JobMaterialCategory
     }
-    field(:unk_1c, 28) {
+    field(:unk_1c, 32) {
         number 8, true
     }
 end
 
 class InterfaceButtonBuildingNewJobst < InterfaceButtonBuildingst
-    sizeof 52
+    sizeof 56
 
     rtti_classname :interface_button_building_new_jobst
 
-    field(:job_type, 16) {
+    field(:job_type, 20) {
         number 32, true, nil, JobType
     }
-    field(:reaction_name, 20) {
+    field(:reaction_name, 24) {
         stl_string
     }
-    field(:item_type, 24) {
+    field(:item_type, 28) {
         number 16, true, nil, ItemType
     }
-    field(:item_subtype, 26) {
+    field(:item_subtype, 30) {
         number 16, true
     }
-    field(:mat_type, 28) {
+    field(:mat_type, 32) {
         number 16, true, -1
     }
-    field(:mat_index, 32) {
+    field(:mat_index, 36) {
         number 32, true
     }
-    field(:item_category, 36) {
+    field(:item_category, 40) {
         global :StockpileGroupSet
     }
-    field(:hist_figure_id, 40) {
+    field(:hist_figure_id, 44) {
         number 32, true, -1
     }
     def hist_figure_tg ; df.world.history.figures.binsearch(hist_figure_id) ; end
-    field(:material_category, 44) {
+    field(:material_category, 48) {
         global :JobMaterialCategory
     }
-    field(:unk_48, 48) {
+    field(:unk_48, 52) {
         number 8, true, nil, BooleanEnum
     }
-    field(:is_custom, 49) {
+    field(:is_custom, 53) {
         number 8, true, nil, BooleanEnum
     }
-end
-
-class InterfaceButtonButtonst < InterfaceButton
-    sizeof 12
-
-    rtti_classname :interface_button_buttonst
-
-    field(:anon_1, 9) {
-        number 8, true, nil, BooleanEnum
-    }
-end
-
-class InterfaceButtonButtonDesignateSelectst < InterfaceButtonButtonst
-    sizeof 12
-
-    rtti_classname :interface_button_button_designate_selectst
-
-end
-
-class InterfaceButtonButtonDonest < InterfaceButtonButtonst
-    sizeof 12
-
-    rtti_classname :interface_button_button_donest
-
-end
-
-class InterfaceButtonButtonLightUpSelectorstShort < InterfaceButtonButtonst
-    sizeof 24
-
-    rtti_classname :interface_button_button_light_up_selectorst_short
-
-    field(:text, 12) {
-        stl_string
-    }
-    field(:var_ptr, 16) {
-        pointer {
-            number 16, true
-        }
-    }
-    field(:set_value, 20) {
-        number 16, true
-    }
-end
-
-class InterfaceButtonButtonOpenBitemDesignationst < InterfaceButtonButtonst
-    sizeof 12
-
-    rtti_classname :interface_button_button_open_bitem_designationst
-
-end
-
-class InterfaceButtonButtonOpenTrafficDesignationst < InterfaceButtonButtonst
-    sizeof 12
-
-    rtti_classname :interface_button_button_open_traffic_designationst
-
 end
 
 class InterfaceButtonConstructionst < InterfaceButton
-    sizeof 16
+    sizeof 20
 
     rtti_classname :interface_button_constructionst
 
-    field(:unused_c, 12) {
+    field(:unused_c, 16) {
         pointer {
         }
     }
 end
 
 class InterfaceButtonConstructionBuildingSelectorst < InterfaceButtonConstructionst
-    sizeof 28
+    sizeof 32
 
     rtti_classname :interface_button_construction_building_selectorst
 
-    field(:building_type, 16) {
+    field(:building_type, 20) {
         number 16, true
     }
-    field(:building_subtype, 18) {
+    field(:building_subtype, 22) {
         number 16, true
     }
-    field(:custom_type, 20) {
+    field(:custom_type, 24) {
         number 32, true, -1
     }
     def custom_type_tg ; df.world.raws.buildings.all.binsearch(custom_type) ; end
-    field(:existing_count, 24) {
+    field(:existing_count, 28) {
         number 32, true
     }
 end
 
 class InterfaceButtonConstructionCategorySelectorst < InterfaceButtonConstructionst
-    sizeof 20
+    sizeof 24
 
     rtti_classname :interface_button_construction_category_selectorst
 
-    field(:category_id, 16) {
+    field(:category_id, 20) {
         number 32, true
     }
 end
 
 class InterfaceButtonConstructionDonest < InterfaceButtonConstructionst
-    sizeof 16
+    sizeof 20
 
     rtti_classname :interface_button_construction_donest
 
@@ -30737,7 +30684,7 @@ class JobItem < MemHack::Compound
 end
 
 class JobItemFilter < MemHack::Compound
-    sizeof 140
+    sizeof 144
 
     field(:item_type, 0) {
         number 16, true, nil, ItemType
@@ -30830,37 +30777,40 @@ class JobItemFilter < MemHack::Compound
     field(:has_melee_skill, 96) {
         number 16, true, nil, JobSkill
     }
-    field(:pos, 98) {
+    field(:unk_v40_1, 98) {
+        number 8, true
+    }
+    field(:pos, 100) {
         global :Coord
     }
-    field(:unit, 104) {
+    field(:unit, 108) {
         pointer {
             global :Unit
         }
     }
-    field(:job, 108) {
+    field(:job, 112) {
         pointer {
             global :Job
         }
     }
-    field(:building, 112) {
+    field(:building, 116) {
         pointer {
             global :Building
         }
     }
-    field(:unk_74, 116) {
+    field(:unk_74, 120) {
         number 32, true
     }
-    field(:burrows, 120) {
+    field(:burrows, 124) {
         stl_vector(4) {
             number 32, true, -1
         }
     }
     def burrows_tg ; burrows.map { |i| df.ui.burrows.list.binsearch(i) } ; end
-    field(:use_burrows, 132) {
+    field(:use_burrows, 136) {
         number 8, true, nil, BooleanEnum
     }
-    field(:take_from, 136) {
+    field(:take_from, 140) {
         pointer {
             stl_vector(4) {
                 pointer {
@@ -39494,40 +39444,40 @@ class UiAdvmode < MemHack::Compound
 end
 
 class UiBuildItemReq < MemHack::Compound
-    sizeof 196
+    sizeof 200
 
     field(:filter, 0) {
         global :JobItemFilter
     }
-    field(:candidates, 140) {
+    field(:candidates, 144) {
         stl_vector(4) {
             pointer {
                 global :Item
             }
         }
     }
-    field(:candidate_selected, 152) {
+    field(:candidate_selected, 156) {
         stl_vector(1) {
             number 8, true, nil, BooleanEnum
         }
     }
-    field(:unk_a0, 164) {
+    field(:unk_a0, 168) {
         stl_vector(2) {
             number 16, true
         }
     }
-    field(:candidate_enabled, 176) {
+    field(:candidate_enabled, 180) {
         stl_vector(1) {
             number 8, true, nil, BooleanEnum
         }
     }
-    field(:count_required, 188) {
+    field(:count_required, 192) {
         number 16, true
     }
-    field(:count_max, 190) {
+    field(:count_max, 194) {
         number 16, true
     }
-    field(:count_provided, 192) {
+    field(:count_provided, 196) {
         number 16, true
     }
 end
@@ -40156,7 +40106,7 @@ class UniformIndivChoice < MemHack::Compound
 end
 
 class Unit < MemHack::Compound
-    sizeof 2668
+    sizeof 3388
 
     field(:name, 0) {
         global :LanguageName
@@ -41300,128 +41250,149 @@ class Unit < MemHack::Compound
                     number 32, true
                 }
             }
-            field(:anon_1, 92) {
+            field(:unk_v40_1a, 92) {
                 static_array(10, 4) {
                     number 32, true
                 }
             }
-            field(:anon_2, 132) {
+            field(:unk_v40_1b, 132) {
                 static_array(10, 4) {
                     number 32, true
                 }
             }
-            field(:anon_3, 172) {
+            field(:unk_v40_1c, 172) {
                 static_array(10, 4) {
                     number 32, true
                 }
             }
-            field(:anon_4, 212) {
+            field(:unk_v40_1d, 212) {
                 static_array(10, 4) {
                     number 32, true
                 }
             }
-            field(:anon_5, 252) {
+            field(:unk_v40_1e, 252) {
                 static_array(10, 4) {
                     number 32, true
                 }
             }
-            field(:anon_6, 292) {
+            field(:unk_v40_2, 292) {
                 static_array(20, 4) {
                     number 32, true
                 }
             }
-            field(:anon_7, 372) {
+            field(:anon_1, 372) {
+                static_array(180, 4) {
+                    number 32, true
+                }
+            }
+            field(:unk_v40_2_count, 1092) {
                 number 32, true
             }
-            field(:anon_8, 376) {
+            field(:anon_2, 1096) {
                 pointer {
                 }
             }
-            field(:anon_9, 380) {
+            field(:anon_3, 1100) {
                 pointer {
                 }
             }
-            field(:anon_10, 384) {
+            field(:anon_4, 1104) {
                 number 32, true
             }
-            field(:anon_11, 388) {
+            field(:anon_5, 1108) {
                 number 32, true
             }
-            field(:anon_12, 392) {
+            field(:anon_6, 1112) {
                 number 32, true
             }
-            field(:anon_13, 396) {
+            field(:anon_7, 1116) {
                 number 32, true
             }
-            field(:anon_14, 400) {
+            field(:anon_8, 1120) {
                 pointer {
                 }
             }
-            field(:anon_15, 404) {
+            field(:anon_9, 1124) {
                 stl_vector
             }
-            field(:anon_16, 416) {
+            field(:anon_10, 1136) {
                 stl_vector
             }
-            field(:anon_17, 428) {
-                stl_vector
-            }
-            field(:anon_18, 440) {
-                pointer {
-                }
-            }
-            field(:enemy_status_slot, 444) {
-                number 32, true, -1
-            }
-            field(:unk_874_cntr, 448) {
-                number 32, true
-            }
-            field(:body_part_878, 452) {
-                stl_vector(1) {
-                    number 8, false
-                }
-            }
-            field(:body_part_888, 464) {
-                stl_vector(1) {
-                    number 8, false
-                }
-            }
-            field(:body_part_relsize, 476) {
+            field(:anon_11, 1148) {
                 stl_vector(4) {
                     number 32, true
                 }
             }
-            field(:body_part_8a8, 488) {
+            field(:anon_12, 1160) {
+                pointer {
+                    compound(:Unit_TEnemy_TAnon12) {
+                        sizeof 24
+
+                        field(:unk_0, 0) {
+                            stl_vector(4) {
+                                number 32, true
+                            }
+                        }
+                        field(:unk_10, 12) {
+                            stl_vector(4) {
+                                number 32, true
+                            }
+                        }
+                    }
+                }
+            }
+            field(:enemy_status_slot, 1164) {
+                number 32, true, -1
+            }
+            field(:unk_874_cntr, 1168) {
+                number 32, true
+            }
+            field(:body_part_878, 1172) {
                 stl_vector(1) {
                     number 8, false
                 }
             }
-            field(:body_part_base_ins, 500) {
+            field(:body_part_888, 1184) {
+                stl_vector(1) {
+                    number 8, false
+                }
+            }
+            field(:body_part_relsize, 1196) {
+                stl_vector(4) {
+                    number 32, true
+                }
+            }
+            field(:body_part_8a8, 1208) {
+                stl_vector(1) {
+                    number 8, false
+                }
+            }
+            field(:body_part_base_ins, 1220) {
                 stl_vector(2) {
                     number 16, false
                 }
             }
-            field(:body_part_clothing_ins, 512) {
+            field(:body_part_clothing_ins, 1232) {
                 stl_vector(2) {
                     number 16, false
                 }
             }
-            field(:body_part_8d8, 524) {
+            field(:body_part_8d8, 1244) {
                 stl_vector(2) {
                     number 16, false
                 }
             }
-            field(:unk_8e8, 536) {
+            field(:unk_8e8, 1256) {
                 stl_vector
             }
-            field(:unk_8f8, 548) {
+            field(:unk_8f8, 1268) {
                 stl_vector(2) {
                     number 16, false
                 }
             }
         }
     }
-    field(:recuperation, 2616) {
+    field(:recuperation, 3336) {
         compound(:Unit_TRecuperation) {
             field(:healing_rate, 0) {
                 stl_vector(4) {
@@ -41439,22 +41410,22 @@ class Unit < MemHack::Compound
             }
         }
     }
-    field(:weight, 2640) {
+    field(:weight, 3360) {
         number 32, true
     }
-    field(:weight_fraction, 2644) {
+    field(:weight_fraction, 3364) {
         number 32, true
     }
-    field(:burrows, 2648) {
+    field(:burrows, 3368) {
         stl_vector(4) {
             number 32, true, -1
         }
     }
     def burrows_tg ; burrows.map { |i| df.ui.burrows.list.binsearch(i) } ; end
-    field(:combat_side_id, 2660) {
+    field(:combat_side_id, 3380) {
         number 32, true
     }
-    field(:anon_5, 2664) {
+    field(:anon_5, 3384) {
         number 32, true
     }
 end

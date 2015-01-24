@@ -1,4 +1,4 @@
-Lazy-Newb-Pack-Linux V0.40.23
+Lazy-Newb-Pack-Linux V0.40.24
 ====================
 
 A small package to get people started with Dwarf Fortress on linux. Please take time to check out the [Official thread](http://www.bay12forums.com/smf/index.php?topic=140966.0). There are a few help documents in the [Wiki](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/wiki) if you should get stuck.
@@ -11,6 +11,8 @@ DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 Website Download [faster]: [HERE](http://www.lazynewbpack.com/linux/#download)
 
 #### Older Linux Downloads
+
+V0.40.23 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04023/)
 
 V0.40.19 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04019/)
 
@@ -35,18 +37,16 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 #### Package Version Notes
 
-Update: 5th, Jan 2015
-R1 - Updated DF to v0.40.23, added dfhack v0.40.23 r1, updated graphics, DTv30.1 
-R2 - Added [mifki's 5.40 (DF 0.40.23) Text Will Be Text](http://www.bay12forums.com/smf/index.php?topic=138754.0) dfhack plugin. :D 
-    * multilevel distance set to 6 and on by default
+Update: 23rd, Jan 2015
+R1 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
  
 
 
 Included Mods
 -------------
-* [Pidgeot's PyLNP 0.8b Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
+* [Pidgeot's PyLNP 0.9 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
-    * [DFhack Linux V0.40.23 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
+    * [DFhack Linux V0.40.24 R0 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
         * [TWBT 5.40](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
         * [splintermind's Dwarf Therapist v30.1](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
@@ -78,6 +78,48 @@ Included Mods
  * [Dwarf Therapist user Guide by ResMar](http://dffd.wimbli.com/file.php?id=7889)
  * [Community Quickfort blueprints]()
 
+
+
+Release notes for 0.40.24 (January 7, 2015):
+-------------
+
+Here is another release with fixes.  Old saves are compatible, but there will be some error logs due to minor issues with the old raws.  These logs can be ignored, but old saves will still experience problems like blank seed names.
+
+Major bug fixes
+
+    * Fixed problem causing dwarves to sometimes fail to attack monsters/invaders
+    * Stopped active blocks/parries from rarely freezing adv mode
+    * Stopped certain situations where you could be stuck in the air above certain tiles
+    * Fixed a few problems with necromancers attacking (and generally being killed by) their zombies
+    * Stopped crash from moving/centering squad menu going out of bounds
+    * Fixed crash involving squads and minimap
+    * Fixed unretire crash that generally triggered when caravan arrived
+    * Stopped dwarf from stressing out over the same wound forever
+    * Stopped certain inaccessible jobs from blocking lower priority ones
+
+Other bug fixes/tweaks
+
+    * Allowed embarks with x/y dim 1
+    * Made removal of trees check building/bridge/machine stability
+    * Stopped worker chaining to next construction job from choosing suspended one
+    * Tentatively fixed text mode error on OSX (lethosor)
+    * Tentatively fixed broken sound on some linuxes (Baughn)
+    * Fixed problem with water disappearing when it crosses the z=0 boundary
+    * Made certain old civilian weapon assignments clear over time
+    * Made t/q building selector respect stockpile shapes when looking for closest one
+    * Fixed error with underground pops in small forts not appearing
+    * Stopped mood jobs from going outside of burrows
+    * Capped various combat skill gains per action (Urist Da Vinci)
+    * Stopped "fighting" skill from increasing from trap/projectile attacks
+    * Stopped random creature proboscis from sometimes messing up poison attacks
+    * Fixed key display issue in bindings screen (lethosor)
+    * Fixed problem with display of kill order status
+    * Made geld indicator appear for pets on animal screen properly
+    * Fixed display problem with agreement conclusion dates
+    * Added error logs for missing materials set to defaults, fixed various raws
+    * Stopped announcement screen date from overrunning title depending on window size
+    * Differentiated two pain readouts on health screen
+    * Fixed a few empty announcement errors
 
 
 
