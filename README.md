@@ -38,19 +38,20 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 #### Package Version Notes
 
 Update: 23rd, Jan 2015
-R1 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
+R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
+R1 - dfhack v0.40.24 r1, TWBT 5.42, updated graphics
  
 
 
 Included Mods
 -------------
-* [Pidgeot's PyLNP 0.9 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
+* [Pidgeot's PyLNP 0.8b Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
-    * [DFhack Linux V0.40.24 R0 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
+    * [DFhack Linux V0.40.24 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
-        * [TWBT 5.40](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
+        * [TWBT 5.42](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
         * [splintermind's Dwarf Therapist v30.1](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
-    * [Soundsense r43](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
+    * [Soundsense r2014-1](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
     * [chromafort 2010-04-25](http://www.bay12forums.com/smf/index.php?topic=55025.0)
     * [DF Announcement Filter 1.01](http://www.bay12forums.com/smf/index.php?topic=130030.0)
@@ -60,7 +61,6 @@ Included Mods
     - [16x16] ASCII
     - [16x16] [Afro's Graphics Pack 1.33](http://dffd.wimbli.com/file.php?id=9137)
     - [16x16] [CLA v0.40.14v19](http://www.bay12forums.com/smf/index.php?topic=105376.0)
-    - [32x32] [DawnFortress v0.28](http://www.bay12forums.com/smf/index.php?topic=136221.msg4992910#msg4992910)
     - [15x15] [Duerer v.0.6](http://www.bay12forums.com/smf/index.php?topic=142083.0)
     - [12x12] [Grim Fortress 1.2](http://www.bay12forums.com/smf/index.php?topic=122421.0)
     - [16x16] [Ironhand v0.40.0x](http://dffd.wimbli.com/file.php?id=8747)
