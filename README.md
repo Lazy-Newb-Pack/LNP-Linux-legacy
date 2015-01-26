@@ -8,7 +8,11 @@ A small package to get people started with Dwarf Fortress on linux. Please take 
 
 DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
-Website Download [faster]: [HERE](http://www.lazynewbpack.com/linux/#download)
+You can also download the latest versions from [the Website](http://www.lazynewbpack.com/linux/#download)
+
+Website Download[x64 HERE](goo.gl/QqpcsD)
+ 
+Website Download [i686 HERE](goo.gl/VprN06)
 
 #### Older Linux Downloads
 
