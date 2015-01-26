@@ -38,8 +38,10 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 #### Package Version Notes
 
 Update: 23rd, Jan 2015
-R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
-R1 - dfhack v0.40.24 r1, TWBT 5.42, updated graphics
+
+* R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
+
+* R1 - dfhack v0.40.24 r1, TWBT 5.42, updated graphics
  
 
 
