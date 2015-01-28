@@ -34,6 +34,13 @@ fi
 # Save current terminal settings
 old_tty_settings=$(stty -g)
 
+# >>> LNP modification:
+
+#apply any ARC/distro fixes
+source "$DF_DIR/distro_fixes.sh"
+
+# <<< LNP modification:
+
 # Now run
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"./hack/libs":"./hack"
