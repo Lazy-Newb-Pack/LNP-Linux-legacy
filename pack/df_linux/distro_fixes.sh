@@ -28,10 +28,14 @@ DF_ARCH=$(file "$DF_BIN_LOCATION" | grep -Po '(32|64)-bit')
 # this needs to be picked up by df/dfhack and included in LD_PRELOAD
 export PRELOAD_LIB
 
+# LSB should work across modern distros, but may not be available in some cases.
 if [ -e "/usr/bin/lsb_release" ]; then
     OS=$(lsb_release -si)
-    ARCH=$(uname -m | sed 's/x86_//;s/i[3-6]86/32/')
     VER=$(lsb_release -sr)
+# Fedora specific Fallback
+elif [ -e  /etc/fedora-release ]; then
+    OS="Fedora"
+    VER=$(cat /etc/fedora-release | grep -Po '\d+')
 fi
 
 # Report Stuff
@@ -49,11 +53,11 @@ dlog "INFO" "DF_BIN_LOCATION: $DF_BIN_LOCATION"
 # Some threads suggest png files should be also be converted to bmp as a fix
 # I haven't found this necessary if LD_PRELOAD is properly set (on fedora).
 
-if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'64' ]; then
+if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'x86_64' ]; then
 
     # Fedora 21/64-bit is tested
     if [ x"$OS" == x'Fedora' ]; then
-        export PRELOAD_LIB=/usr/lib/libz.so;
+        export PRELOAD_LIB="$PRELOAD_LIB /usr/lib/libz.so.1";
         dlog "INFO" "32 bit df on $OS/64bit detected. Will set LD_PRELOAD to $PRELOAD_LIB...."
     # Add your distro here...
     elif [ x"$OS" == x'MyFooDistro' ]; then

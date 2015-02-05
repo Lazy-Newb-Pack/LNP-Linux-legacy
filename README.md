@@ -204,6 +204,10 @@ Let's see... jobs that are assigned in workshops can swipe items from haul jobs 
 sudo apt-get install default-jre libsdl1.2debian:i386 libsdl-image1.2:i386 libsdl-ttf2.0-0:i386 libglu1-mesa:i386 libgtk2.0-0:i386 libopenal1:i386 libjpeg62:i386 git mercurial wget coreutils tar unzip unrar make g++ gcc patch xterm sed python bzip2 qtchooser qtbase5-dev qtbase5-dev-tools qtscript5-dev qt5-qmake libqt5script5 libqt5scripttools5 libqxt-core0 libqxt-gui0
 ```
 
+ For Fedora (21)
+```
+yum install SDL.i686 SDL_image.i686 SDL_ttf.i686 mesa-libGLU.i686 gtk2.i686 zlib.i686 openal-soft.i686 xterm python qt qt-x11 bzip2 xorg-x11-fonts-Type1
+```
 
   System Requirements
 -------------
@@ -241,7 +245,7 @@ Usage: ./startlnp
 Tested On
 =========
 * Ubuntu 14.04 "Trusty Tahr"      fresh install.
- 
+* Fedora 21/64bit - With deps listed above installed.
 
 Common Issues
 =============
@@ -250,7 +254,7 @@ See [the WIKI](https://github.com/BeauBouchard/DF-Lazy-Newb-Pack/wiki).
 Credits & Special Thanks
 =============
 
- * [@andrewd18](https://github.com/andrewd18/) Andrew Dorney made the awesome linux LNP isntaller script
+ * [@andrewd18](https://github.com/andrewd18/) Andrew Dorney made the awesome linux LNP installer script
  * [@amfournda](https://github.com/amfournda/) Created a great gentoo fix script included in the pack
  * [@beaubouchard](https://github.com/BeauBouchard) Maintains this package and lazynewbpack.com website
  * [@Captain Duck](https://www.youtube.com/playlist?list=PL06686270DA5FF439) 
@@ -260,7 +264,7 @@ Credits & Special Thanks
  * [@fricy](https://github.com/fricy/) Maintains the MacNewbie pack Reborn as well as supporting essential gaphic repo
  * [@joelpt](http://www.joelpt.net/quickfort/) Joel Thornton Created Quickfort 2.x
  * [@lethosor](https://github.com/lethosor) Works on DFhack, DFwiki, and maintainer of the LNP
- * [@LucasUP](https://github.com/LucasUP/) Lucas Paquette made the orginal windows LNP 
+ * [@LucasUP](https://github.com/LucasUP/) Lucas Paquette made the original windows LNP
  * [@mifki](https://github.com/mifki) Text Will Be Text dfmultiscroll and webfort
  * [@splintermind](https://github.com/splintermind/) Josh, part time wizard works dilligently on Dwarf Therapist
  * [@PeridexisErrant](http://www.bay12forums.com/smf/index.php?topic=126076.0)
