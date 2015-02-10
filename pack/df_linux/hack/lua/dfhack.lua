@@ -385,11 +385,8 @@ internal.scripts = internal.scripts or {}
 local scripts = internal.scripts
 local hack_path = dfhack.getHackPath()
 
-local function findScript(name)
-    local file = hack_path..'scripts/'..name..'.lua'
-    if dfhack.filesystem.exists(file) then
-        return file
-    end
+function dfhack.findScript(name)
+    local file
     file = dfhack.getSavePath()
     if file then
         file = file .. '/raw/scripts/' .. name .. '.lua'
@@ -397,7 +394,12 @@ local function findScript(name)
             return file
         end
     end
-    file = hack_path..'../raw/scripts/' .. name .. '.lua'
+    local path = dfhack.getDFPath()
+    file = path..'/raw/scripts/' .. name .. '.lua'
+    if dfhack.filesystem.exists(file) then
+        return file
+    end
+    file = path..'/hack/scripts/'..name..'.lua'
     if dfhack.filesystem.exists(file) then
         return file
     end
@@ -405,7 +407,16 @@ local function findScript(name)
 end
 
 function dfhack.run_script(name,...)
-    local file = findScript(name)
+    return dfhack.run_script_with_env(nil,name,...)
+end
+
+function dfhack.script_environment(name)
+    _, env = dfhack.run_script_with_env({moduleMode=true}, name)
+    return env
+end
+
+function dfhack.run_script_with_env(envVars,name,...)
+    local file = dfhack.findScript(name)
     if not file then
         error('Could not find script ' .. name)
     end
@@ -414,10 +425,13 @@ function dfhack.run_script(name,...)
         env = {}
         setmetatable(env, { __index = base_env })
     end
+    for x,y in pairs(envVars or {}) do
+        env[x] = y
+    end
     local f,perr = loadfile(file, 't', env)
     if f then
         scripts[file] = env
-        return f(...)
+        return f(...), env
     end
     error(perr)
 end
@@ -475,7 +489,7 @@ if dfhack.is_core_context then
         local env = setmetatable({ SAVE_PATH = path }, { __index = base_env })
         local f,perr = loadfile(name, 't', env)
         if f == nil then
-            if not string.match(perr, 'No such file or directory') then
+            if dfhack.filesystem.exists(name) then
                 dfhack.printerr(perr)
             end
         elseif safecall(f) then

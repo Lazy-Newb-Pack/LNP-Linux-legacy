@@ -10,11 +10,16 @@ DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
 You can also download the latest versions from [the Website](http://www.lazynewbpack.com/linux/#download)
 
-Website Download[x64 HERE](goo.gl/QqpcsD)
+V0.40.24 r2 x64 Linux Lazy Newb Pack can be downloaded [not here. (04024r1-x64.zip)]()
  
-Website Download [i686 HERE](goo.gl/VprN06)
+V0.40.24 r2 i686 Linux Lazy Newb Pack can be downloaded [not here. (04024r1-i686.zip)]()
+
 
 #### Older Linux Downloads
+
+V0.40.24 r1 x64 Linux Lazy Newb Pack can be downloaded [here. (04024r1-x64.zip)](goo.gl/QqpcsD)
+ 
+V0.40.24 r1 i686 Linux Lazy Newb Pack can be downloaded [here. (04024r1-i686.zip)](goo.gl/VprN06)
 
 V0.40.23 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04023/)
 
@@ -42,8 +47,12 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 #### Package Version Notes
 
 Update: 23rd, Jan 2015
+
 R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
+
 R1 - dfhack v0.40.24 r1, TWBT 5.42, updated graphics
+
+R2 - dfhack v0.40.24 r2, updated Pidgeot's PyLNP to 0.9a. 
  
 
 
