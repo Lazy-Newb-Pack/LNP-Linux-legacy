@@ -14,4 +14,3 @@ exit $?
 # <<< LNP modification:
 
 ./libs/Dwarf_Fortress "$@" # Go, go, go! :)
-

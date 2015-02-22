@@ -22,9 +22,11 @@
 	"hideUtilityPath": true,
 	"hideUtilityExt": true,
 	"updates": {
+		"dffdID": "",
+		"packVersion": "",
 		"checkURL": "",
 		"versionRegex": "",
 		"downloadURL": "",
-		"packVersion": ""
+		"directURL": ""
 	}
 }
