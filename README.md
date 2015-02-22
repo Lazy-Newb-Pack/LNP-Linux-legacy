@@ -10,9 +10,6 @@ DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
 You can also download the latest versions from [the Website](http://www.lazynewbpack.com/linux/#download)
 
-V0.40.24 r2 x64 Linux Lazy Newb Pack can be downloaded [here. (04024r2-x64.zip)](http://goo.gl/N5JQne)
- 
-V0.40.24 r2 i686 Linux Lazy Newb Pack can be downloaded [here. (04024r2-i686.zip)](http://goo.gl/y28s4X)
 
 
 #### Older Linux Downloads
