@@ -1,0 +1,35 @@
+taodih
+Re: [Quickfort] Version 2.00pre3 released
+http://www.bay12forums.com/smf/index.php?topic=35931.msg1843166#msg1843166
+« Reply #256 on: December 30, 2010, 06:48:04 pm »
+
+...I also made a simple ramp staircase.
+It is a 3x3 4z (1 full spiral) , I also added an dug out area arround the staircase so it's 5x5. Always start a zlevel down from where you want to start (ramps are upwards thus you need to dig from a zlevel higher)
+
+the 5x5 grid (also center start):
+
+#dig start(2;2)
+ddddd#
+dr~~d#
+dd~dd#
+d~~rd#
+ddddd#
+#>#####
+ddddd#
+d~~~d#
+dr~rd#
+d~~~d#
+ddddd#
+#>#####
+ddddd#
+d~~rd#
+d~~~d#
+dr~~d#
+ddddd#
+#>#####
+ddddd#
+ddr~d#
+d~~~d#
+d~rdd#
+ddddd#
+#>#####

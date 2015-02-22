@@ -10,16 +10,16 @@ DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
 You can also download the latest versions from [the Website](http://www.lazynewbpack.com/linux/#download)
 
-V0.40.24 r2 x64 Linux Lazy Newb Pack can be downloaded [not here. (04024r1-x64.zip)]()
+V0.40.24 r2 x64 Linux Lazy Newb Pack can be downloaded [here. (04024r2-x64.zip)](http://goo.gl/N5JQne)
  
-V0.40.24 r2 i686 Linux Lazy Newb Pack can be downloaded [not here. (04024r1-i686.zip)]()
+V0.40.24 r2 i686 Linux Lazy Newb Pack can be downloaded [here. (04024r2-i686.zip)](http://goo.gl/y28s4X)
 
 
 #### Older Linux Downloads
 
-V0.40.24 r1 x64 Linux Lazy Newb Pack can be downloaded [here. (04024r1-x64.zip)](goo.gl/QqpcsD)
+V0.40.24 r1 x64 Linux Lazy Newb Pack can be downloaded [here. (04024r1-x64.zip)](http://goo.gl/QqpcsD)
  
-V0.40.24 r1 i686 Linux Lazy Newb Pack can be downloaded [here. (04024r1-i686.zip)](goo.gl/VprN06)
+V0.40.24 r1 i686 Linux Lazy Newb Pack can be downloaded [here. (04024r1-i686.zip)](http://goo.gl/VprN06)
 
 V0.40.23 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04023/)
 
@@ -52,15 +52,15 @@ R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
 
 R1 - dfhack v0.40.24 r1, TWBT 5.42, updated graphics
 
-R2 - dfhack v0.40.24 r2, updated Pidgeot's PyLNP to 0.9a. 
+R2 - dfhack v0.40.24 r2, updated Pidgeot's PyLNP to 0.9.2a, updated graphics. 
  
 
 
 Included Mods
 -------------
-* [Pidgeot's PyLNP 0.8b Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
+* [Pidgeot's PyLNP 0.9.2a Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
-    * [DFhack Linux V0.40.24 R1 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
+    * [DFhack Linux V0.40.24 R2 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
         * [TWBT 5.42](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
         * [splintermind's Dwarf Therapist v30.1](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
@@ -274,6 +274,7 @@ Credits & Special Thanks
  * [@joelpt](http://www.joelpt.net/quickfort/) Joel Thornton Created Quickfort 2.x
  * [@lethosor](https://github.com/lethosor) Works on DFhack, DFwiki, and maintainer of the LNP
  * [@LucasUP](https://github.com/LucasUP/) Lucas Paquette made the original windows LNP
+ * [@miffedmap](https://github.com/miffedmap) Actively helping perfect Fedora compatibility and a lot more help behind the scenes 
  * [@mifki](https://github.com/mifki) Text Will Be Text dfmultiscroll and webfort
  * [@splintermind](https://github.com/splintermind/) Josh, part time wizard works dilligently on Dwarf Therapist
  * [@PeridexisErrant](http://www.bay12forums.com/smf/index.php?topic=126076.0)

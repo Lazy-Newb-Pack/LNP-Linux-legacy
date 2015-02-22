@@ -1,0 +1,4 @@
+This pack includes all circles with a diameter measurable in an odd number of tiles from 11 through 27, with selected circles up through 45 tiles in diameter (one entire embark tile!).  The ones I left out had really ugly jaggies, asymmetric edging, or other problems - basically they didn't look like circles, and were too difficult to clean up by hand.  I also included a lagniappe: 45-concentric has a giant circle with a smaller circle inside, ideal for anyone who wants a circular hallway around a large circular center room.
+
+Enjoy!
+jurph

@@ -1,0 +1,17 @@
+#dig start(2;2; Center tile of a 3-tile square) This is a 3x3, 4 z-level (1 full clockwise spiral) ramp staircase. It has two up ramps per level. NOTE: Always begin a z-level down from where you want to start. (Ramps are upwards. Thus, you need to start these designations from a z-level below.)
+~,~,~,#
+r,~,r,#
+~,~,~,#
+#>,#,#,#
+r,~,~,#
+~,~,~,#
+~,~,r,#
+#>,#,#,#
+~,r,~,#
+~,~,~,#
+~,r,~,#
+#>,#,#,#
+~,~,r,#
+~,~,~,#
+r,~,~,#
+#>,#,#,#

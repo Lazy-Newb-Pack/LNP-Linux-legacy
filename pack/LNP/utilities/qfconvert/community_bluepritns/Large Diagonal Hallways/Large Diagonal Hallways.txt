@@ -1,0 +1,3 @@
+I made these four files for those of you who prefer diagonal halls in your forts.  Each one is 45x45 (the size of a single embark tile).  There are two orientations (NE/SW and SE/NW) and two widths (5 tiles wide and 4 tiles wide).  Enjoy!
+
+-jurph

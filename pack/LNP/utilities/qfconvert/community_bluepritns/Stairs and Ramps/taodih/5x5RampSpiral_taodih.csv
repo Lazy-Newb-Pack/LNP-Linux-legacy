@@ -1,0 +1,25 @@
+#dig start(3; 3; Center tile of a 5-tile square) This is a 3x3, 4 z-level (1 full counter-clockwise spiral) ramp staircase with two up ramps per level. I also added a dug out area around the staircase, so it's actually 5x5. NOTE: Always begin a z-level down from where you want to start. (Ramps are upwards. Thus, you need to start these designations from a z-level below.)
+d,d,d,d,d,#
+d,r,~,~,d,#
+d,~,~,~,d,#
+d,~,~,r,d,#
+d,d,d,d,d,#
+#>,#,#,#,#,#
+d,d,d,d,d,#
+d,~,~,~,d,#
+d,r,~,r,d,#
+d,~,~,~,d,#
+d,d,d,d,d,#
+#>,#,#,#,#,#
+d,d,d,d,d,#
+d,~,~,r,d,#
+d,~,~,~,d,#
+d,r,~,~,d,#
+d,d,d,d,d,#
+#>,#,#,#,#,#
+d,d,d,d,d,#
+d,d,r,~,d,#
+d,~,~,~,d,#
+d,~,r,d,d,#
+d,d,d,d,d,#
+#>,#,#,#,#,#
