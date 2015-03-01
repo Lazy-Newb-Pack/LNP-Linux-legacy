@@ -8,10 +8,15 @@ function dlog() {
     echo -e "\033[0;32m[distro_fixes]\033[0;00m $1 $2"
 }
 
+if [ "$#" -lt 1 ]; then
+    echo "[distro_fixes.sh] you must provide DF_DIR as an argument."
+    exit 1
+fi
+
 dlog "INFO" "Checking whether any ARCH/distro specific fixes are required..."
 
 # find df bin relative to location of this shell scrip
-DF_BIN_LOCATION=$(readlink -f $(dirname "$0")/libs/Dwarf_Fortress)
+DF_BIN_LOCATION=$(readlink -f $(dirname "$1")/libs/Dwarf_Fortress)
 
 if [ ! -f $DF_BIN_LOCATION ]; then
     dlog "Warning: did not find df binary at $DF_BIN_LOCATION"
@@ -57,11 +62,11 @@ if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'x86_64' ]; then
 
     # Fedora 21/64-bit is tested
     if [ x"$OS" == x'Fedora' ]; then
-        export PRELOAD_LIB="$PRELOAD_LIB:/usr/lib/libz.so.1";
+        export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/usr/lib/libz.so.1";
         dlog "INFO" "32 bit df on $OS/64bit detected. Will set LD_PRELOAD to $PRELOAD_LIB...."
     # Add your distro here...
     elif [ x"$OS" == x'MyFooDistro' ]; then
-        export PRELOAD_LIB="$PRELOAD_LIB:<abspath_to_32bit_libz>";
+        export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}<abspath_to_32bit_libz>";
         dlog "INFO" "32 bit df on $OS/64bit detected. Will set LD_PRELOAD to $PRELOAD_LIB...."
     else
         dlog "WARN" "32bit 'Dwarf_Fortress' on 64bit OS detected. see $0 script for fix using LD_PRELOAD."
