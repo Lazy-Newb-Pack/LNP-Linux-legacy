@@ -10,9 +10,11 @@ DFFD Download: [HERE](http://dffd.wimbli.com/file.php?id=8936)
 
 You can also download the latest versions from [the Website](http://www.lazynewbpack.com/linux/#download)
 
-
-
 #### Older Linux Downloads
+
+V0.40.24 r2 x64 Linux Lazy Newb Pack can be downloaded [here. (04024r2-x64.zip)](http://goo.gl/3si7b6)
+ 
+V0.40.24 r2 i686 Linux Lazy Newb Pack can be downloaded [here. (04024r2-i686.zip)](http://goo.gl/sviJrU)
 
 V0.40.24 r1 x64 Linux Lazy Newb Pack can be downloaded [here. (04024r1-x64.zip)](http://goo.gl/QqpcsD)
  
@@ -22,18 +24,9 @@ V0.40.23 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/li
 
 V0.40.19 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04019/)
 
-V0.40.16 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04016/)
-
-V0.40.15 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04015/)
-
-V0.40.14 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04014/) 
-
-V0.40.13 Linux Lazy Newb Pack can be found [here](http://www.lazynewbpack.com/linux/04013/)
-
  
 #### Other Versions
  
-
 Similar packages also available in windows and Mac:
 
 Windows Version: [PeridexisErrant's Starter Pack](http://www.bay12forums.com/smf/index.php?topic=126076.0)
@@ -43,24 +36,26 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 #### Package Version Notes
 
-Update: 23rd, Jan 2015
+Update: 28th, Feb 2015
 
-R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
+R3 - updated Pidgeot's PyLNP to 0.9.4, updated Dwarf Therapist to v31, Thank you so much @miffedmap and @lethosor, fixing #20 bug slayers! 
+
+R2 - dfhack v0.40.24 r2, updated Pidgeot's PyLNP to 0.9.2a, updated graphics. 
 
 R1 - dfhack v0.40.24 r1, TWBT 5.42, updated graphics
 
-R2 - dfhack v0.40.24 r2, updated Pidgeot's PyLNP to 0.9.2a, updated graphics. 
- 
+R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
+
 
 
 Included Mods
 -------------
-* [Pidgeot's PyLNP 0.9.2a Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
+* [Pidgeot's PyLNP 0.9.4 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
     * [DFhack Linux V0.40.24 R2 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
         * [TWBT 5.42](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
-        * [splintermind's Dwarf Therapist v30.1](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
+        * [splintermind's Dwarf Therapist v31](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
     * [Soundsense r2014-1](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)
     * [chromafort 2010-04-25](http://www.bay12forums.com/smf/index.php?topic=55025.0)
@@ -86,11 +81,12 @@ Included Mods
  also includes
  * [Captian Duck's DF2014 Embark Profile V3](http://www.reddit.com/r/dwarffortress/comments/2bzrqg/dfvidtuts2014_embark_profile_beta_testing/)
  * [Dwarf Therapist user Guide by ResMar](http://dffd.wimbli.com/file.php?id=7889)
- * [Community Quickfort blueprints]()
 
 
+The [Community Quickfort Blueprints](https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints) are not longer included, but I encourage you to check them out and use them to make your mountain home.
 
-Release notes for 0.40.24 (January 7, 2015):
+
+Release notes for DF 0.40.24 (January 7, 2015):
 -------------
 
 Here is another release with fixes.  Old saves are compatible, but there will be some error logs due to minor issues with the old raws.  These logs can be ignored, but old saves will still experience problems like blank seed names.
@@ -250,7 +246,7 @@ Usage: ./startlnp
 
 Tested On
 =========
-* Ubuntu 14.04 "Trusty Tahr"      fresh install.
+* Ubuntu 14.04 "Trusty Tahr" - With deps listed above installed..
 * Fedora 21/64bit - With deps listed above installed.
 
 Common Issues
@@ -262,8 +258,8 @@ Credits & Special Thanks
 
  * [@andrewd18](https://github.com/andrewd18/) Andrew Dorney made the awesome linux LNP installer script
  * [@amfournda](https://github.com/amfournda/) Created a great gentoo fix script included in the pack
- * [@beaubouchard](https://github.com/BeauBouchard) Maintains this package and lazynewbpack.com website
- * [@Captain Duck](https://www.youtube.com/playlist?list=PL06686270DA5FF439) 
+ * [@beaubouchard](https://github.com/BeauBouchard) Maintains this package and [lazynewbpack.com](http://www.lazynewbpack.com/) website
+ * [@Captain Duck](https://www.youtube.com/playlist?list=PL0sBhCMFBvPlF7wG7OH-NFQKMeCQiS8aM) Just all around great guy, watch his Dwarf Fortress Tutorial series and subscribe!
  * [@Daveralph](https://github.com/daveralph1234/LazyNewbPack/) continued working on LNP after Dricus 
  * [@Dricus](https://github.com/Dricus)   Dirk Groot is the creator of the cross platform LNP port
  * [@Dwimenor](https://github.com/Dwimenor/) Created a workaround for LNP, as well as providing linux support
@@ -271,13 +267,13 @@ Credits & Special Thanks
  * [@joelpt](http://www.joelpt.net/quickfort/) Joel Thornton Created Quickfort 2.x
  * [@lethosor](https://github.com/lethosor) Works on DFhack, DFwiki, and maintainer of the LNP
  * [@LucasUP](https://github.com/LucasUP/) Lucas Paquette made the original windows LNP
- * [@miffedmap](https://github.com/miffedmap) Actively helping perfect Fedora compatibility and a lot more help behind the scenes 
+ * [@miffedmap](https://github.com/miffedmap) Actively perfecting cross distro compatibility  
  * [@mifki](https://github.com/mifki) Text Will Be Text dfmultiscroll and webfort
  * [@splintermind](https://github.com/splintermind/) Josh, part time wizard works dilligently on Dwarf Therapist
- * [@PeridexisErrant](http://www.bay12forums.com/smf/index.php?topic=126076.0)
+ * [@PeridexisErrant](http://www.bay12forums.com/smf/index.php?topic=126076.0) Maintains the Windows Package
  * [@Pidgeot](https://bitbucket.org/Pidgeot/python-lnp/) Michael is a Founding developer of PyLNP
  * [@runrobotrun](http://www.bay12forums.com/smf/index.php?topic=55025.0) Created Chromafort
- * [@Zweistein](http://zweistein.cz/) Created Soundsense
+ * [@Zweistein](http://zweistein.cz/) Created Soundsense, enriching the game with awesome sound packages!
 
 
 

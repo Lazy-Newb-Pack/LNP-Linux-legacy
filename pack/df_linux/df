@@ -6,9 +6,9 @@ export SDL_DISABLE_LOCK_KEYS=1 # Work around for bug in Debian/Ubuntu SDL patch.
 
 # >>> LNP modification:
 
-#apply any ARC/distro fixes
-source "$DF_DIR/distro_fixes.sh"
-LD_PRELOAD="$LD_PRELOAD:$PRELOAD_LIB" ./libs/Dwarf_Fortress "$@" # Go, go, go! :)
+#apply any ARCH/distro fixes
+source "./distro_fixes.sh" "${DF_DIR}"
+LD_PRELOAD="${LD_PRELOAD:+$LD_PRELOAD:}$PRELOAD_LIB" "./libs/Dwarf_Fortress" "$@" # Go, go, go! :)
 exit $?
 
 # <<< LNP modification:
