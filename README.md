@@ -38,7 +38,7 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 Update: 28th, Feb 2015
 
-R3 - updated Pidgeot's PyLNP to 0.9.4, updated Dwarf Therapist to v31, Thank you so much @miffedmap and @lethosor, fixing #20 bug slayers! 
+R3 - updated Pidgeot's PyLNP to 0.9.4, updated Dwarf Therapist to v31, some bug fixes from  [@miffedmap](https://github.com/miffedmap) and [@lethosor](https://github.com/lethosor) Thank you so much bug slayers!
 
 R2 - dfhack v0.40.24 r2, updated Pidgeot's PyLNP to 0.9.2a, updated graphics. 
 
