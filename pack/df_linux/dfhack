@@ -45,7 +45,7 @@ source "./distro_fixes.sh" "${DF_DIR}"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"./hack/libs":"./hack"
 
-PRELOAD_LIB="$PRELOAD_LIB:./hack/libdfhack.so"
+PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}./hack/libdfhack.so"
 
 case "$1" in
   -g | --gdb)
