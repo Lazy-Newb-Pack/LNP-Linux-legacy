@@ -15,11 +15,11 @@ fi
 
 dlog "INFO" "Checking whether any ARCH/distro specific fixes are required..."
 
-# find df bin relative to location of this shell scrip
+# find df bin relative to location of this shell script
 DF_BIN_LOCATION=$(readlink -f $(dirname "$1")/libs/Dwarf_Fortress)
 
 if [ ! -f $DF_BIN_LOCATION ]; then
-    dlog "Warning: did not find df binary at $DF_BIN_LOCATION"
+    dlog "WARN" "did not find df binary at $DF_BIN_LOCATION"
 fi
 
 # Detect Stuff
@@ -28,9 +28,8 @@ ARCH=$(uname -m)
 VER=$(uname -r)
 DF_ARCH=$(file "$DF_BIN_LOCATION" | grep -Po '(32|64)-bit')
 
-# by default don't preload anything
-
 # this needs to be picked up by df/dfhack and included in LD_PRELOAD
+# empty by default (unless set manually in the shell env)
 export PRELOAD_LIB
 
 # LSB should work across modern distros, but may not be available in some cases.
@@ -55,8 +54,8 @@ dlog "INFO" "DF_BIN_LOCATION: $DF_BIN_LOCATION"
 
 # 32 bit df on 64 bit linux must give loader precedence to the 32 bit libz
 # to avoid errors when libpng tries to load images.
-# Some threads suggest png files should be also be converted to bmp as a fix
-# I haven't found this necessary if LD_PRELOAD is properly set (on fedora).
+# Some threads suggest png files should also be converted to bmp as a fix
+# but I haven't found this necessary if LD_PRELOAD is properly set (on fedora).
 
 if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'x86_64' ]; then
 
@@ -68,6 +67,9 @@ if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'x86_64' ]; then
     elif [ x"$OS" == x'Gentoo' ]; then
         export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/lib32/libz.so.1";
         dlog "INFO" "32 bit df on $OS/64bit detected. Will set LD_PRELOAD to $PRELOAD_LIB...."
+    elif [ x"$OS" == x'Arch' ]; then
+        export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/usr/lib32/libz.so";
+        dlog "INFO" "32 bit df on $OS/64bit detected. Will set LD_PRELOAD to $PRELOAD_LIB...."    
     # Add your distro here...
     # elif [ x"$OS" == x'MyFooDistro' ]; then
     #     export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}<abspath_to_32bit_libz>";
