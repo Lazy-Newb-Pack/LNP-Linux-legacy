@@ -68,6 +68,9 @@ if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'x86_64' ]; then
     elif [ x"$OS" == x'Gentoo' ]; then
         export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/lib32/libz.so.1";
         dlog "INFO" "32 bit df on $OS/64bit detected. Will set LD_PRELOAD to $PRELOAD_LIB...."
+    elif [ x"$OS" == x'Arch' ]; then
+        export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/usr/lib32/libz.so";
+        dlog "INFO" "32 bit df on $OS/64bit detected. Will set LD_PRELOAD to $PRELOAD_LIB...."    
     # Add your distro here...
     # elif [ x"$OS" == x'MyFooDistro' ]; then
     #     export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}<abspath_to_32bit_libz>";
