@@ -16,7 +16,7 @@ fi
 dlog "INFO" "Checking whether any ARCH/distro specific fixes are required..."
 
 # find df bin relative to location of this shell script
-DF_BIN_LOCATION=$(readlink -f $(dirname "$1")/libs/Dwarf_Fortress)
+DF_BIN_LOCATION="$1/libs/Dwarf_Fortress"
 
 if [ ! -f $DF_BIN_LOCATION ]; then
     dlog "WARN" "did not find df binary at $DF_BIN_LOCATION"
