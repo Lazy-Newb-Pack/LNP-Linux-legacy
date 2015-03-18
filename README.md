@@ -251,7 +251,7 @@ Tested On
 
 Common Issues
 =============
-See [the WIKI](https://github.com/BeauBouchard/DF-Lazy-Newb-Pack/wiki).
+See [the WIKI](https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/wiki/Common-Errors).
 
 Credits & Special Thanks
 =============
