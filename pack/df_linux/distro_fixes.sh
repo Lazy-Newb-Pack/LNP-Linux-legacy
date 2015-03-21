@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script checks the system for ARCH and disto details
 # and sets up env variables as workaround for use by the
