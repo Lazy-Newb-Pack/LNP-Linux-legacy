@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # NOTE: This is dfhack's modification of the normal invocation script,
 # changed to properly set LD_PRELOAD so as to run DFHACK.
