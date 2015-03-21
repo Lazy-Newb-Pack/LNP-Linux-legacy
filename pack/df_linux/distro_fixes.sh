@@ -69,9 +69,20 @@ if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'x86_64' ]; then
         dlog "INFO" "Setting LD_PRELOAD to $PRELOAD_LIB"
     elif [ x"$OS" == x'Arch' ]; then
         export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/usr/lib32/libz.so";
-        dlog "INFO" "Setting LD_PRELOAD to $PRELOAD_LIB...."
+        dlog "INFO" "Setting LD_PRELOAD to $PRELOAD_LIB"
     elif [ x"$OS" == x'Debian' ]; then
         export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/mesa-diverted/i386-linux-gnu"
+        if [ -f "/usr/lib32/libz.so" ]; then
+            export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/usr/lib32/libz.so"
+        else
+            zlib32=$(ls /usr/lib32/libz.so.* | head -n1)
+            if [ -f "$zlib32" ]; then
+                export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}$zlib32"
+            else
+                dlog "WARN" "Could not find a 32-bit zlib"
+            fi
+        fi
+        dlog "INFO" "Setting LD_PRELOAD to $PRELOAD_LIB"
         dlog "INFO" "Setting LD_LIBRARY_PATH to $LD_LIBRARY_PATH"
     # Add your distro here...
     # elif [ x"$OS" == x'MyFooDistro' ]; then
