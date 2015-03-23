@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 # This script checks the system for ARCH and disto details
 # and sets up env variables as workaround for use by the
 # df/dfhack scripts.
 
-function dlog() {
+dlog() {
     echo -e "\033[0;32m[distro_fixes]\033[0;00m $1 $2"
 }
 
@@ -71,7 +71,7 @@ if [ x"$DF_ARCH" == x'32-bit' ] && [ x"$ARCH" == x'x86_64' ]; then
         export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/usr/lib32/libz.so";
         dlog "INFO" "Setting LD_PRELOAD to $PRELOAD_LIB"
     elif [ x"$OS" == x'Debian' ]; then
-        export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/mesa-diverted/i386-linux-gnu"
+        export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}/usr/lib/mesa-diverted/i386-linux-gnu"
         if [ -f "/usr/lib32/libz.so" ]; then
             export PRELOAD_LIB="${PRELOAD_LIB:+$PRELOAD_LIB:}/usr/lib32/libz.so"
         else
