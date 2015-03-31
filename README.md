@@ -36,9 +36,11 @@ Mac Version: [Fricy's MacNewbie Pack](http://www.bay12forums.com/smf/index.php?t
 
 #### Package Version Notes
 
-Update: 28th, Feb 2015
+Update: 29th, Mar 2015
 
 R3 - updated Pidgeot's PyLNP to 0.9.4, updated Dwarf Therapist to v31, some bug fixes from  [@miffedmap](https://github.com/miffedmap) and [@lethosor](https://github.com/lethosor) Thank you so much bug slayers!
+
+R3 - TWBT 5.43, Pidgeot's PyLNP to 0.9.5a
 
 R2 - dfhack v0.40.24 r2, updated Pidgeot's PyLNP to 0.9.2a, updated graphics. 
 
@@ -50,11 +52,11 @@ R0 - Updated DF to v0.40.24, added dfhack v0.40.24 r0, updated graphics, DTv30.1
 
 Included Mods
 -------------
-* [Pidgeot's PyLNP 0.9.4 Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
+* [Pidgeot's PyLNP 0.9.5a Lazy Newb Pack Python interface](http://www.bay12forums.com/smf/index.php?topic=140808.0)
 * Utilities:
     * [DFhack Linux V0.40.24 R2 (gcc 4.5.4)](http://www.bay12forums.com/smf/index.php?topic=139553.0) Thanks lethosor!
         * [StoneSense](https://github.com/DFHack/stonesense)
-        * [TWBT 5.42](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
+        * [TWBT 5.43](http://do1.mifki.com:8810/dashboard;jsessionid=g2dj1d13cw7q1o5v7tgm5v8i8)
         * [splintermind's Dwarf Therapist v31](https://github.com/splintermind/Dwarf-Therapist/tree/DF2014) (compiled with qt4)
     * [Soundsense r2014-1](http://df.zweistein.cz/soundsense/) (need to run auto update on first use)
     * [qfconvert 2.04](http://www.joelpt.net/quickfort/)

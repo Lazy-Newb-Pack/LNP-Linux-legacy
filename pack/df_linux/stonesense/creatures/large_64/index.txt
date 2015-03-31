@@ -1,8 +1,0 @@
-jabber.xml
-crundle.xml
-
-waterbuf.xml
-goat.xml
-sheep.xml
-
-dwarf.xml
